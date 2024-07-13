@@ -11,13 +11,18 @@ export const metadata: Metadata = {
 
 function TopNav() {
   return (
-    <nav className="flex items-center justify-between w-full p-4 text-xl font-semibold">
-      <div>
+    <nav className="flex items-center justify-between w-full p-8 bg-ivory">
+      <div className="text-xl font-semibold">
         Harry Leung
       </div>
+      <div className="flex space-x-10">
+       <div>
+        Portfolio
+       </div>
        <div>
         Resume
        </div>
+      </div>
     </nav>
   )
 }
@@ -27,7 +32,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${GeistSans.variable}`}>
-      <body className="flex flex-col gap-4">
+      <body className="flex flex-col gap-4 bg-ivory">
         <TopNav />
         {children}
       </body>
