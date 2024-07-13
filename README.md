@@ -2,7 +2,7 @@
 
 ## TODO
 
-- [ ] Make it deploy
+- [x] Make it deploy
 - [ ] Scaffold basic ui with mock data
 - [ ] Set up a database (vercel postgres)
 - [ ] Attach database to UI
@@ -13,3 +13,7 @@
 - [ ] Delete button (with server actions)
 - [ ] Analytics (posthog)
 - [ ] Ratelimiting (upstash)
+
+## Important Links
+
+- https://uploadthing.com for image hosting
