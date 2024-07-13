@@ -13,6 +13,12 @@
 - [ ] Delete button (with server actions)
 - [ ] Analytics (posthog)
 - [ ] Ratelimiting (upstash)
+- [ ] Dark Mode
+- [ ] Topnav (Harry Leung, Light/Dark toggle, portfolio + resume on right)
+- [ ] Link resume
+- [ ] About me (short bio, UCI, location)
+- [ ] Portfolio
+- [ ] Link email, github, linkedin 
 
 ## Important Links
 
