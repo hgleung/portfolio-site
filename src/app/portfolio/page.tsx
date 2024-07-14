@@ -1,4 +1,9 @@
 export const dynamic = "force-dynamic";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Portfolio',
+};
 
 export default function Page() {
   // const posts = await db.query.posts.findMany();
