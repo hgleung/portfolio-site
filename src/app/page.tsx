@@ -8,7 +8,7 @@ export default function HomePage() {
   // console.log(posts);
   return (
     <main className="flex min-h-screen flex-col items-center justify-center bg-ivory text-black">
-      Hello (in progress)
+      Hello (in construction)
     </main>
   );
 }
