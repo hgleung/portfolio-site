@@ -17,8 +17,8 @@
 - [ ] Analytics (posthog)
 - [ ] Ratelimiting (upstash)
 - [ ] Dark Mode
-- [ ] Topnav (Harry Leung, Light/Dark toggle, portfolio + resume on right)
-- [ ] Link resume
+- [X] Topnav (Harry Leung, Light/Dark toggle, portfolio + resume on right)
+- [X] Link resume
 - [ ] About me (short bio, UCI, location)
 - [ ] Portfolio
 - [ ] Link email, github, linkedin 
