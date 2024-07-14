@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 function TopNav() {
   return (
     <nav className="flex items-center justify-between w-full p-8 bg-ivory">
-      <Link href="/" className="text-xl font-semibold">
+      <Link href="/" className="harry text-xl font-semibold">
         Harry Leung
       </Link>
       <div className="flex space-x-10">
