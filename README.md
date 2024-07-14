@@ -1,5 +1,7 @@
 # Harry Leung's Portfolio
 
+### Built using T3
+
 ## TODO
 
 - [x] Make it deploy
@@ -7,8 +9,8 @@
 - [x] Tidy up build process
 - [x] Set up a database (vercel postgres)
 - [ ] Attach database to UI
-- [ ] Add auth
-- [ ] Add image upload
+- [ ] "taint" (server-only)
+- [ ] Use Next/Image component
 - [ ] Error management (with Sentry)
 - [ ] Routing/image page (parallel route)
 - [ ] Delete button (with server actions)
