@@ -8,7 +8,7 @@ export default function HomePage() {
   return (
     <main className="flex max-w-lg flex-col items-center self-center justify-center bg-ivory text-black">
       Hey, I'm Harry! I am currently studying Computer Science at UC Irvine with a specialization in Intelligent Systems.
-      In the past, I've worked in Software QA as an intern at Litepoint. Feel free to reach out!
+      In the past, I've worked in Software QA as an intern at Litepoint. I am currently located in the Bay Area. Feel free to reach out!
       <Footer />
     </main>
   );
