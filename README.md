@@ -15,4 +15,4 @@
 - [ ] Dark Mode
 - [ ] Attach database to UI
 - [ ] Portfolio
-- [ ] Mobile Layout
+- [x] Mobile Layout
