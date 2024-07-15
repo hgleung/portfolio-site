@@ -7,6 +7,9 @@ export default function HomePage() {
   // console.log(posts);
   return (
     <main className="flex flex-col items-center self-center justify-center bg-ivory text-black">
+      <div>
+        {/* <img src="./head.png" width={200} height={200} className='pb-4'></img> */}
+      </div>
       <div className='max-w-lg pb-10'>
       Hey, I'm Harry! I am currently studying Computer Science at UC Irvine with a specialization in Intelligent Systems.
       In the past, I've worked in Software QA as an intern at Litepoint. I am currently located in the Bay Area. Feel free to reach out!

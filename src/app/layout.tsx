@@ -26,6 +26,9 @@ function TopNav() {
         Harry Leung
       </Link>
       <div className="flex space-x-10">
+      <Link href="/notes">
+        Notes
+       </Link>
        <Link href="/portfolio">
         Portfolio
        </Link>
