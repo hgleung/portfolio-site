@@ -15,4 +15,8 @@
 - [ ] Dark Mode
 - [ ] Attach database to UI
 - [ ] Portfolio
+- [ ] Notes
+- [ ] New font and bg color
+- [ ] Background image
+- [ ] Right side of top nav into dropdown menu on mobile
 - [x] Mobile Layout
