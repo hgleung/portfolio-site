@@ -10,7 +10,7 @@ export default function HomePage() {
       <div>
         {/* <img src="./head.png" width={200} height={200} className='pb-4'></img> */}
       </div>
-      <div className='max-w-sm md:max-w-lg md:flex pb-10'>
+      <div className='max-w-64 md:max-w-lg md:flex pb-10'>
       Hey, I'm Harry! I am currently studying Computer Science at UC Irvine with a specialization in Intelligent Systems.
       In the past, I've worked in Software QA as an intern at Litepoint. I am currently located in the Bay Area. Feel free to reach out!
       </div>
