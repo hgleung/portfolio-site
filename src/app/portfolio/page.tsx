@@ -11,7 +11,7 @@ export default function Page() {
 
   // console.log(posts);
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center bg-ivory text-black">
+    <main className="flex flex-col items-center justify-center bg-ivory text-black">
       Portfolio Page (in construction)
     <Footer />
     </main>
