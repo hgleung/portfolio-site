@@ -21,11 +21,11 @@ export const metadata: Metadata = {
 
 function TopNav() {
   return (
-    <nav className="flex items-center justify-between w-full p-8 bg-ivory">
+    <nav className="flex items-center justify-between w-full p-8 bg-light-gray">
       <Link href="/" className="harry text-xl font-semibold">
         Harry Leung<span className="blink">_</span>
       </Link>
-      <div className="flex space-x-10">
+      <div className="flex space-x-10 text-charcoal">
       <Link href="/notes">
         Notes
        </Link>
@@ -45,7 +45,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${montserrat}`}>
-      <body className="flex flex-col gap-4 bg-ivory">
+      <body className="flex flex-col gap-4 bg-light-gray">
         <TopNav />
         {children}
       </body>

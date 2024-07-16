@@ -6,10 +6,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        'ivory': '#ede8d7',
+        'light-gray': '#f5f5f5',
+        'charcoal': '#2c3e50',
+        'my-green': '#2ecc71',
       },
       fontFamily: {
-        sans: ["var(--font-geist-sans)", ...fontFamily.sans],
+        sans: ["Montserrat", ...fontFamily.sans],
       },
     },
   },

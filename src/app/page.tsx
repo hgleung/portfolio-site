@@ -6,7 +6,7 @@ export default function HomePage() {
 
   // console.log(posts);
   return (
-    <main className="flex flex-col items-center self-center justify-center bg-ivory text-black">
+    <main className="flex flex-col items-center self-center justify-center bg-ivory text-charcoal">
       <div>
         {/* <img src="./head.png" width={200} height={200} className='pb-4'></img> */}
       </div>
