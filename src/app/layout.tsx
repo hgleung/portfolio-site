@@ -25,7 +25,7 @@ function TopNav() {
       <Link href="/" className="harry text-xl font-semibold">
         Harry Leung<span className="blink">_</span>
       </Link>
-      <div className="flex space-x-10 text-charcoal">
+      <div className="flex space-x-10 font-light text-charcoal">
       <Link href="/notes">
         Notes
        </Link>

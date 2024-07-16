@@ -6,7 +6,7 @@ export default function HomePage() {
 
   // console.log(posts);
   return (
-    <main className="flex flex-col items-center self-center justify-center bg-ivory text-charcoal">
+    <main className="flex font-light flex-col items-center self-center justify-center bg-ivory text-charcoal">
       <div>
         {/* <img src="./head.png" width={200} height={200} className='pb-4'></img> */}
       </div>
@@ -20,7 +20,7 @@ export default function HomePage() {
         <div className="col-span-12">
           <div className="flex flex-col space-y-3">
             <a href="mailto:hleung.cs@gmail.com" className="flex items-center space-x-4 group">
-              <strong className="flex-none font-medium" >
+              <strong className="flex-none font-normal" >
                 Email: hleung.cs@gmail.com
               </strong>
             <span className="w-full border-t border-gray-300 border-dashed shrink dark:border-gray-800"></span>
@@ -29,7 +29,7 @@ export default function HomePage() {
             </span>
             </a>
             <a href="https://github.com/hgleung" className="flex items-center space-x-4 group">
-              <strong className="flex-none font-medium">
+              <strong className="flex-none font-normal">
                 GitHub
               </strong>
             <span className="w-full border-t border-gray-300 border-dashed shrink dark:border-gray-800"></span>
@@ -38,7 +38,7 @@ export default function HomePage() {
             </span>
             </a>
             <a href="https://www.linkedin.com/in/harrygleung/" className="flex items-center space-x-4 group">
-              <strong className="flex-none font-medium">
+              <strong className="flex-none font-normal">
                 LinkedIn
               </strong>
             <span className="w-full border-t border-gray-300 border-dashed shrink dark:border-gray-800"></span>
