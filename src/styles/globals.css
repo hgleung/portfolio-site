@@ -7,6 +7,11 @@ a:hover {
     color:black;
 }
 
+strong:hover {
+    font-weight: 400;
+    color:black;
+}
+
 .harry:hover {
     font-weight: 600;
 }

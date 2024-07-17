@@ -28,27 +28,27 @@ export default function HomePage() {
         <div className="col-span-10">
           <div className="flex flex-col space-y-3">
             <a href="mailto:hleung.cs@gmail.com" className="flex items-center space-x-2 md:space-x-4 group">
-              <a className="flex-none font-normal md:font-light">
+              <strong className="flex-none font-normal md:font-light">
                 Email: hleung.cs@gmail.com
-              </a>
+              </strong>
             <span className="w-full border-t border-gray-800 border-dashed shrink"></span>
             <span className="flex-none text-tertiary text-sm md:text-base">
               Send
             </span>
             </a>
             <a href="https://github.com/hgleung" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-4 group">
-              <a className="flex-none font-normal md:font-light">
+              <strong className="flex-none font-normal md:font-light">
                 GitHub
-              </a>
+              </strong>
             <span className="w-full border-t border-gray-800 border-dashed shrink"></span>
             <span className="flex-none text-tertiary text-sm md:text-base">
               Follow
             </span>
             </a>
             <a href="https://www.linkedin.com/in/harrygleung/" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-4 group">
-              <a className="flex-none font-normal md:font-light">
+              <strong className="flex-none font-normal md:font-light">
                 LinkedIn
-              </a>
+              </strong>
             <span className="w-full border-t border-gray-800 border-dashed shrink"></span>
             <span className="flex-none text-tertiary text-sm md:text-base">
               Connect
