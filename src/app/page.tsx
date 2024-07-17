@@ -15,7 +15,7 @@ export default function HomePage() {
 
   // console.log(posts);
   return (
-    <main className="max-w-xl font-light items-center self-center justify-center bg-ivory text-charcoal">
+    <main className="max-w-64 md:max-w-xl font-light items-center self-center justify-center bg-ivory text-charcoal">
       <div className='grid items-start grid-cols-1 md:grid-cols-12 pb-4 md:pb-16'>
         <h4 className='col-span-2'> </h4>
         <div className='col-span-10'>
