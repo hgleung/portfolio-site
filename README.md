@@ -1,6 +1,6 @@
 # Harry Leung's Portfolio
 
-#### Built using T3
+Built using T3
 
 ## TODO
 
