@@ -15,7 +15,7 @@ function TopNav() {
   const pathname = usePathname()
 
   return (
-    <nav className="flex items-center justify-between w-full p-8 bg-light-gray">
+    <nav className="flex border-solid border-2 items-center justify-between w-full p-8 bg-light-gray">
       <Link href="/" className="harry text-xl font-semibold">
         Harry Leung<span className="blink">_</span>
       </Link>

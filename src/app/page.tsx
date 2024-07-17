@@ -16,14 +16,14 @@ export default function HomePage() {
   // console.log(posts);
   return (
     <main className="max-w-80 md:max-w-xl font-light items-center self-center justify-center bg-ivory text-charcoal">
-      <div className='grid items-start grid-cols-1 gap-6 md:grid-cols-12 pb-4 md:pb-16'>
+      <div className='grid items-start grid-cols-1 gap-6 md:grid-cols-12 pb-4 pt-12 md:pb-12'>
         <h4 className='col-span-2'> </h4>
         <div className='col-span-10'>
         Hey, I'm Harry! I am currently studying Computer Science at UC Irvine with a specialization in Intelligent Systems.
         In the past, I've worked in Software QA as an intern at Litepoint. I am currently located in the Bay Area. Feel free to reach out!
         </div>
         </div>
-      <div className="grid items-start grid-cols-1 gap-6 md:grid-cols-12 pb-8 md:pb-16">
+      <div className="grid items-start grid-cols-1 gap-6 md:grid-cols-12 pb-4 md:pb-12">
         <h4 className='col-span-2 font-extrabold md:font-medium pt-8 md:pt-0'>Online</h4>
         <div className="col-span-10">
           <div className="flex flex-col space-y-3">
@@ -57,12 +57,12 @@ export default function HomePage() {
           </div>
         </div>
       </div>
-      {/* <div className="grid items-start grid-cols-1 md:grid-cols-12">
+      <div className="grid items-start grid-cols-1 md:grid-cols-12">
         <h4 className='col-span-2'>Where</h4>
         <div className="col-span-10">
-    
+          <img className='rounded-lg' alt='Map of Irvine, CA with blue location dot in the middle'></img>
         </div>
-      </div> */}
+      </div>
     </main>
   );
 }
