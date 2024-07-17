@@ -28,7 +28,7 @@ export default function HomePage() {
               Send
             </span>
             </a>
-            <a href="https://github.com/hgleung" className="flex items-center space-x-4 group">
+            <a href="https://github.com/hgleung" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-4 group">
               <strong className="flex-none font-normal">
                 GitHub
               </strong>
@@ -37,7 +37,7 @@ export default function HomePage() {
               Follow
             </span>
             </a>
-            <a href="https://www.linkedin.com/in/harrygleung/" className="flex items-center space-x-4 group">
+            <a href="https://www.linkedin.com/in/harrygleung/" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-4 group">
               <strong className="flex-none font-normal">
                 LinkedIn
               </strong>
