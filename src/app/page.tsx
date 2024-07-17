@@ -57,12 +57,12 @@ export default function HomePage() {
           </div>
         </div>
       </div>
-      <div className="grid items-start grid-cols-1 md:grid-cols-12">
+      {/* <div className="grid items-start grid-cols-1 md:grid-cols-12">
         <h4 className='col-span-2'>Where</h4>
         <div className="col-span-10">
           <img className='rounded-lg' alt='Map of Irvine, CA with blue location dot in the middle'></img>
         </div>
-      </div>
+      </div> */}
     </main>
   );
 }
