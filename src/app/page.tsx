@@ -15,7 +15,7 @@ export default function HomePage() {
 
   // console.log(posts);
   return (
-    <main className="max-w-64 md:max-w-xl font-light items-center self-center justify-center bg-ivory text-charcoal">
+    <main className="max-w-80 md:max-w-xl font-light items-center self-center justify-center bg-ivory text-charcoal">
       <div className='grid items-start grid-cols-1 md:grid-cols-12 pb-4 md:pb-16'>
         <h4 className='col-span-2'> </h4>
         <div className='col-span-10'>
@@ -27,7 +27,7 @@ export default function HomePage() {
         <h4 className='col-span-2'>Online</h4>
         <div className="col-span-10">
           <div className="flex flex-col space-y-3">
-            <a href="mailto:hleung.cs@gmail.com" className="flex items-center space-x-4 group">
+            <a href="mailto:hleung.cs@gmail.com" className="flex items-center space-x-2 md:space-x-4 group">
               <strong className="flex-none font-normal">
                 Email: hleung.cs@gmail.com
               </strong>
