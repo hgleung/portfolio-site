@@ -16,7 +16,7 @@ export default function HomePage() {
   // console.log(posts);
   return (
     <main className="max-w-80 md:max-w-xl font-light items-center self-center justify-center bg-ivory text-charcoal">
-      <div className='grid items-start grid-cols-1 gap-6 md:grid-cols-12 pb-4 pt-12 md:pb-12'>
+      <div className='grid items-start grid-cols-1 gap-6 md:grid-cols-12 pb-4 pt-4 md:pt-12 md:pb-12'>
         <h4 className='col-span-2'> </h4>
         <div className='col-span-10'>
         Hey, I'm Harry! I am currently studying Computer Science at UC Irvine with a specialization in Intelligent Systems.
