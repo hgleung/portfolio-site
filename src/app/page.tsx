@@ -1,5 +1,14 @@
-export const dynamic = "force-dynamic";
 import Footer from '../components/Footer';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: {
+    template: 'Harry Leung | %s',
+    default: 'Harry Leung',
+  },
+  description: "Computer Science student and Software Engineer located in the Bay Area.",
+  icons: [{ rel: "icon", url: "/favicon.ico" }],
+};
 
 export default function HomePage() {
   // const posts = await db.query.posts.findMany();

@@ -1,8 +1,8 @@
+'use client';
+import { usePathname } from "next/navigation";
 import "~/styles/globals.css";
 
 import { Montserrat } from "next/font/google";
-import { Metadata } from "next";
-
 import Link from 'next/link';
 
 const montserrat = Montserrat({
@@ -10,26 +10,19 @@ const montserrat = Montserrat({
   subsets: ['latin']
 })
 
-export const metadata: Metadata = {
-  title: {
-    template: 'Harry Leung | %s',
-    default: 'Harry Leung',
-  },
-  description: "Computer Science student and Software Engineer located in the Bay Area.",
-  icons: [{ rel: "icon", url: "/favicon.ico" }],
-};
-
 function TopNav() {
+  const pathname = usePathname()
+
   return (
     <nav className="flex items-center justify-between w-full p-8 bg-light-gray">
       <Link href="/" className="harry text-xl font-semibold">
         Harry Leung<span className="blink">_</span>
       </Link>
       <div className="flex space-x-10 font-light text-charcoal">
-      <Link href="/notes">
+      <Link href="/notes" className={pathname === '/notes' ? 'text-black font-normal underline' : 'no-underline'}>
         Notes
        </Link>
-       <Link href="/portfolio">
+       <Link href="/portfolio" className={pathname === '/portfolio' ? 'text-black font-normal underline' : 'no-underline'}>
         Portfolio
        </Link>
        <Link href="/Harry_Leung_resume.pdf" target="_blank">
