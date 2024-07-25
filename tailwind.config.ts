@@ -1,4 +1,6 @@
 import type { Config } from "tailwindcss"
+import { fontFamily } from "tailwindcss/defaultTheme";
+
 
 const config = {
   darkMode: ["class"],
@@ -19,6 +21,9 @@ const config = {
     },
     extend: {
       colors: {
+        'light-gray': '#f5f5f5',
+        'charcoal': '#2c3e50',
+        'my-green': '#2ecc71',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -57,6 +62,9 @@ const config = {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      fontFamily: {
+        sans: ["Montserrat", ...fontFamily.sans],
       },
       keyframes: {
         "accordion-down": {
