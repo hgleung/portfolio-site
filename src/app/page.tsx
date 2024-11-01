@@ -1,5 +1,6 @@
 import Footer from '../components/Footer';
 import { Metadata } from 'next';
+import BrowserWindow from '../components/window';
 
 export const metadata: Metadata = {
   title: {
@@ -56,6 +57,14 @@ export default function HomePage() {
             </a>
           </div>
         </div>
+      </div>
+      <div className="grid items-start grid-cols-1 gap-6 md:grid-cols-12 pb-4 md:pb-12">
+        <h3 className='col-span-2 text-xl font-extrabold md:font-medium pt-8 md:pt-0'>Experience</h3>
+      </div>
+      <div>
+        <BrowserWindow url="Litepoint">
+          <p>Details added soon.</p>
+        </BrowserWindow>
       </div>
       {/* <div className="grid items-start grid-cols-1 md:grid-cols-12">
         <h4 className='col-span-2'>Where</h4>
