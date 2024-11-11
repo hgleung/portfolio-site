@@ -20,12 +20,11 @@ export default function HomePage() {
       <div className='grid items-start grid-cols-1 gap-6 md:grid-cols-12 pb-4 pt-4 md:pt-12 md:pb-12'>
         <h4 className='col-span-2'> </h4>
         <div className='col-span-10'>
-        Hey, I'm Harry! I am currently studying Computer Science at UC Irvine with a specialization in Intelligent Systems.
-        In the past, I've worked in Software QA as an intern at Litepoint. I am currently located in the Bay Area. Feel free to reach out!
+        Hey, I'm Harry! I am a Computer Science student at UC Irvine with a specialization in Intelligent Systems.
         </div>
         </div>
       <div className="grid items-start grid-cols-1 gap-6 md:grid-cols-12 pb-4 md:pb-12">
-        <h4 className='col-span-2 font-extrabold md:font-medium pt-8 md:pt-0'>Online</h4>
+        <h4 className='col-span-2 font-extrabold md:font-medium pt-8 md:pt-0'>Contact</h4>
         <div className="col-span-10">
           <div className="flex flex-col space-y-3">
             <a href="mailto:hleung.cs@gmail.com" className="flex items-center space-x-2 md:space-x-4 group">
@@ -59,12 +58,28 @@ export default function HomePage() {
         </div>
       </div>
       <div className="grid items-start grid-cols-1 gap-6 md:grid-cols-12 pb-4 md:pb-12">
-        <h3 className='col-span-2 text-xl font-extrabold md:font-medium pt-8 md:pt-0'>Experience</h3>
+      <h4 className='col-span-2 font-extrabold md:font-medium pt-8 md:pt-0'>Skills</h4>
       </div>
-      <div>
-        <BrowserWindow url="Litepoint">
-          <p>Details added soon.</p>
-        </BrowserWindow>
+      <div className="grid items-start grid-cols-1 gap-6 md:grid-cols-12 pb-4 md:pb-12">
+        <h4 className='col-span-2 font-extrabold md:font-medium pt-8 md:pt-0'>Experience</h4>
+        <div className="col-span-10">
+          <div className="flex flex-col space-y-3">
+          <BrowserWindow url="www.litepoint.com">
+            <p className="font-bold">LitePoint</p>
+            <p className='italic text-sm'>Software QA Intern</p>
+            <p className='italic text-sm'>Jun-Sep '23</p>
+            <p>• Developed a user-friendly GUI tool to display regression tester values, enhancing data visualization and decision-making.</p>
+            <p>• Implemented Apache Cassandra to optimize storage and retrieval of regression tester data, maximizing data
+            reliability and reducing query response time by over 96%.</p>
+            <p>• Designed and created an intuitive and responsive GUI using Tkinter, improving user interaction and reducing the
+            learning curve for the team.</p>
+            <p>• Integrated Matplotlib for data visualization, enabling the creation of insightful charts and graphs to enhance data
+            analysis.</p>
+            <p>• Significantly improved team efficiency by deploying the tool, facilitating quicker decision-making and higher-quality
+            regression testing outcomes.</p>
+          </BrowserWindow>
+          </div>
+        </div>
       </div>
       {/* <div className="grid items-start grid-cols-1 md:grid-cols-12">
         <h4 className='col-span-2'>Where</h4>

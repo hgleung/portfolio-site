@@ -10,6 +10,8 @@ interface BrowserWindowProps {
 }
 
 const BrowserWindow: React.FC<BrowserWindowProps> = ({ url, children }) => {
+  const formattedUrl = url.startsWith('http://') || url.startsWith('https://') ? url : `https://${url}`;
+
   return (
     <div className={styles.browserWindow}>
       <div className={styles.browserHeader}>
@@ -18,7 +20,11 @@ const BrowserWindow: React.FC<BrowserWindowProps> = ({ url, children }) => {
           <span className={styles.minimize} />
           <span className={styles.maximize} />
         </div>
-        <div className={styles.addressBar}>{url}</div>
+        <div className={styles.addressBar}>
+          <a href={formattedUrl} target="_blank" rel="noopener noreferrer">
+            {formattedUrl}
+          </a>
+        </div>
       </div>
       <div className={styles.browserContent}>
         {children}
