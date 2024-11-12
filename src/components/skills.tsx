@@ -8,8 +8,8 @@ import styles from './skills.module.css';
 const skills = [
   { name: 'Python', icon: <FaPython /> },
   { name: 'C++', icon: <SiCplusplus /> },
-  { name: 'HTML', icon: <FaHtml5 /> },
   { name: 'JavaScript', icon: <FaJs /> },
+  { name: 'HTML', icon: <FaHtml5 /> },
   { name: 'React.js', icon: <FaReact /> },
   { name: 'Next.js', icon: <SiNextdotjs /> },
   { name: 'Tailwind CSS', icon: <SiTailwindcss /> },
