@@ -62,9 +62,9 @@ export default function HomePage() {
       <h4 className='col-span-2 font-extrabold md:font-medium pt-8 md:pt-0'>Skills</h4>
         <div className="col-span-10">
           <Skills />
-          <div className="flex-none font-normal text-sm md:font-light pt-4">
+          {/* <div className="flex-none font-normal text-sm md:font-light pt-4">
                 Python, C++, JavaScript, HTML, React.js, Next.js, Tailwind CSS, Git, GitHub, mySQL, PostgreSQL, MongoDB 
-          </div>
+          </div> */}
         </div>
 
       </div>
