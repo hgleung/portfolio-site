@@ -1,0 +1,51 @@
+/* components/Skills.module.css */
+
+.skillsSection {
+    text-align: center;
+  }
+  
+  .skillsGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: left;
+  }
+  
+  .skillItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1rem;
+    position: relative;
+  }
+  
+  .icon {
+    font-size: 2rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+    position: relative;
+    cursor: pointer;
+
+    
+  }
+  
+  .skillItem:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .tooltip {
+    position: absolute;
+    bottom: 100%; /* Position above the icon */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease-in-out;
+  }
+  
