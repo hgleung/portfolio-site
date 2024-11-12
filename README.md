@@ -17,7 +17,9 @@ Built using T3
 - [ ] Portfolio
 - [ ] Notes
 - [x] New font and bg color
-- [ ] Background image
+- [ ] Skills icons hover
+- [ ] Profile icon
+- [ ] Experience tabs
 - [ ] Right side of top nav into dropdown menu on mobile
 - [x] Mobile Layout
 - [ ] Map
