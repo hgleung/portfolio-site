@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { FaPython, FaHtml5, FaCss3Alt, FaJs, FaReact, FaGitAlt, FaGithub } from 'react-icons/fa';
-import { SiCplusplus, SiNextdotjs, SiTailwindcss, SiMysql } from 'react-icons/si';
+import { SiCplusplus, SiNextdotjs, SiTailwindcss, SiMysql, SiPostgresql, SiMongodb } from 'react-icons/si';
 import styles from './skills.module.css';
 
 const skills = [
@@ -17,6 +17,9 @@ const skills = [
   { name: 'Git', icon: <FaGitAlt /> },
   { name: 'GitHub', icon: <FaGithub /> },
   { name: 'MySQL', icon: <SiMysql /> },
+  { name: 'PostgreSQL', icon: <SiPostgresql /> },
+  { name: 'MongoDB', icon: <SiMongodb /> },
+
 ];
 
 const Skills: React.FC = () => {

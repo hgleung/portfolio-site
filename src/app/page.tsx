@@ -17,7 +17,7 @@ export default function HomePage() {
 
   // console.log(posts);
   return (
-    <main className="max-w-80 md:max-w-xl font-light items-center self-center justify-center bg-ivory text-charcoal">
+    <main className="max-w-80 md:max-w-4xl font-light items-center self-center justify-center bg-ivory text-charcoal">
       <div className='grid items-start grid-cols-1 gap-6 md:grid-cols-12 pb-4 pt-4 md:pt-12 md:pb-12'>
         <h4 className='col-span-2'> </h4>
         <div className='col-span-10'>
@@ -60,8 +60,11 @@ export default function HomePage() {
       </div>
       <div className="grid items-start grid-cols-1 gap-6 md:grid-cols-12 pb-4 md:pb-12">
       <h4 className='col-span-2 font-extrabold md:font-medium pt-8 md:pt-0'>Skills</h4>
-        <div className="col-span-8">
+        <div className="col-span-10">
           <Skills />
+          <div className="flex-none font-normal text-sm md:font-light pt-4">
+                Python, C++, HTML, CSS, JavaScript, React.js, Next.js, Tailwind CSS, Git, GitHub, mySQL, PostgreSQL, MongoDB 
+          </div>
         </div>
 
       </div>
