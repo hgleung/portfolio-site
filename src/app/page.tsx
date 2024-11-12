@@ -63,7 +63,7 @@ export default function HomePage() {
         <div className="col-span-10">
           <Skills />
           <div className="flex-none font-normal text-sm md:font-light pt-4">
-                Python, C++, HTML, CSS, JavaScript, React.js, Next.js, Tailwind CSS, Git, GitHub, mySQL, PostgreSQL, MongoDB 
+                Python, C++, HTML, JavaScript, React.js, Next.js, Tailwind CSS, Git, GitHub, mySQL, PostgreSQL, MongoDB 
           </div>
         </div>
 
