@@ -51,6 +51,33 @@
     color: #333;
   }
   
+  .tabs {
+    display: flex;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .tab {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    background-color: #f8f8f8;
+    border: none;
+    outline: none;
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .tab:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .activeTab {
+    background-color: white;
+    color: #333;
+    font-weight: bold;
+    border-bottom: 2px solid #333;
+  }
+
   .browserContent {
     padding: 1rem;
   }

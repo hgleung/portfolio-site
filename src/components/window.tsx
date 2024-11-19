@@ -1,16 +1,27 @@
 // components/BrowserWindow.tsx
+'use client'
 
-import React, { ReactNode } from 'react';
+import React, { useState, ReactNode } from 'react';
 import styles from './BrowserWindow.module.css';
+import { Client } from '@vercel/postgres';
 
-// Define props type for the component
+interface Tab {
+  label: string;
+  content: ReactNode;
+  url: string
+} 
+
 interface BrowserWindowProps {
-  url: string;
-  children: ReactNode;
+  tabs: Tab[];
 }
 
-const BrowserWindow: React.FC<BrowserWindowProps> = ({ url, children }) => {
-  const formattedUrl = url.startsWith('http://') || url.startsWith('https://') ? url : `https://${url}`;
+const BrowserWindow: React.FC<BrowserWindowProps> = ({ tabs }) => {
+  const [activeTab, setActiveTab] = useState<number>(0);
+  
+  const activeUrl = tabs[activeTab]?.url.startsWith('http://') || tabs[activeTab]?.url.startsWith('https://')
+    ? tabs[activeTab]?.url
+    : `https://${tabs[activeTab]?.url}`;
+
 
   return (
     <div className={styles.browserWindow}>
@@ -21,13 +32,24 @@ const BrowserWindow: React.FC<BrowserWindowProps> = ({ url, children }) => {
           <span className={styles.maximize} />
         </div>
         <div className={styles.addressBar}>
-          <a href={formattedUrl} target="_blank" rel="noopener noreferrer">
-            {formattedUrl}
+          <a href={activeUrl} target="_blank" rel="noopener noreferrer">
+            {activeUrl}
           </a>
         </div>
       </div>
+      <div className={styles.tabs}>
+      {tabs.map((tab, index) => (
+          <button
+            key={index}
+            className={`${styles.tab} ${index === activeTab ? styles.activeTab : ''}`}
+            onClick={() => setActiveTab(index)}
+          >
+            {tab.label}
+          </button>
+        ))}
+      </div>
       <div className={styles.browserContent}>
-        {children}
+        {tabs[activeTab]?.content || <p>No content available.</p>}
       </div>
     </div>
   );

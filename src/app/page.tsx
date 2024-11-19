@@ -1,4 +1,3 @@
-import Footer from '../components/Footer';
 import { Metadata } from 'next';
 import BrowserWindow from '../components/window';
 import Skills from '../components/skills';
@@ -13,6 +12,25 @@ export const metadata: Metadata = {
 };
 
 export default function HomePage() {
+  const tabs = [
+    { label: 'Litepoint', content: (
+      <div>
+        <p className="font-bold">LitePoint</p>
+            <p className='italic text-sm'>Software QA Intern</p>
+            <p className='italic text-sm'>Jun-Sep '23</p>
+            <p>• Developed a user-friendly GUI tool to display regression tester values, enhancing data visualization and decision-making.</p>
+            <p>• Implemented Apache Cassandra to optimize storage and retrieval of regression tester data, maximizing data
+            reliability and reducing query response time by over 96%.</p>
+            <p>• Designed and created an intuitive and responsive GUI using Tkinter, improving user interaction and reducing the
+            learning curve for the team.</p>
+            <p>• Integrated Matplotlib for data visualization, enabling the creation of insightful charts and graphs to enhance data
+            analysis.</p>
+            <p>• Significantly improved team efficiency by deploying the tool, facilitating quicker decision-making and higher-quality
+            regression testing outcomes.</p>
+      </div>
+    ), url:"www.litepoint.com",},
+    { label: 'WIP', content: <p>More to be added.</p>, url:"work.in.progress"}
+  ];
   // const posts = await db.query.posts.findMany();
 
   // console.log(posts);
@@ -72,20 +90,7 @@ export default function HomePage() {
         <h4 className='col-span-2 font-extrabold md:font-medium pt-8 md:pt-0'>Experience</h4>
         <div className="col-span-10">
           <div className="flex flex-col space-y-3">
-          <BrowserWindow url="www.litepoint.com">
-            <p className="font-bold">LitePoint</p>
-            <p className='italic text-sm'>Software QA Intern</p>
-            <p className='italic text-sm'>Jun-Sep '23</p>
-            <p>• Developed a user-friendly GUI tool to display regression tester values, enhancing data visualization and decision-making.</p>
-            <p>• Implemented Apache Cassandra to optimize storage and retrieval of regression tester data, maximizing data
-            reliability and reducing query response time by over 96%.</p>
-            <p>• Designed and created an intuitive and responsive GUI using Tkinter, improving user interaction and reducing the
-            learning curve for the team.</p>
-            <p>• Integrated Matplotlib for data visualization, enabling the creation of insightful charts and graphs to enhance data
-            analysis.</p>
-            <p>• Significantly improved team efficiency by deploying the tool, facilitating quicker decision-making and higher-quality
-            regression testing outcomes.</p>
-          </BrowserWindow>
+            <BrowserWindow tabs={tabs} />
           </div>
         </div>
       </div>
