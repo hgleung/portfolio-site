@@ -20,12 +20,12 @@ function TopNav() {
         Harry Leung<span className="blink">_</span>
       </Link>
       <div className="flex space-x-10 font-light text-charcoal">
-      <Link href="/notes" className={pathname === '/notes' ? 'text-black font-normal underline' : 'no-underline'}>
+      {/* <Link href="/notes" className={pathname === '/notes' ? 'text-black font-normal underline' : 'no-underline'}>
         Notes
        </Link>
        <Link href="/portfolio" className={pathname === '/portfolio' ? 'text-black font-normal underline' : 'no-underline'}>
         Portfolio
-       </Link>
+       </Link> */}
        <Link href="/Harry_Leung_resume.pdf" target="_blank">
         Resume
        </Link>
