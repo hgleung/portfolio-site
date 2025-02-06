@@ -23,8 +23,24 @@ export default function HomePage() {
         <h1 className="text-3xl font-extrabold tracking-tight sm:text-6xl md:text-7xl lg:text-8xl bg-gradient-to-r from-green-600 via-green-500 to-lime-400 bg-clip-text text-transparent animate-text py-2">
           Hi, I'm Harry.
         </h1>
+        <div className="mt-12 pt-2 flex flex-col items-center text-gray-600">
+          <p className="mb-4 text-sm font-light">Learn more about me</p>
+          <svg 
+            className="w-6 h-6 animate-bounce"
+            fill="none" 
+            stroke="currentColor" 
+            viewBox="0 0 24 24" 
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path 
+              strokeLinecap="round" 
+              strokeLinejoin="round" 
+              strokeWidth={2} 
+              d="M19 14l-7 7m0 0l-7-7m7 7V3"
+            />
+          </svg>
+        </div>
       </div>
-      <div className="h-[15vh]"></div>
       <div id="about" className="grid items-start grid-cols-1 gap-6 md:grid-cols-12 pb-4 pt-4 md:pt-12 md:pb-12 w-full">
         <h4 className="col-span-2 font-extrabold md:font-medium">About</h4>
         <div className="col-span-10">
