@@ -75,10 +75,21 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        "text-gradient": {
+          "0%, 100%": {
+            "background-size": "400% 400%",
+            "background-position": "0% center",
+          },
+          "50%": {
+            "background-size": "400% 400%",
+            "background-position": "100% center",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "text": "text-gradient 8s ease infinite",
       },
     },
   },

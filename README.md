@@ -4,22 +4,16 @@ Built using T3
 
 ## TODO
 
-- [x] Make it deploy
-- [x] Scaffold basic ui with mock data
-- [x] Tidy up build process
-- [x] Set up a database (vercel postgres)
-- [x] About me (short bio, UCI, location)
-- [x] Link email, github, linkedin 
-- [X] Topnav (Harry Leung, Light/Dark toggle, portfolio + resume on right)
-- [X] Link resume
-- [ ] Dark Mode
-- [ ] Attach database to UI
+- [ ] About me section
+- [x] Education tab under Experience
+- [ ] Revamp skills icons (labels and colored icons)
+- [ ] UI for about me, contact, and skills
+- [ ] Scrolling header
+- [ ] Make header tighter
+
+- [ ] Connect database
 - [ ] Portfolio
 - [ ] Notes
-- [x] New font and bg color
-- [ ] Skills icons hover
-- [ ] Profile icon
-- [ ] Experience tabs
+- [ ] Profile picture
 - [ ] Right side of top nav into dropdown menu on mobile
-- [x] Mobile Layout
 - [ ] Map
