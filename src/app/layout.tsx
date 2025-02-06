@@ -5,14 +5,23 @@ import "~/styles/globals.css";
 
 import { Montserrat } from "next/font/google";
 import Link from 'next/link';
+import { useActiveSection } from '../hooks/useActiveSection';
 
 const montserrat = Montserrat({
   weight: '500',
   subsets: ['latin']
 })
 
+const sections = [
+  { name: 'About', id: 'about' },
+  { name: 'Skills', id: 'skills' },
+  { name: 'Experience', id: 'experience' },
+  { name: 'Contact', id: 'contact' },
+]
+
 function TopNav() {
   const pathname = usePathname()
+  const activeSection = useActiveSection(sections.map(s => s.id))
   
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -34,22 +43,22 @@ function TopNav() {
         <Link href="/" className="harry text-xl font-semibold">
           Harry Leung<span className="blink">_</span>
         </Link>
-        {[
-          { name: 'About', id: 'about' },
-          { name: 'Skills', id: 'skills' },
-          { name: 'Experience', id: 'experience' },
-          { name: 'Contact', id: 'contact' },
-        ].map((item) => (
+        {sections.map((item) => (
           <button
             key={item.id}
             onClick={() => scrollToSection(item.id)}
-            className="font-light text-charcoal hover:text-green-600 transition-colors duration-200"
+            className={`font-light text-charcoal hover:text-green-600 transition-all duration-200 px-3 py-1 rounded-md relative
+              ${activeSection === item.id ? 'text-green-600 bg-green-50' : ''}`}
           >
             {item.name}
           </button>
         ))}
       </div>
-      <Link href="/Harry_Leung_resume.pdf" target="_blank" className="font-light text-charcoal hover:text-green-600 transition-colors duration-200">
+      <Link 
+        href="/Harry_Leung_resume.pdf" 
+        target="_blank" 
+        className="font-light text-charcoal hover:text-green-600 transition-colors duration-200"
+      >
         Resume
       </Link>
     </nav>
