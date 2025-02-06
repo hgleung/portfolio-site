@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   return (
-    <main className="max-w-80 md:max-w-4xl font-light items-center self-center justify-center bg-ivory text-charcoal">
+    <main className="max-w-80 md:max-w-4xl mx-auto font-light items-center self-center justify-center bg-ivory text-charcoal pt-32">
       <div className="flex flex-col items-center justify-center text-center">
         {/* Profile Picture Placeholder */}
         <div className="w-48 h-48 rounded-full bg-gray-200 mb-8 mt-12">
@@ -24,7 +24,7 @@ export default function HomePage() {
           Hi, I'm Harry.
         </h1>
       </div>
-      <div className="grid items-start grid-cols-1 gap-6 md:grid-cols-12 pb-4 pt-4 md:pt-12 md:pb-12 w-full">
+      <div id="about" className="grid items-start grid-cols-1 gap-6 md:grid-cols-12 pb-4 pt-4 md:pt-12 md:pb-12 w-full">
         <h4 className="col-span-2 font-extrabold md:font-medium">About</h4>
         <div className="col-span-10">
           <p className="mb-4">
@@ -38,7 +38,19 @@ export default function HomePage() {
           </p>
         </div>
       </div>
-      <div className="grid items-start grid-cols-1 gap-6 md:grid-cols-12 pb-4 md:pb-12">
+      <div id="skills" className="grid items-start grid-cols-1 gap-6 md:grid-cols-12 pb-4 md:pb-12">
+        <h4 className="col-span-2 font-extrabold md:font-medium pt-8 md:pt-0">Skills</h4>
+        <div className="col-span-10">
+          <Skills />
+        </div>
+      </div>
+      <div id="experience" className="grid items-start grid-cols-1 gap-6 md:grid-cols-12 pb-4 md:pb-12">
+        <h4 className="col-span-2 font-extrabold md:font-medium pt-8 md:pt-0">Experience</h4>
+        <div className="col-span-10">
+          <BrowserWindow tabs={experienceTabs} />
+        </div>
+      </div>
+      <div id="contact" className="grid items-start grid-cols-1 gap-6 md:grid-cols-12 pb-4 md:pb-12">
         <h4 className="col-span-2 font-extrabold md:font-medium pt-8 md:pt-0">Contact</h4>
         <div className="col-span-10">
           <div className="flex flex-col space-y-3">
@@ -70,18 +82,6 @@ export default function HomePage() {
               </span>
             </a>
           </div>
-        </div>
-      </div>
-      <div className="grid items-start grid-cols-1 gap-6 md:grid-cols-12 pb-4 md:pb-12">
-        <h4 className="col-span-2 font-extrabold md:font-medium pt-8 md:pt-0">Skills</h4>
-        <div className="col-span-10">
-          <Skills />
-        </div>
-      </div>
-      <div className="grid items-start grid-cols-1 gap-6 md:grid-cols-12 pb-4 md:pb-12">
-        <h4 className="col-span-2 font-extrabold md:font-medium pt-8 md:pt-0">Experience</h4>
-        <div className="col-span-10">
-          <BrowserWindow tabs={experienceTabs} />
         </div>
       </div>
     </main>

@@ -19,7 +19,7 @@ export const experienceTabs: ExperienceTab[] = [
         learning curve for the team.</p>
         <p>• Integrated Matplotlib for data visualization, enabling the creation of insightful charts and graphs to enhance data
         analysis.</p>
-        <p>• Significantly improved team efficiency by deploying the tool, facilitating quicker decision-making and higher-quality
+        <p>• Improved team efficiency significantly by deploying the tool, facilitating quicker decision-making and higher-quality
         regression testing outcomes.</p>
       </div>
     ), 
