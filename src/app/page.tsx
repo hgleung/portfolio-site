@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import BrowserWindow from '../components/window';
 import Skills from '../components/skills';
+import ScrollButton from '../components/ScrollButton';
 import { experienceTabs } from '../data/experience';
 
 export const metadata: Metadata = {
@@ -52,21 +53,7 @@ export default function HomePage() {
           </a>
         </div>
         <div className="mt-12 flex flex-col items-center text-gray-600">
-          <p className="mb-4 text-sm font-light">Learn more about me</p>
-          <svg 
-            className="w-6 h-6 animate-bounce"
-            fill="none" 
-            stroke="currentColor" 
-            viewBox="0 0 24 24" 
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path 
-              strokeLinecap="round" 
-              strokeLinejoin="round" 
-              strokeWidth={2} 
-              d="M19 14l-7 7m0 0l-7-7m7 7V3"
-            />
-          </svg>
+          <ScrollButton />
         </div>
       </div>
       <div id="about" className="grid items-start grid-cols-1 gap-6 md:grid-cols-12 pb-4 pt-4 md:pt-16 md:pb-12 w-full">

@@ -6,6 +6,7 @@ import "~/styles/globals.css";
 import { Montserrat } from "next/font/google";
 import Link from 'next/link';
 import { useActiveSection } from '../hooks/useActiveSection';
+import MobileNav from '../components/MobileNav';
 
 const montserrat = Montserrat({
   weight: '500',
@@ -39,10 +40,12 @@ function TopNav() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 flex border-solid border-b-2 items-center justify-between w-full p-8 bg-light-gray/95 backdrop-blur-sm z-50">
-      <div className="flex items-center space-x-10">
-        <Link href="/" className="harry text-xl font-semibold">
-          Harry Leung<span className="blink">_</span>
-        </Link>
+      <Link href="/" className="harry text-xl font-semibold">
+        Harry Leung<span className="blink">_</span>
+      </Link>
+      
+      {/* Desktop Navigation */}
+      <div className="hidden md:flex items-center space-x-10">
         {sections.map((item) => (
           <button
             key={item.id}
@@ -53,14 +56,17 @@ function TopNav() {
             {item.name}
           </button>
         ))}
+        <Link 
+          href="/Harry_Leung_resume.pdf" 
+          target="_blank" 
+          className="font-light text-charcoal hover:text-green-600 transition-colors duration-200"
+        >
+          Resume
+        </Link>
       </div>
-      <Link 
-        href="/Harry_Leung_resume.pdf" 
-        target="_blank" 
-        className="font-light text-charcoal hover:text-green-600 transition-colors duration-200"
-      >
-        Resume
-      </Link>
+
+      {/* Mobile Navigation */}
+      <MobileNav sections={sections} onSectionClick={scrollToSection} />
     </nav>
   )
 }
