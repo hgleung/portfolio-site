@@ -40,23 +40,28 @@ function TopNav() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 flex border-solid border-b-2 items-center justify-between w-full p-8 bg-light-gray/95 backdrop-blur-sm" style={{ zIndex: 9997 }}>
-      <Link href="/" className="harry text-xl font-semibold">
-        Harry Leung<span className="blink">_</span>
-      </Link>
-      
-      {/* Desktop Navigation */}
-      <div className="hidden md:flex items-center space-x-10">
-        {sections.map((item) => (
-          <button
-            key={item.id}
-            onClick={() => scrollToSection(item.id)}
-            className={`font-light text-charcoal hover:text-green-600 transition-all duration-200 px-3 py-1 rounded-md relative
-              ${activeSection === item.id ? 'text-green-600 bg-green-50' : ''}`}
-          >
-            {item.name}
-          </button>
-        ))}
+    <nav className="fixed top-0 left-0 right-0 flex border-solid border-b-2 items-center w-full p-8 bg-light-gray/95 backdrop-blur-sm" style={{ zIndex: 9997 }}>
+      <div className="flex items-center space-x-10">
+        <Link href="/" className="harry text-xl font-semibold">
+          Harry Leung<span className="blink">_</span>
+        </Link>
+        
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex items-center space-x-8">
+          {sections.map((item) => (
+            <button
+              key={item.id}
+              onClick={() => scrollToSection(item.id)}
+              className={`font-light text-charcoal hover:text-green-600 transition-all duration-200 px-3 py-1 rounded-md relative
+                ${activeSection === item.id ? 'text-green-600 bg-green-50' : ''}`}
+            >
+              {item.name}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div className="hidden md:flex items-center ml-auto">
         <Link 
           href="/Harry_Leung_resume.pdf" 
           target="_blank" 
@@ -67,7 +72,9 @@ function TopNav() {
       </div>
 
       {/* Mobile Navigation */}
-      <MobileNav sections={sections} onSectionClick={scrollToSection} />
+      <div className="flex md:hidden ml-auto">
+        <MobileNav sections={sections} onSectionClick={scrollToSection} />
+      </div>
     </nav>
   )
 }
