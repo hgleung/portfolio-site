@@ -20,7 +20,7 @@ export default function ScrollButton() {
       onClick={scrollToAbout}
       className="flex flex-col items-center hover:text-green-600 transition-colors duration-200"
     >
-      <p className="mb-4 text-sm font-light">Learn more about me</p>
+      <p className="mb-2 md:mb-4 text-sm font-light">Learn more about me</p>
       <svg 
         className="w-6 h-6 animate-bounce"
         fill="none" 

@@ -52,11 +52,11 @@ export default function HomePage() {
             LinkedIn
           </a>
         </div>
-        <div className="mt-12 flex flex-col items-center text-gray-600">
+        <div className="mt-6 md:mt-12 flex flex-col items-center text-gray-600">
           <ScrollButton />
         </div>
       </div>
-      <div id="about" className="grid items-start grid-cols-1 gap-6 md:grid-cols-12 pb-4 pt-4 md:pt-16 md:pb-12 w-full">
+      <div id="about" className="grid items-start grid-cols-1 gap-6 md:grid-cols-12 pb-4 pt-4 md:pt-12 md:pb-12 w-full">
         <h4 className="col-span-2 font-extrabold md:font-medium">About</h4>
         <div className="col-span-10">
           <p className="mb-4">
