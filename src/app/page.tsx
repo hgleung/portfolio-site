@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import BrowserWindow from '../components/window';
 import Skills from '../components/skills';
 import ScrollButton from '../components/ScrollButton';
-import { experienceTabs } from '../data/experience';
+import { experienceTabs } from '../components/experience';
 import Projects from '../components/Projects';
 
 export const metadata: Metadata = {
