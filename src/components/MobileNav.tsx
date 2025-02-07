@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 
 interface MobileNavProps {
@@ -10,6 +10,18 @@ interface MobileNavProps {
 
 export default function MobileNav({ sections, onSectionClick }: MobileNavProps) {
   const [isOpen, setIsOpen] = useState(false)
+
+  // Prevent scrolling when menu is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'unset'
+    }
+    return () => {
+      document.body.style.overflow = 'unset'
+    }
+  }, [isOpen])
 
   const handleSectionClick = (sectionId: string) => {
     onSectionClick(sectionId)
@@ -38,19 +50,22 @@ export default function MobileNav({ sections, onSectionClick }: MobileNavProps) 
         </svg>
       </button>
 
-      {/* Overlay */}
-      {isOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 z-40" onClick={() => setIsOpen(false)} />
-      )}
+      {/* Full screen overlay */}
+      <div 
+        className={`fixed inset-0 transition-opacity duration-300 ${
+          isOpen ? 'opacity-100 z-40' : 'opacity-0 pointer-events-none'
+        }`} 
+        onClick={() => setIsOpen(false)} 
+      />
 
       {/* Menu */}
       <div
-        className={`fixed right-0 top-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-200 ease-in-out z-50 ${
+        className={`fixed right-0 top-0 h-screen w-full max-w-sm bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50 ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
-        <div className="flex flex-col p-4">
-          <div className="flex justify-end">
+        <div className="flex flex-col h-full">
+          <div className="flex justify-end p-6 border-b">
             <button
               onClick={() => setIsOpen(false)}
               className="p-2 text-gray-600 hover:text-green-600 transition-colors duration-200"
@@ -71,12 +86,12 @@ export default function MobileNav({ sections, onSectionClick }: MobileNavProps) 
               </svg>
             </button>
           </div>
-          <div className="flex flex-col space-y-4 mt-8">
+          <div className="flex flex-col p-6 space-y-6">
             {sections.map((item) => (
               <button
                 key={item.id}
                 onClick={() => handleSectionClick(item.id)}
-                className="px-4 py-2 text-left text-gray-700 hover:text-green-600 hover:bg-gray-50 rounded-md transition-colors duration-200"
+                className="px-4 py-3 text-left text-lg text-gray-700 hover:text-green-600 hover:bg-gray-50 rounded-md transition-colors duration-200"
               >
                 {item.name}
               </button>
@@ -84,7 +99,7 @@ export default function MobileNav({ sections, onSectionClick }: MobileNavProps) 
             <Link
               href="/Harry_Leung_resume.pdf"
               target="_blank"
-              className="px-4 py-2 text-left text-gray-700 hover:text-green-600 hover:bg-gray-50 rounded-md transition-colors duration-200"
+              className="px-4 py-3 text-left text-lg text-gray-700 hover:text-green-600 hover:bg-gray-50 rounded-md transition-colors duration-200"
             >
               Resume
             </Link>

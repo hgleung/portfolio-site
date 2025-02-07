@@ -39,7 +39,7 @@ function TopNav() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 flex border-solid border-b-2 items-center justify-between w-full p-8 bg-light-gray/95 backdrop-blur-sm z-50">
+    <nav className="fixed top-0 left-0 right-0 flex border-solid border-b-2 items-center justify-between w-full p-8 bg-light-gray/95 backdrop-blur-sm" style={{ zIndex: 9997 }}>
       <Link href="/" className="harry text-xl font-semibold">
         Harry Leung<span className="blink">_</span>
       </Link>
