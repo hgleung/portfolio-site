@@ -3,6 +3,7 @@ import BrowserWindow from '../components/window';
 import Skills from '../components/skills';
 import ScrollButton from '../components/ScrollButton';
 import { experienceTabs } from '../data/experience';
+import Projects from '../components/Projects';
 
 export const metadata: Metadata = {
   title: {
@@ -80,6 +81,12 @@ export default function HomePage() {
         <h4 className="col-span-2 font-extrabold md:font-medium pt-8 md:pt-0">Experience</h4>
         <div className="col-span-10">
           <BrowserWindow tabs={experienceTabs} />
+        </div>
+      </div>
+      <div id="projects" className="grid items-start grid-cols-1 gap-6 md:grid-cols-12 pb-4 md:pb-12">
+        <h4 className="col-span-2 font-extrabold md:font-medium pt-8 md:pt-0">Projects</h4>
+        <div className="col-span-10">
+          <Projects />
         </div>
       </div>
       <div id="contact" className="grid items-start grid-cols-1 gap-6 md:grid-cols-12 pb-4 md:pb-12">

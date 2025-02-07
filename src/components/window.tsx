@@ -5,7 +5,7 @@ import React, { useState, ReactNode } from 'react';
 import styles from './BrowserWindow.module.css';
 import { Client } from '@vercel/postgres';
 
-interface Tab {
+export interface Tab {
   label: string;
   content: ReactNode;
   url: string

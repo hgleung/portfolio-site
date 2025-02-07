@@ -1,16 +1,19 @@
+import { ReactNode } from 'react'
+
 interface ExperienceTab {
   label: string;
-  content: JSX.Element;
+  content: ReactNode;
   url: string;
 }
 
 export const experienceTabs: ExperienceTab[] = [
   { 
     label: 'Litepoint', 
+    url: 'https://www.litepoint.com',
     content: (
       <div>
         <p className="font-bold">LitePoint</p>
-        <p className="italic text-sm">Software QA Intern</p>
+        <p className="italic text-sm">Software Engineering Intern - QA Automation</p>
         <p className="italic text-sm">Jun-Sep 2023</p>
         <p>• Developed a user-friendly GUI tool to display regression tester values, enhancing data visualization and decision-making.</p>
         <p>• Implemented Apache Cassandra to optimize storage and retrieval of regression tester data, maximizing data
@@ -23,10 +26,10 @@ export const experienceTabs: ExperienceTab[] = [
         regression testing outcomes.</p>
       </div>
     ), 
-    url: "www.litepoint.com"
   },
   { 
     label: 'Education', 
+    url: 'https://www.uci.edu',
     content: (
       <div>
         <p className="font-bold">University of California, Irvine</p>
@@ -63,6 +66,16 @@ export const experienceTabs: ExperienceTab[] = [
         </div>
       </div>
     ), 
-    url: "uci.edu"
   },
+  { 
+    label: 'Next', 
+    url: '#',
+    content: (
+      <div>
+        <p className="font-bold">Next Experience</p>
+        <p className="italic text-sm">Coming Soon</p>
+        <p>Stay tuned for my next exciting opportunity!</p>
+      </div>
+    ), 
+  }
 ];
