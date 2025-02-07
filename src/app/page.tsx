@@ -57,18 +57,22 @@ export default function HomePage() {
           <ScrollButton />
         </div>
       </div>
-      <div id="about" className="grid items-start grid-cols-1 gap-6 md:grid-cols-12 pb-4 pt-4 md:pt-12 md:pb-12 w-full">
+      <div id="about" className="grid items-start grid-cols-1 gap-6 md:grid-cols-12 pt-4 md:pt-12 md:pb-12 w-full">
         <h4 className="col-span-2 font-extrabold md:font-medium">About</h4>
         <div className="col-span-10">
-          <p className="mb-4">
-            I am a Computer Science student at UC Irvine specializing in Intelligent Systems. My passion lies in developing innovative solutions that bridge the gap between cutting-edge technology and practical applications.
-          </p>
-          <p className="mb-4">
-            With a strong foundation in software development and a keen interest in AI/ML, I strive to create impactful solutions that make a difference. I'm particularly excited about the intersection of artificial intelligence and software engineering.
-          </p>
-          <p>
-            When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or working on personal projects that challenge my skills and creativity.
-          </p>
+          <div className="bg-white/50 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-gray-100">
+            <div className="space-y-4">
+              <p className="text-gray-700 leading-relaxed">
+                I'm a Computer Science student at UC Irvine focusing on AI, where I get to combine my love for problem-solving with cutting-edge tech. Most of my time is spent turning complex ideas into practical applications that people actually want to use.
+              </p>
+              <p className="text-gray-700 leading-relaxed">
+                My current obsession is exploring how AI/ML can enhance developer tools - I'm constantly experimenting with new ways to make coding more intuitive. When I'm not neck-deep in code, you'll find me contributing to open source projects or building random apps that solve problems I encounter in daily life.
+              </p>
+              <p className="text-gray-700 leading-relaxed">
+                What really gets me excited? That moment when abstract concepts click into working solutions. I'm always looking for new challenges that push me to grow as both an engineer and a creative thinker. Feel free to reach out to discuss any opportunities or just say hi!
+              </p>
+            </div>
+          </div>
         </div>
       </div>
       <div id="skills" className="grid items-start grid-cols-1 gap-6 md:grid-cols-12 pb-4 md:pb-12">
@@ -93,32 +97,45 @@ export default function HomePage() {
         <h4 className="col-span-2 font-extrabold md:font-medium pt-8 md:pt-0">Contact</h4>
         <div className="col-span-10">
           <div className="border border-gray-200 rounded-lg bg-white shadow-sm p-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
               <a 
                 href="mailto:hleung.cs@gmail.com" 
-                className="flex flex-col items-center p-4 rounded-lg hover:bg-gray-50 transition-colors duration-200 group"
+                className="flex flex-col items-center p-2 rounded-lg hover:bg-gray-50 transition-colors duration-200 group"
               >
-                <div className="w-12 h-12 flex items-center justify-center rounded-full bg-green-100 mb-3 group-hover:bg-green-200 transition-colors duration-200">
-                  <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-10 h-10 flex items-center justify-center rounded-full bg-green-100 mb-2 group-hover:bg-green-200 transition-colors duration-200">
+                  <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                 </div>
-                <span className="text-sm font-medium text-gray-900 mb-1">Email</span>
+                <span className="text-sm font-medium text-gray-900 mb-0.5">Email</span>
                 <span className="text-sm text-gray-500">hleung.cs@gmail.com</span>
               </a>
-
+              <a 
+                href="https://x.com/hleung_dev" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex flex-col items-center p-2 rounded-lg hover:bg-gray-50 transition-colors duration-200 group"
+              >
+                <div className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 mb-2 group-hover:bg-gray-200 transition-colors duration-200">
+                  <svg className="w-5 h-5 text-gray-900" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                  </svg>
+                </div>
+                <span className="text-sm font-medium text-gray-900 mb-0.5">X</span>
+                <span className="text-sm text-gray-500">hleung_dev</span>
+              </a>
               <a 
                 href="https://www.linkedin.com/in/harrygleung/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="flex flex-col items-center p-4 rounded-lg hover:bg-gray-50 transition-colors duration-200 group"
+                className="flex flex-col items-center p-2 rounded-lg hover:bg-gray-50 transition-colors duration-200 group"
               >
-                <div className="w-12 h-12 flex items-center justify-center rounded-full bg-blue-100 mb-3 group-hover:bg-blue-200 transition-colors duration-200">
-                  <svg className="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+                <div className="w-10 h-10 flex items-center justify-center rounded-full bg-blue-100 mb-2 group-hover:bg-blue-200 transition-colors duration-200">
+                  <svg className="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14m-.5 15.5v-5.3a3.26 3.26 0 00-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 011.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 001.68-1.68c0-.93-.75-1.69-1.68-1.69a1.68 1.68 0 00-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
                   </svg>
                 </div>
-                <span className="text-sm font-medium text-gray-900 mb-1">LinkedIn</span>
+                <span className="text-sm font-medium text-gray-900 mb-0.5">LinkedIn</span>
                 <span className="text-sm text-gray-500">harrygleung</span>
               </a>
             </div>
