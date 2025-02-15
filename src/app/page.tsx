@@ -116,7 +116,7 @@ export default function HomePage() {
                 rel="noopener noreferrer"
                 className="flex flex-col items-center p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200 group"
               >
-                <div className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-800 mb-2 group-hover:bg-gray-200 dark:group-hover:bg-gray-700 transition-colors duration-200">
+                <div className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-600 mb-2 group-hover:bg-gray-200 dark:group-hover:bg-gray-500 transition-colors duration-200">
                   <svg className="w-5 h-5 text-gray-900" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
                   </svg>
