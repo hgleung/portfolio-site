@@ -32,7 +32,7 @@ export default function MobileNav({ sections, onSectionClick }: MobileNavProps) 
     <div className="md:hidden">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="p-2 text-gray-600 hover:text-green-600 transition-colors duration-200"
+        className="p-2 text-gray-600 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-600 transition-colors duration-200"
         aria-label="Toggle menu"
       >
         <svg
@@ -60,15 +60,15 @@ export default function MobileNav({ sections, onSectionClick }: MobileNavProps) 
 
       {/* Menu */}
       <div
-        className={`fixed right-0 top-0 h-screen w-full max-w-sm bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50 ${
+        className={`fixed right-0 top-0 h-screen w-full max-w-sm bg-white dark:bg-gray-900 shadow-lg transform transition-transform duration-300 ease-in-out z-50 ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
         <div className="flex flex-col h-full">
-          <div className="flex justify-end p-6 border-b">
+          <div className="flex justify-end p-6 border-b dark:border-gray-700">
             <button
               onClick={() => setIsOpen(false)}
-              className="p-2 text-gray-600 hover:text-green-600 transition-colors duration-200"
+              className="p-2 text-gray-600 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-600 transition-colors duration-200"
               aria-label="Close menu"
             >
               <svg
@@ -91,7 +91,7 @@ export default function MobileNav({ sections, onSectionClick }: MobileNavProps) 
               <button
                 key={item.id}
                 onClick={() => handleSectionClick(item.id)}
-                className="px-4 py-3 text-left text-lg text-gray-700 hover:text-green-600 hover:bg-gray-50 rounded-md transition-colors duration-200"
+                className="px-4 py-3 text-left text-lg text-gray-700 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-600 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-200"
               >
                 {item.name}
               </button>
@@ -99,7 +99,7 @@ export default function MobileNav({ sections, onSectionClick }: MobileNavProps) 
             <Link
               href="/Harry_Leung_resume.pdf"
               target="_blank"
-              className="px-4 py-3 text-left text-lg text-gray-700 hover:text-green-600 hover:bg-gray-50 rounded-md transition-colors duration-200"
+              className="px-4 py-3 text-left text-lg text-gray-700 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-600 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-200"
             >
               Resume
             </Link>

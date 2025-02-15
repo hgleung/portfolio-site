@@ -55,7 +55,7 @@ function TopNav() {
               key={item.id}
               onClick={() => scrollToSection(item.id)}
               className={`font-light text-charcoal dark:text-gray-200 hover:text-green-600 dark:hover:text-green-400 transition-all duration-200 px-3 py-1 rounded-md relative
-                ${activeSection === item.id ? 'text-green-600 dark:text-green-400' : ''}`}
+                ${activeSection === item.id ? 'underline underline-offset-8 text-green-600 dark:text-green-400' : ''}`}
             >
               {item.name}
             </button>
