@@ -1,6 +1,5 @@
 export const dynamic = "force-dynamic";
 import { Metadata } from 'next';
-import Footer from '../../components/Footer';
 
 export const metadata: Metadata = {
   title: 'Notes',
