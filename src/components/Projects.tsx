@@ -14,11 +14,11 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: '',
-    description: '',
-    technologies: ['', '', ''],
-    imageUrl: '',
-    githubUrl: ''
+    title: 'Aegis - Discord Spam Detection System',
+    description: 'A specialized AI-powered spam detection system designed to combat betting promoter spam in Discord servers. Features an LSTM neural network for text classification and interactive learning capabilities for continuous model improvement. Real-time message monitoring via Discord bot to be implemented and deployed soon.',
+    technologies: ['Python', 'TensorFlow', 'scikit-learn', 'LSTM', 'Natural Language Processing'],
+    imageUrl: '/images/aegis-preview.png',
+    githubUrl: 'https://github.com/hgleung/aegis-discord-spam-detect'
   },
   {
     title: '',
