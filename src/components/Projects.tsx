@@ -17,7 +17,7 @@ const projects: Project[] = [
     title: 'Aegis - Discord Spam Detection System',
     description: 'A specialized AI-powered spam detection system designed to combat betting promoter spam in Discord servers. Features an LSTM neural network for text classification and interactive learning capabilities for continuous model improvement. Real-time message monitoring via Discord bot to be implemented and deployed soon.',
     technologies: ['Python', 'TensorFlow', 'scikit-learn', 'LSTM', 'Natural Language Processing'],
-    imageUrls: [],
+    imageUrls: ['/project-images/aegis-preview.svg'],
     githubUrls: [{ label: 'View on GitHub', url: 'https://github.com/hgleung/aegis-discord-spam-detect' }]
   },
   {
@@ -102,7 +102,9 @@ export default function Projects() {
                 key={index}
                 onClick={() => setCurrentIndex(index)}
                 className={`w-2 h-2 rounded-full transition-colors duration-200 ${
-                  index === currentIndex ? 'bg-white dark:bg-gray-200' : 'bg-white/50 dark:bg-gray-400/50'
+                  index === currentIndex 
+                    ? 'bg-gray-800 dark:bg-gray-200' 
+                    : 'bg-gray-400 dark:bg-gray-400/50'
                 }`}
               />
             ))}
