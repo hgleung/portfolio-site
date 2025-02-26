@@ -8,8 +8,8 @@ interface Project {
   title: string
   description: string
   technologies: string[]
-  imageUrl: string
-  githubUrl: string
+  imageUrls: string[]
+  githubUrls: { label: string; url: string }[]
 }
 
 const projects: Project[] = [
@@ -17,22 +17,25 @@ const projects: Project[] = [
     title: 'Aegis - Discord Spam Detection System',
     description: 'A specialized AI-powered spam detection system designed to combat betting promoter spam in Discord servers. Features an LSTM neural network for text classification and interactive learning capabilities for continuous model improvement. Real-time message monitoring via Discord bot to be implemented and deployed soon.',
     technologies: ['Python', 'TensorFlow', 'scikit-learn', 'LSTM', 'Natural Language Processing'],
-    imageUrl: '/images/aegis-preview.png',
-    githubUrl: 'https://github.com/hgleung/aegis-discord-spam-detect'
+    imageUrls: [],
+    githubUrls: [{ label: 'View on GitHub', url: 'https://github.com/hgleung/aegis-discord-spam-detect' }]
+  },
+  {
+    title: 'Operating Systems Projects - VM Manager & File System Emulator',
+    description: 'A collection of low-level system implementations in Python including a Virtual Memory Manager and File System Emulator. The VM Manager handles memory allocation, segment/page table management, and disk operations, while the File System Emulator implements disk block management, file descriptors, and bitmap-based allocation.',
+    technologies: ['Python', 'Data Structures', 'Algorithms', 'Memory Management', 'File Systems'],
+    imageUrls: ['/project-images/filesystem1.jpg', '/project-images/vmtlb1v2.1.jpeg'],
+    githubUrls: [
+      { label: 'VM Manager', url: 'https://github.com/hgleung/vm-manager' },
+      { label: 'FS Emulator', url: 'https://github.com/hgleung/fs-emulator' }
+    ]
   },
   {
     title: '',
     description: '',
     technologies: ['', '', ''],
-    imageUrl: '',
-    githubUrl: ''
-  },
-  {
-    title: '',
-    description: '',
-    technologies: ['', '', ''],
-    imageUrl: '',
-    githubUrl: ''
+    imageUrls: [],
+    githubUrls: []
   }
 ]
 
@@ -57,9 +60,26 @@ export default function Projects() {
       <div className="relative">
         {/* Image Section */}
         <div className="relative h-48 md:h-64 overflow-hidden rounded-t-lg bg-gray-100 dark:bg-gray-900">
-          <div className="w-full h-full flex items-center justify-center bg-gray-200 dark:bg-gray-800">
-            <span className="text-gray-500 dark:text-gray-400 text-lg">Project Preview</span>
-          </div>
+          {projects[currentIndex] && projects[currentIndex].imageUrls.length > 0 ? (
+            <div className="w-full h-full flex">
+              {(() => {
+                const currentProject = projects[currentIndex];
+                return currentProject.imageUrls.map((url, idx) => (
+                  <div key={idx} className="flex-1 p-2">
+                    <img
+                      src={url}
+                      alt={`${currentProject.title} - Preview ${idx + 1}`}
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                ));
+              })()}
+            </div>
+          ) : (
+            <div className="w-full h-full flex items-center justify-center bg-gray-200 dark:bg-gray-800">
+              <span className="text-gray-500 dark:text-gray-400 text-lg">Project Preview</span>
+            </div>
+          )}
           
           {/* Navigation Arrows */}
           <button
@@ -109,17 +129,20 @@ export default function Projects() {
             </div>
           </div>
 
-          {/* GitHub Link */}
-          <div className="flex justify-end">
-            <a
-              href={projects[currentIndex]?.githubUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center px-4 py-2 rounded-full text-sm font-light text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors duration-200"
-            >
-              <FaGithub className="w-5 h-5 mr-2" />
-              View on GitHub
-            </a>
+          {/* GitHub Links */}
+          <div className="flex justify-end gap-3">
+            {projects[currentIndex]?.githubUrls.map((github, index) => (
+              <a
+                key={index}
+                href={github.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-4 py-2 rounded-full text-sm font-light text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors duration-200"
+              >
+                <FaGithub className="w-5 h-5 mr-2" />
+                {github.label}
+              </a>
+            ))}
           </div>
         </div>
       </div>
