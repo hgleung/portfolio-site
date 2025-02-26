@@ -12,6 +12,8 @@
 /prisma/db.sqlite
 /prisma/db.sqlite-journal
 db.sqlite
+*.db
+start-database.sh
 
 # next.js
 /.next/
@@ -47,3 +49,7 @@ yarn-error.log*
 
 # ide
 /.vscode/
+
+# package manager
+.pnpm-store/
+pnpm-lock.yaml
