@@ -22,7 +22,7 @@ const projects: Project[] = [
   },
   {
     title: 'Operating Systems Projects - VM Manager & File System Emulator',
-    description: 'A collection of low-level system implementations in Python including a Virtual Memory Manager and File System Emulator. The VM Manager handles memory allocation, segment/page table management, and disk operations, while the File System Emulator implements disk block management, file descriptors, and bitmap-based allocation.',
+    description: 'A collection of low-level system implementations simulated in Python including a Virtual Memory Manager and File System Emulator. The VM Manager handles memory allocation, segment/page table management, and disk operations, while the File System Emulator implements disk block management, file descriptors, and bitmap-based allocation.',
     technologies: ['Python', 'Data Structures', 'Algorithms', 'Memory Management', 'File Systems'],
     imageUrls: ['/project-images/filesystem1.jpg', '/project-images/vmtlb1v2.1.jpeg'],
     githubUrls: [
