@@ -26,11 +26,6 @@ const BrowserWindow: React.FC<BrowserWindowProps> = ({ tabs }) => {
   return (
     <div className={styles.browserWindow}>
       <div className={styles.browserHeader}>
-        <div className={styles.buttons}>
-          <span className={styles.close} />
-          <span className={styles.minimize} />
-          <span className={styles.maximize} />
-        </div>
         <div className={styles.addressBar}>
           <a href={activeUrl} target="_blank" rel="noopener noreferrer">
             {activeUrl}
