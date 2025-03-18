@@ -31,11 +31,11 @@ const projects: Project[] = [
     ]
   },
   {
-    title: '',
-    description: '',
-    technologies: ['', '', ''],
-    imageUrls: [],
-    githubUrls: []
+    title: 'AI Art Detector',
+    description: 'A deep learning system that classifies artwork as AI-generated or human-made using two approaches: a custom CNN and a Vision Transformer (ViT). Features include flexible input sizes through adaptive pooling, data augmentation for training, and experiment tracking with WandB. The models use batch normalization, dropout for regularization, and custom classification heads for binary classification.',
+    technologies: ['PyTorch', 'Hugging Face Transformers', 'CNN', 'Vision Transformer', 'WandB', 'Deep Learning'],
+    imageUrls: [''],
+    githubUrls: [{ label: 'View on GitHub', url: 'https://github.com/hgleung/AI-Art-Detector' }]
   }
 ]
 
