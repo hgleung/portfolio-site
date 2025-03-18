@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { FaGithub } from 'react-icons/fa'
+import { FaGithub, FaPlay } from 'react-icons/fa'
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io'
 
 interface Project {
@@ -14,11 +14,11 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: 'Aegis - Discord Spam Detection System',
-    description: 'A specialized AI-powered spam detection system designed to combat betting promoter spam in Discord servers. Features an LSTM neural network for text classification and interactive learning capabilities for continuous model improvement. Real-time message monitoring via Discord bot to be implemented and deployed soon.',
-    technologies: ['Python', 'TensorFlow', 'scikit-learn', 'LSTM', 'Natural Language Processing'],
-    imageUrls: ['/project-images/aegis-preview.svg'],
-    githubUrls: [{ label: 'View on GitHub', url: 'https://github.com/hgleung/aegis-discord-spam-detect' }]
+    title: 'UCI ICS Search Engine',
+    description: 'A high-performance search engine for the UCI ICS domain featuring multi-threaded document processing and efficient indexing. Implements advanced TF-IDF scoring with HTML tag importance weighting, URL normalization, and near-duplicate detection using cosine similarity. The system efficiently manages memory through partial index off-loading and smart batched processing.',
+    technologies: ['Python', 'Multi-threading', 'TF-IDF', 'Porter Stemmer', 'Cosine Similarity', 'Information Retrieval'],
+    imageUrls: ['/project-images/search-engine.png'],
+    githubUrls: [{ label: 'View on GitHub', url: 'https://github.com/hgleung/ICS-Search-Engine' }]
   },
   {
     title: 'Operating Systems Projects - VM Manager & File System Emulator',
@@ -131,7 +131,7 @@ export default function Projects() {
             </div>
           </div>
 
-          {/* GitHub Links */}
+          {/* GitHub Links and Demo Button */}
           <div className="flex justify-end gap-3">
             {projects[currentIndex]?.githubUrls.map((github, index) => (
               <a
@@ -145,6 +145,16 @@ export default function Projects() {
                 {github.label}
               </a>
             ))}
+            {currentIndex === 0 && (
+              <button
+                disabled
+                className="inline-flex items-center px-4 py-2 rounded-md text-sm font-light text-gray-400 dark:text-gray-500 bg-gray-200 dark:bg-gray-600 cursor-not-allowed"
+                title="Demo coming soon!"
+              >
+                <FaPlay className="w-4 h-4 mr-2" />
+                Try it here!
+              </button>
+            )}
           </div>
         </div>
       </div>
