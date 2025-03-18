@@ -15,7 +15,7 @@ interface Project {
 const projects: Project[] = [
   {
     title: 'UCI ICS Search Engine',
-    description: 'A high-performance search engine for the UCI ICS domain featuring multi-threaded document processing and efficient indexing. Implements advanced TF-IDF scoring with HTML tag importance weighting, URL normalization, and near-duplicate detection using cosine similarity. The system efficiently manages memory through partial index off-loading and smart batched processing.',
+    description: 'A high-performance search engine tailored for the UCI ICS domain featuring multi-threaded document processing of over 56,000 documents and efficient indexing with an average query response time of under 100 ms. Implements advanced TF-IDF scoring with HTML tag importance weighting, URL normalization, and near-duplicate detection using cosine similarity. The system efficiently manages memory through partial index off-loading and smart batched processing.',
     technologies: ['Python', 'Multi-threading', 'TF-IDF', 'Porter Stemmer', 'Cosine Similarity', 'Information Retrieval'],
     imageUrls: ['/project-images/search-engine.png'],
     githubUrls: [{ label: 'View on GitHub', url: 'https://github.com/hgleung/ICS-Search-Engine' }]
