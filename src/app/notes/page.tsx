@@ -26,7 +26,15 @@ export default function Page() {
   return (
     <main className="flex min-h-screen flex-col items-center p-8 md:p-24 bg-light-gray dark:bg-gray-900">
       <div className="w-full max-w-4xl pt-24 md:pt-12">
-        <h1 className="text-3xl font-semibold mb-8 text-charcoal dark:text-gray-100">Notes</h1>
+        <h1 className="text-3xl font-semibold mb-4 text-charcoal dark:text-gray-100">My Notes</h1>
+        
+        <div className="mb-12 prose dark:prose-invert">
+          <p className="text-gray-600 dark:text-gray-300">
+            Welcome to my digital garden—a collection of technical write-ups, project reports, and research findings. 
+            Here I document my journey through various technical challenges and share insights from my projects.
+          </p>
+        </div>
+
         <div className="grid gap-6">
           {notes.map((note) => (
             <Link 
