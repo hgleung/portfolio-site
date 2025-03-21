@@ -1,6 +1,7 @@
 export const dynamic = "force-dynamic";
 import { Metadata } from 'next';
 import Link from 'next/link';
+import { ArrowLeft } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'My Notes',
@@ -26,6 +27,14 @@ export default function Page() {
   return (
     <main className="flex min-h-screen flex-col items-center p-8 md:p-24 bg-light-gray dark:bg-gray-900">
       <div className="w-full max-w-4xl pt-24 md:pt-12">
+        <Link 
+          href="/"
+          className="inline-flex items-center gap-2 text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 mb-6 transition-colors"
+        >
+          <ArrowLeft size={20} />
+          <span>Back to Home</span>
+        </Link>
+
         <h1 className="text-3xl font-semibold mb-4 text-charcoal dark:text-gray-100">My Notes</h1>
         
         <div className="mb-12 prose dark:prose-invert">
