@@ -26,17 +26,18 @@ export default function MobileNav({ sections, onSectionClick }: MobileNavProps) 
     }
   }, [isOpen])
 
-  const handleSectionClick = (sectionId: string) => {
+  const handleSectionClick = async (sectionId: string) => {
+    setIsOpen(false)
+
     if (pathname !== '/') {
-      router.push('/');
-      // Wait for navigation to complete before scrolling
-      setTimeout(() => {
-        onSectionClick(sectionId);
-      }, 50);
+      await router.push('/');
+      // Try multiple times with increasing delays to ensure content is loaded
+      setTimeout(() => onSectionClick(sectionId), 100);
+      setTimeout(() => onSectionClick(sectionId), 300);
+      setTimeout(() => onSectionClick(sectionId), 500);
     } else {
       onSectionClick(sectionId);
     }
-    setIsOpen(false)
   }
 
   return (

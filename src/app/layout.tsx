@@ -28,36 +28,31 @@ function TopNav() {
   const router = useRouter()
   const activeSection = useActiveSection(sections.map(s => s.id))
   
-  const scrollToSection = (sectionId: string) => {
-    if (pathname !== '/') {
-      router.push('/');
-      // Wait for navigation to complete before scrolling
-      setTimeout(() => {
-        const element = document.getElementById(sectionId);
-        if (element) {
-          const navHeight = 96; 
-          const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
-          const offsetPosition = elementPosition - navHeight;
+  const scrollToSection = async (sectionId: string) => {
+    const performScroll = () => {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        const navHeight = 96; 
+        const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+        const offsetPosition = elementPosition - navHeight;
 
-          window.scrollTo({
-            top: offsetPosition,
-            behavior: 'smooth'
-          });
-        }
-      }, 100);
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    };
+
+    if (pathname !== '/') {
+      await router.push('/');
+      // Try multiple times with increasing delays to ensure content is loaded
+      setTimeout(performScroll, 100);
+      setTimeout(performScroll, 300);
+      setTimeout(performScroll, 500);
       return;
     }
 
-    const element = document.getElementById(sectionId);
-    if (element) {
-      const navHeight = 96; 
-      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
-      const offsetPosition = elementPosition - navHeight;
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
-    }
+    performScroll();
   };
 
   return (
