@@ -139,28 +139,28 @@ export default function Projects() {
                 href={github.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center px-4 py-2 rounded-full text-sm font-light text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors duration-200"
+                className="inline-flex items-center px-2 py-1 md:px-4 md:py-2 rounded-full text-sm font-light text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors duration-200"
               >
-                <FaGithub className="w-5 h-5 mr-2" />
+                <FaGithub className="w-4 h-4 md:w-5 md:h-5 mr-1 md:mr-2" />
                 {github.label}
               </a>
             ))}
             {currentIndex === 2 && (
               <a
                 href="/notes/ai-art-detector-report"
-                className="inline-flex items-center px-4 py-2 rounded-full text-sm font-light text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors duration-200"
+                className="inline-flex items-center px-2 py-1 md:px-4 md:py-2 rounded-full text-sm font-light text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors duration-200"
               >
-                <FaRegFileAlt className="w-4 h-4 mr-2" />
+                <FaRegFileAlt className="w-3 h-3 md:w-4 md:h-4 mr-1 md:mr-2" />
                 Read Report
               </a>
             )}
             {currentIndex === 0 && (
               <button
                 disabled
-                className="inline-flex items-center px-4 py-2 rounded-md text-sm font-light text-gray-400 dark:text-gray-500 bg-gray-200 dark:bg-gray-600 cursor-not-allowed"
+                className="inline-flex items-center px-2 py-1 md:px-4 md:py-2 rounded-md text-sm font-light text-gray-400 dark:text-gray-500 bg-gray-200 dark:bg-gray-600 cursor-not-allowed"
                 title="Demo coming soon!"
               >
-                <FaPlay className="w-4 h-4 mr-2" />
+                <FaPlay className="w-3 h-3 md:w-4 md:h-4 mr-1 md:mr-2" />
                 Try it here!
               </button>
             )}
