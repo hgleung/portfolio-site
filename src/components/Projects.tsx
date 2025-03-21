@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { FaGithub, FaPlay } from 'react-icons/fa'
+import { FaGithub, FaPlay, FaRegFileAlt } from 'react-icons/fa'
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io'
 
 interface Project {
@@ -145,6 +145,15 @@ export default function Projects() {
                 {github.label}
               </a>
             ))}
+            {currentIndex === 2 && (
+              <a
+                href="/notes/ai-art-detector-report"
+                className="inline-flex items-center px-4 py-2 rounded-full text-sm font-light text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors duration-200"
+              >
+                <FaRegFileAlt className="w-4 h-4 mr-2" />
+                Read Report
+              </a>
+            )}
             {currentIndex === 0 && (
               <button
                 disabled

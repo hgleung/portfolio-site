@@ -63,7 +63,13 @@ function TopNav() {
         </div>
       </div>
 
-      <div className="hidden md:flex items-center ml-auto">
+      <div className="hidden md:flex items-center ml-auto space-x-6">
+        <Link 
+          href="/notes" 
+          className="font-light text-charcoal dark:text-gray-200 hover:text-green-600 dark:hover:text-green-400 transition-colors duration-200"
+        >
+          Notes
+        </Link>
         <Link 
           href="/Harry_Leung_resume.pdf" 
           target="_blank" 

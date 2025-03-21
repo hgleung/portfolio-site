@@ -97,6 +97,12 @@ export default function MobileNav({ sections, onSectionClick }: MobileNavProps) 
               </button>
             ))}
             <Link
+              href="/notes"
+              className="px-4 py-3 text-left text-lg text-gray-700 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-600 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-200"
+            >
+              Notes
+            </Link>
+            <Link
               href="/Harry_Leung_resume.pdf"
               target="_blank"
               className="px-4 py-3 text-left text-lg text-gray-700 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-600 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-200"
