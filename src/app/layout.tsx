@@ -1,6 +1,6 @@
 'use client';
 
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import "~/styles/globals.css";
 
 import { Montserrat } from "next/font/google";
@@ -25,15 +25,34 @@ const sections = [
 
 function TopNav() {
   const pathname = usePathname()
+  const router = useRouter()
   const activeSection = useActiveSection(sections.map(s => s.id))
   
   const scrollToSection = (sectionId: string) => {
+    if (pathname !== '/') {
+      router.push('/');
+      // Wait for navigation to complete before scrolling
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const navHeight = 96; 
+          const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+          const offsetPosition = elementPosition - navHeight;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
+      }, 100);
+      return;
+    }
+
     const element = document.getElementById(sectionId);
     if (element) {
-      const navHeight = 96; // 8 * 2 padding + some extra space
+      const navHeight = 96; 
       const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
       const offsetPosition = elementPosition - navHeight;
-
       window.scrollTo({
         top: offsetPosition,
         behavior: 'smooth'
@@ -91,7 +110,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${montserrat}`}>
+    <html lang="en" className={`${montserrat} dark`}>
       <body className="flex flex-col gap-4 bg-light-gray dark:bg-gray-900">
         <ThemeProvider>
           <TopNav />

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import { useRouter, usePathname } from 'next/navigation'
 
 interface MobileNavProps {
   sections: { name: string; id: string; }[];
@@ -10,6 +11,8 @@ interface MobileNavProps {
 
 export default function MobileNav({ sections, onSectionClick }: MobileNavProps) {
   const [isOpen, setIsOpen] = useState(false)
+  const router = useRouter()
+  const pathname = usePathname()
 
   // Prevent scrolling when menu is open
   useEffect(() => {
@@ -24,7 +27,15 @@ export default function MobileNav({ sections, onSectionClick }: MobileNavProps) 
   }, [isOpen])
 
   const handleSectionClick = (sectionId: string) => {
-    onSectionClick(sectionId)
+    if (pathname !== '/') {
+      router.push('/');
+      // Wait for navigation to complete before scrolling
+      setTimeout(() => {
+        onSectionClick(sectionId);
+      }, 50);
+    } else {
+      onSectionClick(sectionId);
+    }
     setIsOpen(false)
   }
 

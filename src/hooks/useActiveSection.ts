@@ -1,11 +1,19 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { usePathname } from 'next/navigation'
 
 export const useActiveSection = (sectionIds: string[]) => {
   const [activeSection, setActiveSection] = useState<string>('')
+  const pathname = usePathname()
 
   useEffect(() => {
+    // Reset active section when not on home page
+    if (pathname !== '/') {
+      setActiveSection('')
+      return
+    }
+
     const observers = new Map()
     let visibleSections = new Set<string>()
 
@@ -54,7 +62,7 @@ export const useActiveSection = (sectionIds: string[]) => {
         observer.unobserve(element)
       })
     }
-  }, [sectionIds])
+  }, [sectionIds, pathname]) // Add pathname to dependencies
 
   return activeSection
 }

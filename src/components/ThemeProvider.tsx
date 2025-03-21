@@ -12,25 +12,26 @@ type ThemeContextType = {
 const ThemeContext = createContext<ThemeContextType | null>(null);
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setTheme] = useState<Theme>('light');
+  const [theme, setTheme] = useState<Theme>('dark');
 
   useEffect(() => {
-    // Check localStorage first, then system preference
-    const storedTheme = localStorage.getItem('theme') as Theme | null;
-    if (storedTheme && (storedTheme === 'light' || storedTheme === 'dark')) {
-      setTheme(storedTheme);
+    // Check system preference first, then default to dark
+    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (systemPrefersDark) {
+      setTheme('dark');
     } else {
-      // If no stored theme, use system preference
-      const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-      setTheme(systemTheme);
+      // If system doesn't prefer dark, use dark mode anyway
+      setTheme('dark');
     }
 
     // Listen for system theme changes
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
     const handleChange = (e: MediaQueryListEvent) => {
-      // Only update if there's no user preference stored
-      if (!localStorage.getItem('theme')) {
-        setTheme(e.matches ? 'dark' : 'light');
+      if (e.matches) {
+        setTheme('dark');
+      } else {
+        // If system switches to light mode, stay in dark mode
+        setTheme('dark');
       }
     };
 
@@ -41,7 +42,6 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     document.documentElement.classList.remove('light', 'dark');
     document.documentElement.classList.add(theme);
-    localStorage.setItem('theme', theme);
     // Update meta theme-color for mobile browsers
     document.querySelector('meta[name="theme-color"]')?.setAttribute(
       'content',
