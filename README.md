@@ -61,36 +61,6 @@ Currently implements an image schema for storing portfolio project images with t
 - `createdAt`: Timestamp with timezone
 - `updatedAt`: Timestamp with timezone with auto-update
 
-## Planned Features
-
-- Enhanced About Me section with more personal details
-- Improved Skills section with colored icons and labels
-- Scrolling header with tighter UI
-- Complete database integration for dynamic content
-- Portfolio project showcase with filtering
-- Notes section for blog/thoughts
-- Interactive map component
-- Mobile-optimized navigation with dropdown menu
-
-## Getting Started
-
-### Prerequisites
-- Node.js 18+
-- pnpm 9.5.0+
-- PostgreSQL database
-
-### Installation
-1. Clone the repository
-2. Install dependencies with `pnpm install`
-3. Set up environment variables (see `.env.example`)
-4. Run the development server with `pnpm dev`
-
-### Database Setup
-1. Set up PostgreSQL database
-2. Configure connection in `.env`
-3. Generate database schema with `pnpm db:generate`
-4. Push schema to database with `pnpm db:push`
-
 ## Deployment
 
 The portfolio is designed to be deployed on Vercel with the following features:
