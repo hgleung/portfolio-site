@@ -51,7 +51,7 @@ export const experienceTabs: ExperienceTab[] = [
           <p className="font-medium text-sm pt-2">Systems & Architecture</p>
           <ul className="list-disc pl-5 text-sm">
             <li>Computer Organization and Principles of System Design</li>
-            <li>Operating Systems</li>
+            <li>Intro to & Project in Operating Systems</li>
             <li>Computer & Communication Networks</li>
           </ul>
 
