@@ -19,12 +19,15 @@ export default function HomePage() {
     <main className="max-w-80 md:max-w-4xl mx-auto font-light items-center self-center justify-center bg-ivory dark:bg-gray-900 text-charcoal dark:text-gray-200 pt-32 pb-[50vh]">
       <div className="flex flex-col items-center justify-center text-center">
         {/* Profile Picture */}
-        <div className="w-64 h-64 rounded-full overflow-hidden mb-8 mt-12">
+        {/* <div className="w-64 h-64 rounded-full overflow-hidden mb-8 mt-12">
           <img 
-            src="/IMG_6757.png"
+            src=""
             alt="Harry Leung"
             className="w-full h-full object-cover"
           />
+        </div> */}
+        <div className="w-64 h-64 rounded-full overflow-hidden mb-8 mt-12 bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
+          <span className="text-gray-400 dark:text-gray-500 text-4xl">pic</span>
         </div>
         <h1 className="text-3xl font-extrabold tracking-tight sm:text-6xl md:text-7xl lg:text-8xl bg-gradient-to-r from-green-600 via-green-500 to-lime-400 bg-clip-text text-transparent animate-text py-2">
           Hi, I'm Harry.
