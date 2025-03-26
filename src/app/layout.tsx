@@ -12,7 +12,9 @@ import ThemeToggle from '../components/ThemeToggle';
 
 const montserrat = Montserrat({
   weight: '500',
-  subsets: ['latin']
+  subsets: ['latin'],
+  display: 'swap',
+  fallback: ['system-ui', 'sans-serif']
 })
 
 const sections = [
@@ -29,30 +31,33 @@ function TopNav() {
   const activeSection = useActiveSection(sections.map(s => s.id))
   
   const scrollToSection = async (sectionId: string) => {
-    const performScroll = () => {
-      const element = document.getElementById(sectionId);
-      if (element) {
-        const navHeight = 96; 
-        const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
-        const offsetPosition = elementPosition - navHeight;
+    const scrollToElement = (element: HTMLElement) => {
+      const navHeight = 96; 
+      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+      const offsetPosition = elementPosition - navHeight;
 
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: 'smooth'
-        });
-      }
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
     };
 
     if (pathname !== '/') {
       await router.push('/');
-      // Try multiple times with increasing delays to ensure content is loaded
-      setTimeout(performScroll, 100);
-      setTimeout(performScroll, 300);
-      setTimeout(performScroll, 500);
+      // Single timeout with a reasonable delay
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          scrollToElement(element);
+        }
+      }, 300);
       return;
     }
 
-    performScroll();
+    const element = document.getElementById(sectionId);
+    if (element) {
+      scrollToElement(element);
+    }
   };
 
   return (

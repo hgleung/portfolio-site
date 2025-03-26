@@ -1,9 +1,15 @@
 import { Metadata } from 'next';
+import Image from 'next/image';
 import BrowserWindow from '../components/window';
 import Skills from '../components/skills';
 import ScrollButton from '../components/ScrollButton';
 import { experienceTabs } from '../components/experience';
-import Projects from '../components/Projects';
+import dynamic from 'next/dynamic';
+
+// Dynamically import heavy components
+const Projects = dynamic(() => import('../components/Projects'), {
+  loading: () => <div className="h-[300px] w-full bg-gray-100 dark:bg-gray-800 animate-pulse rounded-2xl"></div>
+});
 
 export const metadata: Metadata = {
   title: {
@@ -20,10 +26,12 @@ export default function HomePage() {
       <div className="flex flex-col items-center justify-center text-center">
         {/* Profile Picture */}
         <div className="w-64 h-64 rounded-full overflow-hidden mb-8 mt-12">
-          <img 
+          <Image 
             src="/1713604306480.jpg"
             alt="Harry Leung"
-            className="w-full h-full object-cover"
+            width={256}
+            height={256}
+            className="object-cover"
           />
         </div>
         <h1 className="text-3xl font-extrabold tracking-tight sm:text-6xl md:text-7xl lg:text-8xl bg-gradient-to-r from-green-600 via-green-500 to-lime-400 bg-clip-text text-transparent animate-text py-2">
