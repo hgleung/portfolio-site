@@ -34,7 +34,7 @@ export default function HomePage() {
             className="object-cover"
           />
         </div>
-        <h1 className="text-3xl font-extrabold tracking-tight sm:text-6xl md:text-7xl lg:text-8xl bg-gradient-to-r from-green-600 via-green-500 to-lime-400 bg-clip-text text-transparent animate-text py-2">
+        <h1 className="text-3xl font-extrabold tracking-tight sm:text-6xl md:text-7xl lg:text-8xl bg-gradient-to-r from-green-600 via-green-500 to-lime-400 bg-clip-text text-transparent animate-text py-4">
           Hi, I'm Harry.
         </h1>
         <div className="flex space-x-3 mt-4">
