@@ -12,34 +12,38 @@ type ThemeContextType = {
 const ThemeContext = createContext<ThemeContextType | null>(null);
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setTheme] = useState<Theme>('light');
+  const [theme, setTheme] = useState<Theme>(() => {
+    // Check for saved theme preference in localStorage (client-side only)
+    if (typeof window !== 'undefined') {
+      const savedTheme = localStorage.getItem('theme') as Theme;
+      if (savedTheme === 'light' || savedTheme === 'dark') {
+        return savedTheme;
+      }
+    }
+    return 'light'; // Default fallback
+  });
 
   useEffect(() => {
-    // Check system preference first, then default to light
-    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    if (systemPrefersDark) {
-      setTheme('dark');
-    } else {
-      // If system doesn't prefer dark, use light mode
-      setTheme('light');
+    // Only check system preference if no saved preference exists
+    if (!localStorage.getItem('theme')) {
+      const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      setTheme(systemPrefersDark ? 'dark' : 'light');
+
+      // Listen for system theme changes only if no manual preference is set
+      const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+      const handleChange = (e: MediaQueryListEvent) => {
+        setTheme(e.matches ? 'dark' : 'light');
+      };
+
+      mediaQuery.addEventListener('change', handleChange);
+      return () => mediaQuery.removeEventListener('change', handleChange);
     }
-
-    // Listen for system theme changes
-    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    const handleChange = (e: MediaQueryListEvent) => {
-      if (e.matches) {
-        setTheme('dark');
-      } else {
-        // If system switches to light mode, stay in light mode
-        setTheme('light');
-      }
-    };
-
-    mediaQuery.addEventListener('change', handleChange);
-    return () => mediaQuery.removeEventListener('change', handleChange);
   }, []);
 
   useEffect(() => {
+    // Save theme to localStorage whenever it changes
+    localStorage.setItem('theme', theme);
+    
     document.documentElement.classList.remove('light', 'dark');
     document.documentElement.classList.add(theme);
     // Update meta theme-color for mobile browsers
