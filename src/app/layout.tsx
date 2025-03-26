@@ -110,7 +110,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${montserrat} dark`}>
+    <html lang="en" className={montserrat.className}>
       <body className="flex flex-col gap-4 bg-light-gray dark:bg-gray-900">
         <ThemeProvider>
           <TopNav />
