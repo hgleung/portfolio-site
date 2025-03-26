@@ -3,18 +3,17 @@
 import { usePathname, useRouter } from "next/navigation";
 import "~/styles/globals.css";
 
-import { Montserrat } from "next/font/google";
+import { Inter } from "next/font/google";
 import Link from 'next/link';
 import { useActiveSection } from '../hooks/useActiveSection';
 import MobileNav from '../components/MobileNav';
 import { ThemeProvider } from '../components/ThemeProvider';
 import ThemeToggle from '../components/ThemeToggle';
 
-const montserrat = Montserrat({
-  weight: '500',
+const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
-  fallback: ['system-ui', 'sans-serif']
+  variable: '--font-inter',
 })
 
 const sections = [
@@ -110,7 +109,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={montserrat.className}>
+    <html lang="en" className={`${inter.variable} font-sans`}>
       <body className="flex flex-col gap-4 bg-light-gray dark:bg-gray-900">
         <ThemeProvider>
           <TopNav />
