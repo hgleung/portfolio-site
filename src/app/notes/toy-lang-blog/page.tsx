@@ -23,13 +23,13 @@ export default function Page() {
         <p className="text-gray-500 dark:text-gray-400 mb-8">May 29, 2025</p>
         <article className="prose dark:prose-invert max-w-none">
           <p className="lead text-lg">
-            Developing a programming language from scratch offers profound insights into the inner workings of compilers and interpreters. This article details my experience building a toy language that implements the complete pipeline from source code to execution—including lexical analysis, parsing, interpretation, and LLVM IR generation.
+            Building a programming language from the ground up taught me so much about how compilers and interpreters actually work. In this post, I'll share what I learned while creating a toy language that takes code all the way from text to execution, covering everything from breaking down the code into tokens, figuring out its structure, running it, and even generating LLVM code that can be compiled.
           </p>
           
           <div className="bg-gray-100 dark:bg-gray-700 p-4 rounded-md my-6 border-l-4 border-blue-500">
             <p className="italic m-0">
               "If you don't understand compilers, you don't understand computing."
-              <span className="block text-right">— Tim Berners-Lee</span>
+              <span className="block text-right">- Tim Berners-Lee</span>
             </p>
           </div>
 
@@ -73,7 +73,7 @@ export default function Page() {
                 <h3 className="text-xl font-medium m-0">Interpretation</h3>
               </div>
               <p className="m-0">
-                The interpreter traverses the AST, executing operations and managing program state. It handles variable scoping, function calls, control flow, and expression evaluation—essentially bringing the code to life without compilation.
+                The interpreter traverses the AST, executing operations and managing program state. It handles variable scoping, function calls, control flow, and expression evaluation, essentially bringing the code to life without compilation.
               </p>
             </div>
             
@@ -118,7 +118,7 @@ export default function Page() {
 
           <h2 className="text-2xl font-semibold mt-8 mb-4">LLVM Integration: From Toy Language to Machine Code</h2>
           <p>
-            One of the most technically challenging—and rewarding—aspects of this project was integrating with LLVM. The LLVM (Low Level Virtual Machine) compiler infrastructure provides powerful tools for code optimization and native code generation across multiple platforms.
+            One of the most technically challenging and rewarding aspects of this project was integrating with LLVM. The LLVM (Low Level Virtual Machine) compiler infrastructure provides powerful tools for code optimization and native code generation across multiple platforms.
           </p>
           <p>
             By generating LLVM IR from our AST, we gain several significant advantages:
