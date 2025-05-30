@@ -16,16 +16,16 @@ interface NoteItem {
 
 const notes: NoteItem[] = [
   {
-    title: 'AI Art Detector Report',
-    description: 'Technical report detailing the implementation and findings of the AI Art Detector project, including model architecture, training process, and results.',
-    path: '/notes/ai-art-detector-report',
-    date: '2025-03-20'
-  },
-  {
     title: 'Building a Toy Language: Design, Parsing, and LLVM',
     description: 'A blog post about designing and implementing a toy programming language from scratch, featuring parsing, interpretation, and LLVM IR generation.',
     path: '/notes/toy-lang-blog',
     date: '2025-05-29'
+  },
+  {
+    title: 'AI Art Detector Report',
+    description: 'Technical report detailing the implementation and findings of the AI Art Detector project, including model architecture, training process, and results.',
+    path: '/notes/ai-art-detector-report',
+    date: '2025-03-20'
   },
 ];
 
