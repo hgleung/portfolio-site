@@ -45,8 +45,8 @@ export default function Page() {
         
         <div className="mb-12 prose dark:prose-invert">
           <p className="text-gray-600 dark:text-gray-300">
-            Welcome to my digital garden—a collection of technical write-ups, project reports, and research findings. 
-            Here I document my journey through various technical challenges and share insights from my projects.
+            This is where I keep my technical notes, project reports, and thoughts on things I've built. 
+            I like to write about what I learn while working on different projects, both to organize my own thinking and to share what I've figured out along the way.
           </p>
         </div>
 
