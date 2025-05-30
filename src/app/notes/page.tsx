@@ -21,6 +21,12 @@ const notes: NoteItem[] = [
     path: '/notes/ai-art-detector-report',
     date: '2025-03-20'
   },
+  {
+    title: 'Building a Toy Language: Design, Parsing, and LLVM',
+    description: 'A blog post about designing and implementing a toy programming language from scratch, featuring parsing, interpretation, and LLVM IR generation.',
+    path: '/notes/toy-lang-blog',
+    date: '2025-05-29'
+  },
 ];
 
 export default function Page() {
