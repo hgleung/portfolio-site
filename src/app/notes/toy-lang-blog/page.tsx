@@ -233,12 +233,12 @@ if.else:
             </li>
           </ul>
 
-          <h2 className="text-2xl font-semibold mt-8 mb-4">Conclusion</h2>
+          <h2 className="text-2xl font-semibold mt-8 mb-4">Why It Was Worth It</h2>
           <p>
-            Building a programming language from scratch has been both challenging and deeply rewarding. It has transformed abstract computer science concepts into tangible, working code and provided insights that continue to influence how I approach software development.
+            Building a programming language from scratch turned out to be one of the most rewarding things I've done as a developer. It pushed me to turn abstract ideas into working code and gave me a much deeper appreciation for how languages work under the hood.
           </p>
           <p>
-            For those interested in language design and implementation, I highly recommend undertaking a similar project. The knowledge gained from directly engaging with lexers, parsers, interpreters, and code generators provides a foundation that enhances understanding across the entire software development stack.
+            If you're even a little curious about language design, I can't recommend it enough. Diving into lexers, parsers, interpreters, and code generation doesn’t just teach you about compilers — it changes the way you think about writing software.
           </p>
           
           <div className="flex justify-center mt-8 mb-4">
