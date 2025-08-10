@@ -8,56 +8,98 @@
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     background-color: white;
-  }
-  
-  .browserHeader {
+}
+
+:global(.dark) .browserWindow {
+    border-color: #374151;
+    background-color: #1f2937;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.browserHeader {
     display: flex;
     align-items: center;
     padding: 0.5rem;
     background-color: #f0f0f0;
     border-bottom: 1px solid #ccc;
-  }
-  
-  .buttons {
+}
+
+:global(.dark) .browserHeader {
+    background-color: #111827;
+    border-color: #374151;
+}
+
+.buttons {
     display: flex;
     gap: 0.5rem;
     margin-right: 1rem;
-  }
-  
-  .close, .minimize, .maximize {
+}
+
+:global(.dark) .buttons {
+    gap: 0.5rem;
+    margin-right: 1rem;
+}
+
+.close, .minimize, .maximize {
     width: 12px;
     height: 12px;
     border-radius: 50%;
-  }
-  
-  .close {
+}
+
+.close {
     background-color: #ff5f57;
-  }
-  
-  .minimize {
+}
+
+:global(.dark) .close {
+    background-color: #ff5f57;
+}
+
+.minimize {
     background-color: #ffbd2e;
-  }
-  
-  .maximize {
+}
+
+:global(.dark) .minimize {
+    background-color: #ffbd2e;
+}
+
+.maximize {
     background-color: #28c840;
-  }
-  
-  .addressBar {
+}
+
+:global(.dark) .maximize {
+    background-color: #28c840;
+}
+
+.addressBar {
     flex-grow: 1;
     padding: 0.3rem 1rem;
     border-radius: 4px;
     background-color: white;
     font-size: 0.9rem;
     color: #333;
-  }
-  
-  .tabs {
+}
+
+:global(.dark) .addressBar {
+    background-color: #374151;
+    color: #e5e7eb;
+}
+
+:global(.dark) .addressBar a {
+    color: #e5e7eb;
+}
+
+.tabs {
     display: flex;
     background-color: #f8f8f8;
     border-bottom: 1px solid #ccc;
-  }
-  
-  .tab {
+}
+
+:global(.dark) .tabs {
+    background-color: #111827;
+    border-color: #374151;
+}
+
+.tab {
     padding: 0.5rem 1rem;
     cursor: pointer;
     background-color: #f8f8f8;
@@ -65,20 +107,40 @@
     outline: none;
     font-size: 0.9rem;
     color: #666;
-  }
-  
-  .tab:hover {
+}
+
+:global(.dark) .tab {
+    background-color: #1f2937;
+    border-color: #374151;
+    color: #9ca3af;
+}
+
+.tab:hover {
     background-color: #e0e0e0;
-  }
-  
-  .activeTab {
+}
+
+:global(.dark) .tab:hover {
+    background-color: #2f365f;
+}
+
+.activeTab {
     background-color: white;
     color: #333;
     font-weight: bold;
     border-bottom: 2px solid #333;
-  }
+}
 
-  .browserContent {
+:global(.dark) .activeTab {
+    background-color: #374151;
+    color: #e5e7eb;
+}
+
+.browserContent {
     padding: 1rem;
-  }
-  
+    background-color: white;
+}
+
+:global(.dark) .browserContent {
+    background-color: #1f2937;
+    color: #e5e7eb;
+}

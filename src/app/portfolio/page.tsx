@@ -1,5 +1,4 @@
 import { Metadata } from 'next';
-import Footer from '../../components/Footer';
 
 export const metadata: Metadata = {
   title: 'Portfolio',
@@ -12,7 +11,6 @@ export default function Page() {
   return (
     <main className="flex flex-col items-center justify-center bg-ivory text-black">
       Portfolio Page (in construction)
-    <Footer />
     </main>
   );
 }

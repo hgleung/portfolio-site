@@ -5,7 +5,7 @@ import React, { useState, ReactNode } from 'react';
 import styles from './BrowserWindow.module.css';
 import { Client } from '@vercel/postgres';
 
-interface Tab {
+export interface Tab {
   label: string;
   content: ReactNode;
   url: string
@@ -26,11 +26,6 @@ const BrowserWindow: React.FC<BrowserWindowProps> = ({ tabs }) => {
   return (
     <div className={styles.browserWindow}>
       <div className={styles.browserHeader}>
-        <div className={styles.buttons}>
-          <span className={styles.close} />
-          <span className={styles.minimize} />
-          <span className={styles.maximize} />
-        </div>
         <div className={styles.addressBar}>
           <a href={activeUrl} target="_blank" rel="noopener noreferrer">
             {activeUrl}
