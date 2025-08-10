@@ -27,7 +27,7 @@ export default function HomePage() {
         {/* Profile Picture */}
         <div className="w-64 h-64 rounded-full overflow-hidden mb-8 mt-12">
           <Image 
-            src="/IMG_2161.png"
+            src="/IMG_2161.PNG"
             alt="Harry Leung"
             width={256}
             height={256}
