@@ -31,40 +31,38 @@ const notes: NoteItem[] = [
 
 export default function Page() {
   return (
-    <main className="flex min-h-screen flex-col items-center p-8 md:p-24 bg-white dark:bg-black">
-      <div className="w-full max-w-4xl pt-24 md:pt-12">
-        <Link 
-          href="/"
-          className="inline-flex items-center gap-2 text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 mb-6 transition-colors"
-        >
-          <ArrowLeft size={20} />
-          <span>Back to Home</span>
-        </Link>
+    <main className="max-w-[98%] md:max-w-[95%] mx-auto px-1.5 md:px-2.5 pt-28 md:pt-12 pb-16 bg-white dark:bg-black">
+      <Link 
+        href="/"
+        className="inline-flex items-center gap-2 text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 mb-6 transition-colors"
+      >
+        <ArrowLeft size={20} />
+        <span>Back to Home</span>
+      </Link>
 
-        <h1 className="text-3xl font-semibold mb-4 text-charcoal dark:text-gray-100">My Notes</h1>
-        
-        <div className="mb-12 prose dark:prose-invert">
-          <p className="text-gray-600 dark:text-gray-300">
-            This is where I keep my technical notes, project reports, and thoughts on things I've built. 
-            I like to write about what I learn while working on different projects, both to organize my own thinking and to share what I've figured out along the way.
-          </p>
-        </div>
+      <h1 className="text-2xl font-normal mb-2 text-black dark:text-white">My Notes</h1>
+      
+      <div className="mb-6">
+        <p className="text-gray-700 dark:text-gray-300">
+          This is where I keep my technical notes, project reports, and thoughts on things I've built. 
+          I like to write about what I learn while working on different projects, both to organize my own thinking and to share what I've figured out along the way.
+        </p>
+      </div>
 
-        <div className="grid gap-6">
-          {notes.map((note) => (
-            <Link 
-              key={note.path}
-              href={note.path}
-              className="block p-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 hover:border-green-500 dark:hover:border-green-500 transition-colors duration-200"
-            >
-              <div className="flex justify-between items-start mb-2">
-                <h2 className="text-xl font-medium text-charcoal dark:text-gray-100">{note.title}</h2>
-                <span className="text-sm text-gray-500 dark:text-gray-400">{note.date}</span>
-              </div>
-              <p className="text-gray-600 dark:text-gray-300">{note.description}</p>
-            </Link>
-          ))}
-        </div>
+      <div className="grid gap-6">
+        {notes.map((note) => (
+          <Link 
+            key={note.path}
+            href={note.path}
+            className="block p-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 hover:border-green-500 dark:hover:border-green-500 transition-colors duration-200"
+          >
+            <div className="mb-1">
+              <h2 className="text-lg font-medium text-black dark:text-white">{note.title}</h2>
+              <span className="text-sm text-gray-500 dark:text-gray-400">{note.date}</span>
+            </div>
+            <p className="text-gray-700 dark:text-gray-300 mt-2">{note.description}</p>
+          </Link>
+        ))}
       </div>
     </main>
   );
