@@ -38,12 +38,12 @@
     "@types/node": "^20.19.0",
     "@types/react": "^18.3.23",
     "@types/react-dom": "^18.3.7",
-    "@typescript-eslint/eslint-plugin": "^7.18.0",
-    "@typescript-eslint/parser": "^7.18.0",
-    "drizzle-kit": "^0.18.1",
+    "@typescript-eslint/eslint-plugin": "^8.44.0",
+    "@typescript-eslint/parser": "^8.44.0",
+    "drizzle-kit": "^0.31.4",
     "esbuild": "^0.25.5",
-    "eslint": "^8.57.1",
-    "eslint-config-next": "^14.2.30",
+    "eslint": "^9.36.0",
+    "eslint-config-next": "^15.5.3",
     "eslint-plugin-drizzle": "^0.2.3",
     "postcss": "^8.5.5",
     "prettier": "^3.5.3",
@@ -54,5 +54,10 @@
   "ct3aMetadata": {
     "initVersion": "7.36.1"
   },
-  "packageManager": "pnpm@9.5.0+sha512.140036830124618d624a2187b50d04289d5a087f326c9edfc0ccd733d76c4f52c3a313d4fc148794a2a9d81553016004e6742e8cf850670268a7387fc220c903"
+  "packageManager": "pnpm@9.5.0+sha512.140036830124618d624a2187b50d04289d5a087f326c9edfc0ccd733d76c4f52c3a313d4fc148794a2a9d81553016004e6742e8cf850670268a7387fc220c903",
+  "pnpm": {
+    "overrides": {
+      "esbuild@<=0.24.2": ">=0.25.0"
+    }
+  }
 }
