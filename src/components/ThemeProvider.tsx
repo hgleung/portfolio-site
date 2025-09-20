@@ -26,17 +26,11 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     // Only check system preference if no saved preference exists
     if (!localStorage.getItem('theme')) {
-      const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      setTheme(systemPrefersDark ? 'dark' : 'light');
-
-      // Listen for system theme changes only if no manual preference is set
-      const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-      const handleChange = (e: MediaQueryListEvent) => {
-        setTheme(e.matches ? 'dark' : 'light');
-      };
-
-      mediaQuery.addEventListener('change', handleChange);
-      return () => mediaQuery.removeEventListener('change', handleChange);
+      // Default to light theme regardless of system preference
+      setTheme('light');
+      
+      // Save the default theme to localStorage
+      localStorage.setItem('theme', 'light');
     }
   }, []);
 
