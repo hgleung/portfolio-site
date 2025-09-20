@@ -65,10 +65,7 @@ a:hover {
   color:black;
 }
 
-strong:hover {
-  font-weight: 400;
-  color:black;
-}
+/* Remove the problematic strong:hover style */
 
 .harry:hover {
   font-weight: 600;

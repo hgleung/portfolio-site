@@ -6,9 +6,10 @@ import "~/styles/globals.css";
 import { Inter } from "next/font/google";
 import Link from 'next/link';
 import { useActiveSection } from '../hooks/useActiveSection';
-import MobileNav from '../components/MobileNav';
-import { ThemeProvider } from '../components/ThemeProvider';
 import ThemeToggle from '../components/ThemeToggle';
+import { ThemeProvider } from '../components/ThemeProvider';
+import React from 'react';
+import { FaBars, FaTimes } from 'react-icons/fa';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -17,24 +18,22 @@ const inter = Inter({
 })
 
 const sections = [
-  { name: 'About', id: 'about' },
-  { name: 'Skills', id: 'skills' },
-  { name: 'Experience', id: 'experience' },
-  { name: 'Projects', id: 'projects' },
+  // { name: 'About', id: 'about' },
+  // { name: 'Skills', id: 'skills' },
+  // { name: 'Experience', id: 'experience' },
+  // { name: 'Projects', id: 'projects' },
   { name: 'Contact', id: 'contact' },
 ]
 
-function TopNav() {
+function SideNav() {
   const pathname = usePathname()
   const router = useRouter()
   const activeSection = useActiveSection(sections.map(s => s.id))
   
   const scrollToSection = async (sectionId: string) => {
     const scrollToElement = (element: HTMLElement) => {
-      const navHeight = 96; 
-      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
-      const offsetPosition = elementPosition - navHeight;
-
+      const offsetPosition = element.getBoundingClientRect().top + window.pageYOffset;
+      
       window.scrollTo({
         top: offsetPosition,
         behavior: 'smooth'
@@ -43,7 +42,6 @@ function TopNav() {
 
     if (pathname !== '/') {
       await router.push('/');
-      // Single timeout with a reasonable delay
       setTimeout(() => {
         const element = document.getElementById(sectionId);
         if (element) {
@@ -60,49 +58,100 @@ function TopNav() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 flex border-solid border-b-2 border-gray-200 dark:border-gray-700 items-center w-full p-8 bg-light-gray/95 dark:bg-gray-900/95 backdrop-blur-sm text-gray-900 dark:text-gray-100" style={{ zIndex: 9997 }}>
-      <div className="flex items-center space-x-10">
-        <Link href="/" className="harry text-xl font-semibold text-charcoal dark:text-green-400">
+    <div className="fixed left-0 top-0 h-full w-64 p-10 flex flex-col justify-between bg-white dark:bg-black">
+      <div>
+        <Link href="/" className="block mb-16 text-xl font-normal text-black dark:text-white">
           Harry Leung<span className="blink">_</span>
         </Link>
         
-        {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-8">
-          {sections.map((item) => (
-            <button
-              key={item.id}
-              onClick={() => scrollToSection(item.id)}
-              className={`font-light text-charcoal dark:text-gray-200 hover:text-green-600 dark:hover:text-green-400 transition-all duration-200 px-3 py-1 rounded-md relative
-                ${activeSection === item.id ? 'underline underline-offset-8 text-green-600 dark:text-green-400' : ''}`}
-            >
-              {item.name}
-            </button>
-          ))}
-        </div>
+        <nav className="flex flex-col space-y-6">
+          <Link 
+            href="/notes" 
+            className="block font-normal text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-200"
+          >
+            Notes
+          </Link>
+          <Link 
+            href="/Harry_Leung_resume.pdf" 
+            target="_blank" 
+            className="font-normal text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-200"
+          >
+            Resume
+          </Link>
+          <div className="pt-6 border-t border-gray-200 dark:border-gray-800">
+            {sections.map((item) => (
+              <button
+                key={item.id}
+                onClick={() => scrollToSection(item.id)}
+                className={`text-left font-normal text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-all duration-200 mt-6
+                  ${activeSection === item.id ? 'font-medium' : ''}`}
+              >
+                {item.name}
+              </button>
+            ))}
+          </div>
+        </nav>
       </div>
-
-      <div className="hidden md:flex items-center ml-auto space-x-12">
-        <Link 
-          href="/notes" 
-          className="font-light text-charcoal dark:text-gray-200 hover:text-green-600 dark:hover:text-green-400 transition-colors duration-200"
-        >
-          Notes
-        </Link>
-        <Link 
-          href="/Harry_Leung_resume.pdf" 
-          target="_blank" 
-          className="font-light text-charcoal dark:text-gray-200 hover:text-green-600 dark:hover:text-green-400 transition-colors duration-200"
-        >
-          Resume
-        </Link>
+      
+      <div className="absolute bottom-10 left-10">
+        <ThemeToggle />
       </div>
-
-      {/* Mobile Navigation */}
-      <div className="flex md:hidden ml-auto">
-        <MobileNav sections={sections} onSectionClick={scrollToSection} />
-      </div>
-    </nav>
+    </div>
   )
+}
+
+// Mobile navigation component for small screens
+function MobileHeader() {
+  const [isOpen, setIsOpen] = React.useState(false);
+  
+  return (
+    <div className="md:hidden fixed top-0 left-0 right-0 p-6 bg-white dark:bg-black z-50 border-b border-gray-200 dark:border-gray-800">
+      <div className="flex justify-between items-center">
+        <Link href="/" className="text-xl font-normal text-black dark:text-white">
+          Harry Leung<span className="blink">_</span>
+        </Link>
+        <button 
+          onClick={() => setIsOpen(!isOpen)}
+          className="text-black dark:text-white"
+          aria-label={isOpen ? "Close menu" : "Open menu"}
+        >
+          {isOpen ? <FaTimes size={20} /> : <FaBars size={20} />}
+        </button>
+      </div>
+      
+      {isOpen && (
+        <div className="absolute top-full left-0 right-0 bg-white dark:bg-black p-6 border-b border-gray-200 dark:border-gray-800">
+          <nav className="flex flex-col space-y-6">
+            <Link
+              href="/notes" 
+              className="font-normal text-black dark:text-white"
+              onClick={() => setIsOpen(false)}
+            >
+              Notes
+            </Link>
+            <Link 
+              href="/Harry_Leung_resume.pdf" 
+              target="_blank" 
+              className="font-normal text-black dark:text-white"
+              onClick={() => setIsOpen(false)}
+            >
+              Resume
+            </Link>
+            <div className="pt-6 border-t border-gray-200 dark:border-gray-800">
+              <Link
+                key="contact"
+                href="/#contact"
+                onClick={() => setIsOpen(false)}
+                className="font-normal text-black dark:text-white mt-6 block"
+              >
+                Contact
+              </Link>
+            </div>
+          </nav>
+        </div>
+      )}
+    </div>
+  );
 }
 
 export default function RootLayout({
@@ -110,11 +159,26 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${inter.variable} font-sans`}>
-      <body className="flex flex-col gap-4 bg-light-gray dark:bg-gray-900">
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+        <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+      </head>
+      <body className="bg-white dark:bg-black text-black dark:text-white">
         <ThemeProvider>
-          <TopNav />
-          {children}
-          <ThemeToggle />
+          <div className="hidden md:block">
+            <SideNav />
+          </div>
+          <MobileHeader />
+          <div className="md:ml-64">
+            {children}
+          </div>
+          {/* Mobile theme toggle fixed to bottom left */}
+          <div className="md:hidden fixed bottom-6 left-6 z-50 bg-white dark:bg-gray-800 p-3 rounded-full shadow-lg">
+            <ThemeToggle />
+          </div>
         </ThemeProvider>
       </body>
     </html>

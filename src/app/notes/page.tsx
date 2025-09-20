@@ -31,7 +31,7 @@ const notes: NoteItem[] = [
 
 export default function Page() {
   return (
-    <main className="flex min-h-screen flex-col items-center p-8 md:p-24 bg-light-gray dark:bg-gray-900">
+    <main className="flex min-h-screen flex-col items-center p-8 md:p-24 bg-white dark:bg-black">
       <div className="w-full max-w-4xl pt-24 md:pt-12">
         <Link 
           href="/"
