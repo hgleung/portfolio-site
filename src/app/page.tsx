@@ -35,12 +35,12 @@ export default function HomePage() {
             <div className="relative">
               {/* Mobile profile picture and social links (right aligned) */}
               <div className="md:hidden float-right ml-6 mb-6 w-40">
-                <div className="w-40 h-40 rounded-lg overflow-hidden">
+                <div className="w-40 h-40 xl:w-48 xl:h-48 rounded-lg overflow-hidden">
                   <Image 
                     src="/IMG_2161.PNG"
                     alt="Harry Leung"
-                    width={160}
-                    height={160}
+                    width={192}
+                    height={192}
                     className="object-cover"
                   />
                 </div>
