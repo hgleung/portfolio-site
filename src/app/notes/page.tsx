@@ -34,7 +34,7 @@ export default function Page() {
     <main className="max-w-[98%] md:max-w-[95%] mx-auto px-1.5 md:px-2.5 pt-28 md:pt-12 pb-16 bg-white dark:bg-black">
       <Link 
         href="/"
-        className="inline-flex items-center gap-2 text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 mb-6 transition-colors"
+        className="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-500 mb-6 transition-colors"
       >
         <ArrowLeft size={20} />
         <span>Back to Home</span>
@@ -54,7 +54,7 @@ export default function Page() {
           <Link 
             key={note.path}
             href={note.path}
-            className="block p-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 hover:border-green-500 dark:hover:border-green-500 transition-colors duration-200"
+            className="block p-6 bg-white dark:bg-gray-900 rounded-lg shadow-sm border border-gray-200 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors duration-200"
           >
             <div className="mb-1">
               <h2 className="text-lg font-medium text-black dark:text-white">{note.title}</h2>

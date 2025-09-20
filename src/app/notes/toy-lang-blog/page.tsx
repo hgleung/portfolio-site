@@ -12,7 +12,7 @@ export default function Page() {
     <main className="max-w-[98%] md:max-w-[95%] mx-auto px-1.5 md:px-2.5 pt-28 md:pt-12 pb-16 bg-white dark:bg-black">
       <Link 
         href="/notes"
-        className="inline-flex items-center gap-2 text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 mb-6 transition-colors"
+        className="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-500 mb-6 transition-colors"
       >
         <ArrowLeft size={20} />
         <span>Back to Notes</span>
@@ -26,7 +26,7 @@ export default function Page() {
           Building a programming language from the ground up taught me so much about how compilers and interpreters actually work. In this post, I'll share what I learned while creating a toy language that takes code all the way from text to execution, covering everything from breaking down the code into tokens, figuring out its structure, running it, and even generating LLVM code that can be compiled.
         </p>
         
-        <div className="bg-gray-100 dark:bg-gray-700 p-4 rounded-md my-6 border-l-4 border-blue-500">
+        <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md my-6 border-l-4 border-gray-400">
           <p className="italic m-0">
             "If you don't understand compilers, you don't understand computing."
             <span className="block text-right">- Tim Berners-Lee</span>
@@ -47,9 +47,9 @@ export default function Page() {
         </p>
         
         <div className="grid md:grid-cols-2 gap-6 my-6">
-          <div className="bg-white dark:bg-gray-800 p-5 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700">
+          <div className="bg-white dark:bg-gray-900 p-5 rounded-lg shadow-sm border border-gray-200 dark:border-gray-800">
             <div className="flex items-center mb-3">
-              <Code className="text-blue-600 dark:text-blue-400 mr-2" size={20} />
+              <Code className="text-gray-600 dark:text-gray-400 mr-2" size={20} />
               <h3 className="text-xl font-medium m-0">Lexical Analysis</h3>
             </div>
             <p className="m-0">
@@ -57,9 +57,9 @@ export default function Page() {
             </p>
           </div>
           
-          <div className="bg-white dark:bg-gray-800 p-5 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700">
+          <div className="bg-white dark:bg-gray-900 p-5 rounded-lg shadow-sm border border-gray-200 dark:border-gray-800">
             <div className="flex items-center mb-3">
-              <Code className="text-blue-600 dark:text-blue-400 mr-2" size={20} />
+              <Code className="text-gray-600 dark:text-gray-400 mr-2" size={20} />
               <h3 className="text-xl font-medium m-0">Syntactic Analysis</h3>
             </div>
             <p className="m-0">
@@ -67,9 +67,9 @@ export default function Page() {
             </p>
           </div>
           
-          <div className="bg-white dark:bg-gray-800 p-5 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700">
+          <div className="bg-white dark:bg-gray-900 p-5 rounded-lg shadow-sm border border-gray-200 dark:border-gray-800">
             <div className="flex items-center mb-3">
-              <Code className="text-blue-600 dark:text-blue-400 mr-2" size={20} />
+              <Code className="text-gray-600 dark:text-gray-400 mr-2" size={20} />
               <h3 className="text-xl font-medium m-0">Interpretation</h3>
             </div>
             <p className="m-0">
@@ -77,9 +77,9 @@ export default function Page() {
             </p>
           </div>
           
-          <div className="bg-white dark:bg-gray-800 p-5 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700">
+          <div className="bg-white dark:bg-gray-900 p-5 rounded-lg shadow-sm border border-gray-200 dark:border-gray-800">
             <div className="flex items-center mb-3">
-              <Code className="text-blue-600 dark:text-blue-400 mr-2" size={20} />
+              <Code className="text-gray-600 dark:text-gray-400 mr-2" size={20} />
               <h3 className="text-xl font-medium m-0">LLVM IR Generation</h3>
             </div>
             <p className="m-0">
@@ -95,23 +95,23 @@ export default function Page() {
         
         <ul className="space-y-3 my-6">
           <li className="flex items-start">
-            <span className="inline-block w-2 h-2 rounded-full bg-blue-500 mt-2 mr-2"></span>
+            <span className="inline-block w-2 h-2 rounded-full bg-gray-500 mt-2 mr-2"></span>
             <span><strong>Variables and Data Types:</strong> Support for integers, floating-point numbers, booleans, and strings with dynamic typing and proper scoping rules.</span>
           </li>
           <li className="flex items-start">
-            <span className="inline-block w-2 h-2 rounded-full bg-blue-500 mt-2 mr-2"></span>
+            <span className="inline-block w-2 h-2 rounded-full bg-gray-500 mt-2 mr-2"></span>
             <span><strong>Expressions:</strong> Comprehensive arithmetic, comparison, and logical operations with proper operator precedence and associativity.</span>
           </li>
           <li className="flex items-start">
-            <span className="inline-block w-2 h-2 rounded-full bg-blue-500 mt-2 mr-2"></span>
+            <span className="inline-block w-2 h-2 rounded-full bg-gray-500 mt-2 mr-2"></span>
             <span><strong>Control Flow:</strong> Conditional statements (if/else) and loops (while) for program flow control.</span>
           </li>
           <li className="flex items-start">
-            <span className="inline-block w-2 h-2 rounded-full bg-blue-500 mt-2 mr-2"></span>
+            <span className="inline-block w-2 h-2 rounded-full bg-gray-500 mt-2 mr-2"></span>
             <span><strong>Functions:</strong> First-class functions with parameters, return values, lexical scoping, and support for recursion.</span>
           </li>
           <li className="flex items-start">
-            <span className="inline-block w-2 h-2 rounded-full bg-blue-500 mt-2 mr-2"></span>
+            <span className="inline-block w-2 h-2 rounded-full bg-gray-500 mt-2 mr-2"></span>
             <span><strong>Error Handling:</strong> Robust syntax and runtime error detection with informative error messages and line number reporting.</span>
           </li>
         </ul>
@@ -126,15 +126,15 @@ export default function Page() {
         
         <ul className="space-y-3 my-6">
           <li className="flex items-start">
-            <span className="inline-block w-2 h-2 rounded-full bg-blue-500 mt-2 mr-2"></span>
+            <span className="inline-block w-2 h-2 rounded-full bg-gray-500 mt-2 mr-2"></span>
             <span><strong>Performance Optimization:</strong> LLVM's optimization passes significantly improve code efficiency without requiring language-specific optimizations.</span>
           </li>
           <li className="flex items-start">
-            <span className="inline-block w-2 h-2 rounded-full bg-blue-500 mt-2 mr-2"></span>
+            <span className="inline-block w-2 h-2 rounded-full bg-gray-500 mt-2 mr-2"></span>
             <span><strong>Cross-Platform Support:</strong> Generated code can target multiple architectures without changing the language implementation.</span>
           </li>
           <li className="flex items-start">
-            <span className="inline-block w-2 h-2 rounded-full bg-blue-500 mt-2 mr-2"></span>
+            <span className="inline-block w-2 h-2 rounded-full bg-gray-500 mt-2 mr-2"></span>
             <span><strong>JIT Compilation:</strong> Just-in-time compilation capabilities for dynamic execution environments.</span>
           </li>
         </ul>
@@ -192,19 +192,19 @@ if.else:
         
         <ul className="space-y-3 my-6">
           <li className="flex items-start">
-            <span className="inline-block w-2 h-2 rounded-full bg-blue-500 mt-2 mr-2"></span>
+            <span className="inline-block w-2 h-2 rounded-full bg-gray-500 mt-2 mr-2"></span>
             <span><strong>Language Design Tradeoffs:</strong> Every language feature involves tradeoffs between simplicity, expressiveness, performance, and safety. These decisions shape the character and utility of a language.</span>
           </li>
           <li className="flex items-start">
-            <span className="inline-block w-2 h-2 rounded-full bg-blue-500 mt-2 mr-2"></span>
+            <span className="inline-block w-2 h-2 rounded-full bg-gray-500 mt-2 mr-2"></span>
             <span><strong>Compiler Architecture:</strong> The separation of concerns between lexing, parsing, semantic analysis, and code generation creates a maintainable and extensible system.</span>
           </li>
           <li className="flex items-start">
-            <span className="inline-block w-2 h-2 rounded-full bg-blue-500 mt-2 mr-2"></span>
+            <span className="inline-block w-2 h-2 rounded-full bg-gray-500 mt-2 mr-2"></span>
             <span><strong>Error Handling:</strong> Providing meaningful error messages is as important as the language features themselves. Good error reporting dramatically improves the developer experience.</span>
           </li>
           <li className="flex items-start">
-            <span className="inline-block w-2 h-2 rounded-full bg-blue-500 mt-2 mr-2"></span>
+            <span className="inline-block w-2 h-2 rounded-full bg-gray-500 mt-2 mr-2"></span>
             <span><strong>Testing Strategies:</strong> Comprehensive testing across all components is essential, from unit tests for individual components to integration tests for the full language pipeline.</span>
           </li>
         </ul>
@@ -216,19 +216,19 @@ if.else:
         
         <ul className="space-y-3 my-6">
           <li className="flex items-start">
-            <span className="inline-block w-2 h-2 rounded-full bg-blue-500 mt-2 mr-2"></span>
+            <span className="inline-block w-2 h-2 rounded-full bg-gray-500 mt-2 mr-2"></span>
             <span><strong>Module System:</strong> Adding support for modules and imports to enable code organization and reuse.</span>
           </li>
           <li className="flex items-start">
-            <span className="inline-block w-2 h-2 rounded-full bg-blue-500 mt-2 mr-2"></span>
+            <span className="inline-block w-2 h-2 rounded-full bg-gray-500 mt-2 mr-2"></span>
             <span><strong>Static Type Checking:</strong> Implementing optional static type analysis to catch errors before runtime.</span>
           </li>
           <li className="flex items-start">
-            <span className="inline-block w-2 h-2 rounded-full bg-blue-500 mt-2 mr-2"></span>
+            <span className="inline-block w-2 h-2 rounded-full bg-gray-500 mt-2 mr-2"></span>
             <span><strong>Standard Library:</strong> Developing a small but useful standard library for common operations.</span>
           </li>
           <li className="flex items-start">
-            <span className="inline-block w-2 h-2 rounded-full bg-blue-500 mt-2 mr-2"></span>
+            <span className="inline-block w-2 h-2 rounded-full bg-gray-500 mt-2 mr-2"></span>
             <span><strong>Language-Specific Optimizations:</strong> Implementing high-level optimizations before LLVM IR generation.</span>
           </li>
         </ul>
@@ -246,7 +246,7 @@ if.else:
             href="https://github.com/hgleung/toy-lang" 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-md transition-colors"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-gray-800 hover:bg-gray-900 text-white rounded-md transition-colors"
           >
             <ExternalLink size={18} />
             <span>Explore the Code on GitHub</span>
