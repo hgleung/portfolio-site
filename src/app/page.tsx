@@ -143,12 +143,12 @@ export default function HomePage() {
         <h2 className="text-2xl font-normal mb-3 text-black dark:text-white">Experience</h2>
         <div className="space-y-6">
           <div>
-            <div className="flex justify-between items-start mb-1">
+            <div className="mb-1">
               <h3 className="text-lg font-medium text-black dark:text-white">Software Engineer Intern</h3>
-              <span className="text-sm text-gray-500 dark:text-gray-400 pr-4 md:pr-8">Jun. 2023 - Sep. 2023</span>
+              <div className="text-base font-medium text-gray-600 dark:text-gray-400">Litepoint • San Jose, CA</div>
+              <span className="text-sm text-gray-500 dark:text-gray-400">Jun. 2023 - Sep. 2023</span>
             </div>
-            <div className="text-base font-medium text-gray-600 dark:text-gray-400 mb-1">Teradyne Inc. (Litepoint Division) • San Jose, CA</div>
-            <ul className="list-disc list-inside space-y-1 text-gray-700 dark:text-gray-300">
+            <ul className="list-disc list-inside space-y-1 text-gray-700 dark:text-gray-300 mt-2">
               <li>Enhanced data visualization and regression analysis by developing a Tkinter-based GUI tool, reducing onboarding time for new engineers by 30% and improving decision-making speed</li>
               <li>Reduced query response time by 96% through Apache Cassandra integration, optimizing storage/retrieval of regression tester data for 100+ GB datasets</li>
               <li>Increased team efficiency by 25% by streamlining deployment workflows for internal tools, introducing lightweight DevOps practices</li>
@@ -158,49 +158,51 @@ export default function HomePage() {
           </div>
           
           <div>
-            <div className="flex justify-between items-start mb-1">
+            <div className="mb-1">
               <h3 className="text-lg font-medium text-black dark:text-white">Education</h3>
-              <span className="text-sm text-gray-500 dark:text-gray-400 pr-4 md:pr-8">Sep. 2021 - Jun. 2025</span>
+              <div className="text-base font-medium text-gray-600 dark:text-gray-400">University of California, Irvine</div>
+              <span className="text-sm text-gray-500 dark:text-gray-400">Sep. 2021 - Jun. 2025</span>
             </div>
-            <div className="text-base font-medium text-gray-600 dark:text-gray-400 mb-1">University of California, Irvine</div>
-            <div className="mb-1 text-gray-700 dark:text-gray-300">Bachelor of Science in Computer Science</div>
-            <div className="mb-1 text-gray-700 dark:text-gray-300 italic">Specialization: Intelligent Systems</div>
-            <div className="mb-2 text-gray-700 dark:text-gray-300">Major GPA: 3.76</div>
-            
-            <div className="mb-1 font-medium text-gray-700 dark:text-gray-300">Relevant Coursework:</div>
-            
-            {/* AI and ML */}
-            <div className="mb-2">
-              <div className="font-medium text-gray-700 dark:text-gray-300 mb-1">Artificial Intelligence & Machine Learning</div>
-              <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 ml-2 space-y-0.5">
-                <li>Artificial Intelligence</li>
-                <li>Machine Learning & Data Mining</li>
-                <li>Neural Networks & Deep Learning</li>
-                <li>Graphical Models</li>
-              </ul>
-            </div>
-            
-            {/* Systems */}
-            <div className="mb-2">
-              <div className="font-medium text-gray-700 dark:text-gray-300 mb-1">Systems & Architecture</div>
-              <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 ml-2 space-y-0.5">
-                <li>Computer Organization and Principles of System Design</li>
-                <li>Operating Systems</li>
-                <li>Projects in Operating Systems</li>
-                <li>Computer & Communication Networks</li>
-                <li>Network</li>
-              </ul>
-            </div>
-            
-            {/* Core CS */}
-            <div>
-              <div className="font-medium text-gray-700 dark:text-gray-300 mb-1">Core Computer Science</div>
-              <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 ml-2 space-y-0.5">
-                <li>Data Structures & Algorithms</li>
-                <li>Database Systems</li>
-                <li>Information Retrieval</li>
-                <li>Applications of Probability in Computer Science</li>
-              </ul>
+            <div className="mt-2">
+              <div className="mb-1 text-gray-700 dark:text-gray-300">Bachelor of Science in Computer Science</div>
+              <div className="mb-1 text-gray-700 dark:text-gray-300 italic">Specialization: Intelligent Systems</div>
+              <div className="mb-2 text-gray-700 dark:text-gray-300">Major GPA: 3.76</div>
+              
+              <div className="mb-1 font-medium text-gray-700 dark:text-gray-300">Relevant Coursework:</div>
+              
+              {/* AI and ML */}
+              <div className="mb-2">
+                <div className="font-medium text-gray-700 dark:text-gray-300 mb-1">Artificial Intelligence & Machine Learning</div>
+                <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 ml-2 space-y-0.5">
+                  <li>Artificial Intelligence</li>
+                  <li>Machine Learning & Data Mining</li>
+                  <li>Neural Networks & Deep Learning</li>
+                  <li>Graphical Models</li>
+                </ul>
+              </div>
+              
+              {/* Systems */}
+              <div className="mb-2">
+                <div className="font-medium text-gray-700 dark:text-gray-300 mb-1">Systems & Architecture</div>
+                <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 ml-2 space-y-0.5">
+                  <li>Computer Organization and Principles of System Design</li>
+                  <li>Operating Systems</li>
+                  <li>Projects in Operating Systems</li>
+                  <li>Computer & Communication Networks</li>
+                  <li>Network</li>
+                </ul>
+              </div>
+              
+              {/* Core CS */}
+              <div>
+                <div className="font-medium text-gray-700 dark:text-gray-300 mb-1">Core Computer Science</div>
+                <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 ml-2 space-y-0.5">
+                  <li>Data Structures & Algorithms</li>
+                  <li>Database Systems</li>
+                  <li>Information Retrieval</li>
+                  <li>Applications of Probability in Computer Science</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
