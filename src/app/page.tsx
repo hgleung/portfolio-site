@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     template: 'Harry Leung | %s',
     default: 'Harry Leung',
   },
-  description: 'Computer Science student and Software Engineer located in the Bay Area.',
+  description: 'Software Engineer located in the Bay Area.',
   icons: [{ rel: 'icon', url: '/favicon.ico' }],
 };
 
