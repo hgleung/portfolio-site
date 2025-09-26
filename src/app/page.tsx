@@ -84,7 +84,7 @@ export default function HomePage() {
                   My current obsession is exploring how AI can enhance developer tools. I'm constantly experimenting with new ways to make coding more intuitive and building random apps that solve problems I encounter in daily life.
                 </p>
                 <p>
-                  Open to software engineer roles (backend, full-stack, infra). Always looking for new challenges that push me to grow as both an engineer and a creative thinker.
+                  Open to software engineer roles (backend, full-stack, infra). Fluent in English and Cantonese. Always looking for new challenges that push me to grow as both an engineer and a creative thinker.
                 </p>
               </div>
             </div>
