@@ -7,8 +7,20 @@ interface ExperienceTab {
 }
 
 export const experienceTabs: ExperienceTab[] = [
-  { 
-    label: 'Litepoint', 
+  {
+    label: 'Amazon Music',
+    url: 'https://music.amazon.com',
+    content: (
+      <div>
+        <p className="font-bold">Amazon Music</p>
+        <p className="italic text-sm">SDE 1</p>
+        <p className="italic text-sm">Nov 2025 - Present</p>
+        <p>• Developing and maintaining machine learning-backed pipelines for catalog metadata optimization.</p>
+      </div>
+    ),
+  },
+  {
+    label: 'Litepoint',
     url: 'https://www.litepoint.com',
     content: (
       <div>
@@ -17,18 +29,18 @@ export const experienceTabs: ExperienceTab[] = [
         <p className="italic text-sm">Jun-Sep 2023</p>
         <p>• Developed a user-friendly GUI tool to display regression tester values, enhancing data visualization and decision-making.</p>
         <p>• Implemented Apache Cassandra to optimize storage and retrieval of regression tester data, maximizing data
-        reliability and reducing query response time by over 96%.</p>
+          reliability and reducing query response time by over 96%.</p>
         <p>• Designed and created an intuitive and responsive GUI using Tkinter, improving user interaction and reducing the
-        learning curve for the team.</p>
+          learning curve for the team.</p>
         <p>• Integrated Matplotlib for data visualization, enabling the creation of insightful charts and graphs to enhance data
-        analysis.</p>
+          analysis.</p>
         <p>• Improved team efficiency significantly by deploying the tool, facilitating quicker decision-making and higher-quality
-        regression testing outcomes.</p>
+          regression testing outcomes.</p>
       </div>
-    ), 
+    ),
   },
-  { 
-    label: 'Education', 
+  {
+    label: 'Education',
     url: 'https://www.uci.edu',
     content: (
       <div>
@@ -46,7 +58,7 @@ export const experienceTabs: ExperienceTab[] = [
             <li>Machine Learning & Data Mining</li>
             <li>Neural Networks and Deep Learning</li>
           </ul>
-          
+
           {/* Systems and Architecture */}
           <p className="font-medium text-sm pt-2">Systems & Architecture</p>
           <ul className="list-disc pl-5 text-sm">
@@ -65,10 +77,10 @@ export const experienceTabs: ExperienceTab[] = [
           </ul>
         </div>
       </div>
-    ), 
+    ),
   },
-  { 
-    label: 'Next', 
+  {
+    label: 'Next',
     url: '#',
     content: (
       <div>
@@ -76,6 +88,6 @@ export const experienceTabs: ExperienceTab[] = [
         <p className="italic text-sm">Coming Soon</p>
         <p>Stay tuned for my next exciting opportunity!</p>
       </div>
-    ), 
+    ),
   }
 ];

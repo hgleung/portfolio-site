@@ -31,12 +31,12 @@ export default function HomePage() {
           {/* About Section */}
           <section id="about" className="mb-6">
             <h2 className="text-2xl font-normal mb-4 text-black dark:text-white">About</h2>
-            
+
             <div className="relative">
               {/* Mobile profile picture and social links (right aligned) */}
               <div className="md:hidden float-right ml-6 mb-6 w-40">
                 <div className="w-40 h-40 rounded-lg overflow-hidden">
-                  <Image 
+                  <Image
                     src="/IMG_2161.PNG"
                     alt="Harry Leung"
                     width={192}
@@ -46,26 +46,26 @@ export default function HomePage() {
                 </div>
                 <div className="flex justify-center mt-3">
                   <div className="flex space-x-6">
-                    <a 
-                      href="https://github.com/hgleung" 
-                      target="_blank" 
+                    <a
+                      href="https://github.com/hgleung"
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-300 text-xl"
                       aria-label="GitHub"
                     >
                       <FaGithub />
                     </a>
-                    <a 
-                      href="https://www.linkedin.com/in/harrygleung/" 
-                      target="_blank" 
+                    <a
+                      href="https://www.linkedin.com/in/harrygleung/"
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-300 text-xl"
                       aria-label="LinkedIn"
                     >
                       <FaLinkedin />
                     </a>
-                    <a 
-                      href="mailto:hleung.cs@gmail.com" 
+                    <a
+                      href="mailto:hleung.cs@gmail.com"
                       className="text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-300 text-xl"
                       aria-label="Email"
                     >
@@ -74,7 +74,7 @@ export default function HomePage() {
                   </div>
                 </div>
               </div>
-              
+
               {/* About text */}
               <div className="space-y-3 text-gray-700 dark:text-gray-300">
                 <p>
@@ -84,17 +84,17 @@ export default function HomePage() {
                   My current obsession is exploring how AI can enhance developer tools. I'm constantly experimenting with new ways to make coding more intuitive and building random apps that solve problems I encounter in daily life.
                 </p>
                 <p>
-                  Open to software engineer roles (backend, full-stack, infra). Always looking for new challenges that push me to grow as both an engineer and a creative thinker.
+                  Always looking for new challenges that push me to grow as both an engineer and a creative thinker. Feel free to reach out.
                 </p>
               </div>
             </div>
           </section>
         </div>
-        
+
         {/* Right side - Profile picture and social links */}
         <div className="md:w-1/3 hidden md:flex flex-col items-center md:pl-1">
           <div className="w-32 h-32 md:w-40 md:h-40 rounded-lg overflow-hidden mb-4">
-            <Image 
+            <Image
               src="/IMG_2161.PNG"
               alt="Harry Leung"
               width={160}
@@ -103,26 +103,26 @@ export default function HomePage() {
             />
           </div>
           <div className="flex space-x-5 mt-3">
-            <a 
-              href="https://github.com/hgleung" 
-              target="_blank" 
+            <a
+              href="https://github.com/hgleung"
+              target="_blank"
               rel="noopener noreferrer"
               className="text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-300 text-2xl"
               aria-label="GitHub"
             >
               <FaGithub />
             </a>
-            <a 
-              href="https://www.linkedin.com/in/harrygleung/" 
-              target="_blank" 
+            <a
+              href="https://www.linkedin.com/in/harrygleung/"
+              target="_blank"
               rel="noopener noreferrer"
               className="text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-300 text-2xl"
               aria-label="LinkedIn"
             >
               <FaLinkedin />
             </a>
-            <a 
-              href="mailto:hleung.cs@gmail.com" 
+            <a
+              href="mailto:hleung.cs@gmail.com"
               className="text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-300 text-2xl"
               aria-label="Email"
             >
@@ -144,6 +144,17 @@ export default function HomePage() {
         <div className="space-y-6">
           <div>
             <div className="mb-1">
+              <h3 className="text-lg font-medium text-black dark:text-white">SDE 1</h3>
+              <div className="text-base font-medium text-gray-600 dark:text-gray-400">Amazon Music • San Francisco, CA</div>
+              <span className="text-sm text-gray-500 dark:text-gray-400">Nov. 2025 - Present</span>
+            </div>
+            <ul className="list-disc list-inside space-y-1 text-gray-700 dark:text-gray-300 mt-2">
+              <li>Developing and maintaining machine learning-backed pipelines for catalog metadata optimization.</li>
+            </ul>
+          </div>
+
+          <div>
+            <div className="mb-1">
               <h3 className="text-lg font-medium text-black dark:text-white">Software Engineer Intern</h3>
               <div className="text-base font-medium text-gray-600 dark:text-gray-400">Litepoint • San Jose, CA</div>
               <span className="text-sm text-gray-500 dark:text-gray-400">Jun. 2023 - Sep. 2023</span>
@@ -156,7 +167,7 @@ export default function HomePage() {
               <li>Integrated Matplotlib to generate actionable visual reports within a full stack internal application, accelerating root-cause analysis for performance issues by 40%</li>
             </ul>
           </div>
-          
+
           <div>
             <div className="mb-1">
               <h3 className="text-lg font-medium text-black dark:text-white">Education</h3>
@@ -167,9 +178,9 @@ export default function HomePage() {
               <div className="mb-1 text-gray-700 dark:text-gray-300">Bachelor of Science in Computer Science</div>
               <div className="mb-1 text-gray-700 dark:text-gray-300 italic">Specialization: Intelligent Systems</div>
               <div className="mb-2 text-gray-700 dark:text-gray-300">Major GPA: 3.76</div>
-              
+
               <div className="mb-1 font-medium text-gray-700 dark:text-gray-300">Relevant Coursework:</div>
-              
+
               {/* AI and ML */}
               <div className="mb-2">
                 <div className="font-medium text-gray-700 dark:text-gray-300 mb-1">Artificial Intelligence & Machine Learning</div>
@@ -180,7 +191,7 @@ export default function HomePage() {
                   <li>Graphical Models</li>
                 </ul>
               </div>
-              
+
               {/* Systems */}
               <div className="mb-2">
                 <div className="font-medium text-gray-700 dark:text-gray-300 mb-1">Systems & Architecture</div>
@@ -192,7 +203,7 @@ export default function HomePage() {
                   <li>Network</li>
                 </ul>
               </div>
-              
+
               {/* Core CS */}
               <div>
                 <div className="font-medium text-gray-700 dark:text-gray-300 mb-1">Core Computer Science</div>
@@ -225,15 +236,15 @@ export default function HomePage() {
               <span className="text-xs bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 px-2 py-1 rounded mr-2">LLVM</span>
             </div>
             <div className="flex space-x-4">
-              <Link 
-                href="/notes/toy-lang-blog" 
+              <Link
+                href="/notes/toy-lang-blog"
                 className="text-sm text-gray-600 dark:text-gray-400 hover:underline"
               >
                 Read more
               </Link>
-              <a 
-                href="https://github.com/hgleung/toy-lang" 
-                target="_blank" 
+              <a
+                href="https://github.com/hgleung/toy-lang"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm text-gray-600 dark:text-gray-400 hover:underline flex items-center"
               >
@@ -241,7 +252,7 @@ export default function HomePage() {
               </a>
             </div>
           </div>
-          
+
           {/* UCI ICS Search Engine */}
           <div>
             <h3 className="text-lg font-medium mb-2 text-black dark:text-white">UCI ICS Search Engine</h3>
@@ -255,9 +266,9 @@ export default function HomePage() {
               <span className="text-xs bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 px-2 py-1 rounded mr-2">Information Retrieval</span>
             </div>
             <div className="flex space-x-4">
-              <a 
-                href="https://github.com/hgleung/ics-search-engine" 
-                target="_blank" 
+              <a
+                href="https://github.com/hgleung/ics-search-engine"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm text-gray-600 dark:text-gray-400 hover:underline flex items-center"
               >
@@ -279,9 +290,9 @@ export default function HomePage() {
               <span className="text-xs bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 px-2 py-1 rounded mr-2">Algorithms</span>
             </div>
             <div className="flex space-x-4">
-              <a 
-                href="https://github.com/hgleung/os-projects" 
-                target="_blank" 
+              <a
+                href="https://github.com/hgleung/os-projects"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm text-gray-600 dark:text-gray-400 hover:underline flex items-center"
               >
@@ -289,7 +300,7 @@ export default function HomePage() {
               </a>
             </div>
           </div>
-          
+
           {/* AI Art Detector */}
           <div>
             <h3 className="text-lg font-medium mb-2 text-black dark:text-white">AI Art Detector</h3>
@@ -303,15 +314,15 @@ export default function HomePage() {
               <span className="text-xs bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 px-2 py-1 rounded mr-2">Deep Learning</span>
             </div>
             <div className="flex space-x-4">
-              <Link 
-                href="/notes/ai-art-detector-report" 
+              <Link
+                href="/notes/ai-art-detector-report"
                 className="text-sm text-gray-600 dark:text-gray-400 hover:underline"
               >
                 Read more
               </Link>
-              <a 
-                href="https://github.com/hgleung/ai-art-detector" 
-                target="_blank" 
+              <a
+                href="https://github.com/hgleung/ai-art-detector"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm text-gray-600 dark:text-gray-400 hover:underline flex items-center"
               >
@@ -334,9 +345,9 @@ export default function HomePage() {
           </div>
           <div className="flex items-center">
             <span className="w-20 text-gray-600 dark:text-gray-400">X:</span>
-            <a 
-              href="https://x.com/hleung_dev" 
-              target="_blank" 
+            <a
+              href="https://x.com/hleung_dev"
+              target="_blank"
               rel="noopener noreferrer"
               className="text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-300 flex items-center"
             >
@@ -345,9 +356,9 @@ export default function HomePage() {
           </div>
           <div className="flex items-center">
             <span className="w-20 text-gray-600 dark:text-gray-400">LinkedIn:</span>
-            <a 
-              href="https://www.linkedin.com/in/harrygleung/" 
-              target="_blank" 
+            <a
+              href="https://www.linkedin.com/in/harrygleung/"
+              target="_blank"
               rel="noopener noreferrer"
               className="text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-300 flex items-center"
             >
