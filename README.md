@@ -1,80 +1,112 @@
 # Harry Leung's Portfolio
 
-Built using T3
+A modern, interactive personal portfolio website built with the [T3 Stack](https://create.t3.gg/). This project showcases my skills, professional experience, and technical projects through a clean, responsive interface.
 
 ## Overview
 
-A modern, responsive personal portfolio website showcasing Harry Leung's skills, experience, and projects. This portfolio is designed with a clean, minimalist aesthetic featuring a dark/light mode toggle and smooth scrolling navigation.
+This portfolio serves as a central hub for my professional identity. It goes beyond a simple static page by incorporating interactive elements like a simulated browser window for viewing experience, a dynamic skills showcase, and a dedicated section for technical notes and reports.
 
-## Features
+## Key Features
 
-### Core Components
-- **About Me**: Personal introduction and professional overview
-- **Skills**: Interactive display of technical skills with custom icons
-- **Experience**: Tab-based browser window UI showcasing professional and educational experience
-- **Projects**: Showcase of personal and professional projects
-- **Contact**: Multiple contact options with animated interactive elements
-
-### Technical Highlights
-- Responsive design that works seamlessly on mobile, tablet, and desktop
-- Dark/light mode with system preference detection
-- Smooth scrolling navigation with custom scroll button
-- Browser window component with tabbed navigation for experience section
-- PostgreSQL database integration with Drizzle ORM
-- Modern UI with glassmorphism effects, animations, and gradient text
+-   **Interactive Experience UI**: A unique "browser window" interface that allows users to explore my professional background in a familiar, tabbed format.
+-   **Technical Notes & Blog**: A dedicated section (`/notes`) for in-depth technical articles, project reports, and learning logs (e.g., "Building a Toy Language", "AI Art Detector Report").
+-   **Project Showcase**: A visual gallery of my personal and professional projects, complete with descriptions and links.
+-   **Responsive Design**: Fully responsive layout that adapts seamlessly to mobile, tablet, and desktop screens.
+-   **Dark/Light Mode**: Built-in theme switching with system preference detection.
+-   **Resume View**: A dedicated page (`/resume`) for a printer-friendly version of my resume.
 
 ## Technology Stack
 
+This project is built using the **T3 Stack**, leveraging the best modern web technologies for type safety and performance.
+
 ### Frontend
-- **Framework**: Next.js 14 with App Router
-- **Styling**: Tailwind CSS with custom animations
-- **Components**: Custom React components with CSS modules
-- **Icons**: React Icons and custom SVG components
-- **Typography**: Geist font family
+-   **Framework**: [Next.js 14](https://nextjs.org/) (App Router)
+-   **Language**: [TypeScript](https://www.typescriptlang.org/)
+-   **Styling**: [Tailwind CSS](https://tailwindcss.com/) with `tailwindcss-animate`
+-   **Icons**: [Lucide React](https://lucide.dev/) & React Icons
+-   **Fonts**: [Geist](https://vercel.com/font)
 
-### Backend
-- **Database**: PostgreSQL via Vercel Postgres
-- **ORM**: Drizzle ORM for type-safe database operations
-- **API**: Next.js API routes
-- **Environment**: T3 environment configuration
+### Backend & Database
+-   **Database**: PostgreSQL (via [Vercel Postgres](https://vercel.com/docs/storage/vercel-postgres))
+-   **ORM**: [Drizzle ORM](https://orm.drizzle.team/) for type-safe database interactions
+-   **Environment**: [@t3-oss/env-nextjs](https://env.t3.gg/) for type-safe environment variables
 
-### Development Tools
-- **Package Manager**: pnpm
-- **TypeScript**: Strict type checking
-- **ESLint**: Code quality and consistency
-- **Prettier**: Code formatting with Tailwind plugin
+### Tooling
+-   **Package Manager**: [pnpm](https://pnpm.io/)
+-   **Linting**: ESLint
+-   **Formatting**: Prettier (with Tailwind plugin)
+
+## Getting Started
+
+Follow these steps to run the project locally.
+
+### Prerequisites
+-   Node.js (LTS recommended)
+-   pnpm (`npm install -g pnpm`)
+
+### Installation
+
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/hgleung/portfolio-site.git
+    cd portfolio-site
+    ```
+
+2.  **Install dependencies:**
+    ```bash
+    pnpm install
+    ```
+
+3.  **Set up environment variables:**
+    Create a `.env` file in the root directory based on `.env.example` (if available) or ensure you have the following variables:
+    ```env
+    POSTGRES_URL="postgres://..."
+    ```
+
+4.  **Push the database schema:**
+    ```bash
+    pnpm db:push
+    ```
+
+5.  **Run the development server:**
+    ```bash
+    pnpm dev
+    ```
+    Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## Project Structure
 
-- `/src/app`: Next.js app router pages and layouts
-- `/src/components`: Reusable UI components
-- `/src/server`: Server-side code including database schema
-- `/src/styles`: Global styles and CSS modules
-- `/public`: Static assets including profile picture and favicons
+-   `src/app`: Next.js App Router pages and layouts.
+    -   `src/app/notes`: Technical notes and blog posts.
+    -   `src/app/resume`: Dedicated resume page.
+-   `src/components`: Reusable UI components (e.g., `BrowserWindow`, `Skills`, `Projects`).
+-   `src/server/db`: Database configuration and Drizzle schema definitions.
+-   `src/styles`: Global styles and CSS modules.
+-   `public`: Static assets.
 
 ## Database Schema
 
-Currently implements an image schema for storing portfolio project images with the following fields:
-- `id`: Serial primary key
-- `name`: Image name (indexed)
-- `url`: Image URL
-- `createdAt`: Timestamp with timezone
-- `updatedAt`: Timestamp with timezone with auto-update
+The project uses a PostgreSQL database managed by Drizzle ORM. The current schema includes:
+
+-   **Images Table** (`hleung-portfolio_image`): Stores metadata for portfolio images.
+    -   `id`: Serial primary key
+    -   `name`: Image name
+    -   `url`: Image URL
+    -   `createdAt` & `updatedAt`: Timestamps
 
 ## Deployment
 
-The portfolio is designed to be deployed on Vercel with the following features:
-- Vercel Postgres for database
-- Edge runtime for optimal performance
-- Automatic preview deployments for PRs
-
-## License
-
-All rights reserved. This project is private and not licensed for public use.
+The application is optimized for deployment on [Vercel](https://vercel.com).
+-   Connect your GitHub repository to Vercel.
+-   Configure the `POSTGRES_URL` environment variable in the Vercel dashboard.
+-   Deployments are automatic on push to the `main` branch.
 
 ## Contact
 
-- Email: hleung.cs@gmail.com
-- LinkedIn: harrygleung
-- X: hleung_dev
-- GitHub: hgleung
+-   **Email**: hleung.cs@gmail.com
+-   **GitHub**: [hgleung](https://github.com/hgleung)
+-   **LinkedIn**: [harrygleung](https://linkedin.com/in/harrygleung)
+-   **X (Twitter)**: [hleung_dev](https://x.com/hleung_dev)
+
+---
+*Built with ❤️ by Harry Leung*
