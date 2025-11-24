@@ -177,8 +177,6 @@ export default function HomePage() {
             <div className="mt-2">
               <div className="mb-1 text-gray-700 dark:text-gray-300">Bachelor of Science in Computer Science</div>
               <div className="mb-1 text-gray-700 dark:text-gray-300 italic">Specialization: Intelligent Systems</div>
-              <div className="mb-2 text-gray-700 dark:text-gray-300">Major GPA: 3.76</div>
-
               <div className="mb-1 font-medium text-gray-700 dark:text-gray-300">Relevant Coursework:</div>
 
               {/* AI and ML */}
