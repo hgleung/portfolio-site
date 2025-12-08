@@ -28,7 +28,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     if (!localStorage.getItem('theme')) {
       // Default to light theme regardless of system preference
       setTheme('light');
-      
+
       // Save the default theme to localStorage
       localStorage.setItem('theme', 'light');
     }
@@ -37,7 +37,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     // Save theme to localStorage whenever it changes
     localStorage.setItem('theme', theme);
-    
+
     document.documentElement.classList.remove('light', 'dark');
     document.documentElement.classList.add(theme);
     // Update meta theme-color for mobile browsers

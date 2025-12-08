@@ -31,8 +31,8 @@ const notes: NoteItem[] = [
 
 export default function Page() {
   return (
-    <main className="max-w-[98%] md:max-w-[95%] mx-auto px-1.5 md:px-2.5 pt-28 md:pt-12 pb-16 bg-white dark:bg-black">
-      <Link 
+    <main className="max-w-[98%] md:max-w-[95%] mx-auto px-1.5 md:px-2.5 pt-28 md:pt-12 pb-16 bg-white dark:bg-[#0F0F0F]">
+      <Link
         href="/"
         className="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-500 mb-6 transition-colors"
       >
@@ -41,20 +41,20 @@ export default function Page() {
       </Link>
 
       <h1 className="text-2xl font-normal mb-2 text-black dark:text-white">My Notes</h1>
-      
+
       <div className="mb-6">
         <p className="text-gray-700 dark:text-gray-300">
-          This is where I keep my technical notes, project reports, and thoughts on things I've built. 
+          This is where I keep my technical notes, project reports, and thoughts on things I've built.
           I like to write about what I learn while working on different projects, both to organize my own thinking and to share what I've figured out along the way.
         </p>
       </div>
 
       <div className="grid gap-6">
         {notes.map((note) => (
-          <Link 
+          <Link
             key={note.path}
             href={note.path}
-            className="block p-6 bg-white dark:bg-gray-900 rounded-lg shadow-sm border border-gray-200 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors duration-200"
+            className="block p-6 bg-white dark:bg-[#0F0F0F] rounded-lg shadow-sm border border-gray-200 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors duration-200"
           >
             <div className="mb-1">
               <h2 className="text-lg font-medium text-black dark:text-white">{note.title}</h2>

@@ -9,8 +9,8 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <main className="max-w-[98%] md:max-w-[95%] mx-auto px-1.5 md:px-2.5 pt-28 md:pt-12 pb-16 bg-white dark:bg-black">
-      <Link 
+    <main className="max-w-[98%] md:max-w-[95%] mx-auto px-1.5 md:px-2.5 pt-28 md:pt-12 pb-16 bg-white dark:bg-[#0F0F0F]">
+      <Link
         href="/notes"
         className="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-500 mb-6 transition-colors"
       >
@@ -20,12 +20,12 @@ export default function Page() {
 
       <h1 className="text-2xl font-normal mb-2 text-black dark:text-white">Building a Toy Language: Design, Parsing, and LLVM</h1>
       <p className="text-gray-500 dark:text-gray-400 mb-6">May 29, 2025</p>
-      
+
       <article className="text-gray-700 dark:text-gray-300">
         <p className="text-lg mb-6">
           Building a programming language from the ground up taught me so much about how compilers and interpreters actually work. In this post, I'll share what I learned while creating a toy language that takes code all the way from text to execution, covering everything from breaking down the code into tokens, figuring out its structure, running it, and even generating LLVM code that can be compiled.
         </p>
-        
+
         <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md my-6 border-l-4 border-gray-400">
           <p className="italic m-0">
             "If you don't understand compilers, you don't understand computing."
@@ -45,7 +45,7 @@ export default function Page() {
         <p>
           The language implementation follows the classic compiler/interpreter architecture, divided into several distinct phases:
         </p>
-        
+
         <div className="grid md:grid-cols-2 gap-6 my-6">
           <div className="bg-white dark:bg-gray-900 p-5 rounded-lg shadow-sm border border-gray-200 dark:border-gray-800">
             <div className="flex items-center mb-3">
@@ -56,7 +56,7 @@ export default function Page() {
               The lexer transforms raw source code into a sequence of tokens, identifying keywords, identifiers, literals, and operators. This phase handles character-by-character processing, whitespace management, and basic syntax validation.
             </p>
           </div>
-          
+
           <div className="bg-white dark:bg-gray-900 p-5 rounded-lg shadow-sm border border-gray-200 dark:border-gray-800">
             <div className="flex items-center mb-3">
               <Code className="text-gray-600 dark:text-gray-400 mr-2" size={20} />
@@ -66,7 +66,7 @@ export default function Page() {
               The parser constructs an Abstract Syntax Tree (AST) from the token stream, enforcing grammar rules and establishing relationships between language constructs. It implements recursive descent parsing with precedence handling for expressions.
             </p>
           </div>
-          
+
           <div className="bg-white dark:bg-gray-900 p-5 rounded-lg shadow-sm border border-gray-200 dark:border-gray-800">
             <div className="flex items-center mb-3">
               <Code className="text-gray-600 dark:text-gray-400 mr-2" size={20} />
@@ -76,7 +76,7 @@ export default function Page() {
               The interpreter traverses the AST, executing operations and managing program state. It handles variable scoping, function calls, control flow, and expression evaluation, essentially bringing the code to life without compilation.
             </p>
           </div>
-          
+
           <div className="bg-white dark:bg-gray-900 p-5 rounded-lg shadow-sm border border-gray-200 dark:border-gray-800">
             <div className="flex items-center mb-3">
               <Code className="text-gray-600 dark:text-gray-400 mr-2" size={20} />
@@ -92,7 +92,7 @@ export default function Page() {
         <p>
           Despite being a "toy" language, the implementation supports a surprisingly rich set of programming constructs:
         </p>
-        
+
         <ul className="space-y-3 my-6">
           <li className="flex items-start">
             <span className="inline-block w-2 h-2 rounded-full bg-gray-500 mt-2 mr-2"></span>
@@ -123,7 +123,7 @@ export default function Page() {
         <p>
           By generating LLVM IR from our AST, we gain several significant advantages:
         </p>
-        
+
         <ul className="space-y-3 my-6">
           <li className="flex items-start">
             <span className="inline-block w-2 h-2 rounded-full bg-gray-500 mt-2 mr-2"></span>
@@ -138,7 +138,7 @@ export default function Page() {
             <span><strong>JIT Compilation:</strong> Just-in-time compilation capabilities for dynamic execution environments.</span>
           </li>
         </ul>
-        
+
         <div className="bg-gray-800 text-gray-200 p-4 rounded-md my-6 overflow-x-auto">
           <pre className="text-sm"><code>{`; LLVM IR generated for a simple function
 define i32 @fibonacci(i32 %n) {
@@ -158,28 +158,28 @@ if.else:
   ret i32 %add
 }`}</code></pre>
         </div>
-        
+
         <p className="text-sm text-gray-600 dark:text-gray-400 -mt-4 mb-6 text-center">
           Example LLVM IR generated for a recursive Fibonacci function
         </p>
 
         <h2 className="text-2xl font-semibold mt-8 mb-4">Technical Challenges and Solutions</h2>
-        
+
         <h3 className="text-xl font-medium mt-6 mb-3">1. Recursive Descent Parsing</h3>
         <p>
           Implementing a parser that correctly handles operator precedence and associativity was one of the initial challenges. I adopted a recursive descent approach with precedence climbing for expressions, which provided a clean and maintainable solution while correctly handling the grammar rules.
         </p>
-        
+
         <h3 className="text-xl font-medium mt-6 mb-3">2. Lexical Scoping</h3>
         <p>
           Managing variable scopes, especially with nested functions and blocks, required careful design. The solution involved implementing an environment chain that mimics lexical scoping rules, allowing for proper variable resolution in nested contexts while maintaining parent scope accessibility.
         </p>
-        
+
         <h3 className="text-xl font-medium mt-6 mb-3">3. Type System</h3>
         <p>
           Even in a dynamically typed language, type checking and conversion are essential. The interpreter implements runtime type checking and appropriate conversions where needed, balancing flexibility with type safety to prevent nonsensical operations.
         </p>
-        
+
         <h3 className="text-xl font-medium mt-6 mb-3">4. LLVM Code Generation</h3>
         <p>
           Mapping high-level language constructs to LLVM IR required deep understanding of both domains. The solution involved creating a dedicated code generation visitor that traverses the AST and emits appropriate LLVM instructions, handling type conversions, control flow, and function calls.
@@ -189,7 +189,7 @@ if.else:
         <p>
           Developing this toy language has been an invaluable learning experience, offering insights that extend far beyond language implementation:
         </p>
-        
+
         <ul className="space-y-3 my-6">
           <li className="flex items-start">
             <span className="inline-block w-2 h-2 rounded-full bg-gray-500 mt-2 mr-2"></span>
@@ -213,7 +213,7 @@ if.else:
         <p>
           While the current implementation is functional and educational, several exciting enhancements could further extend its capabilities:
         </p>
-        
+
         <ul className="space-y-3 my-6">
           <li className="flex items-start">
             <span className="inline-block w-2 h-2 rounded-full bg-gray-500 mt-2 mr-2"></span>
@@ -240,12 +240,12 @@ if.else:
         <p>
           If you're even a little curious about language design, I can't recommend it enough. Diving into lexers, parsers, interpreters, and code generation doesn’t just teach you about compilers — it changes the way you think about writing software.
         </p>
-        
+
         <div className="flex justify-center mt-8 mb-4">
-          <a 
-            href="https://github.com/hgleung/toy-lang" 
-            target="_blank" 
-            rel="noopener noreferrer" 
+          <a
+            href="https://github.com/hgleung/toy-lang"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 bg-gray-800 hover:bg-gray-900 text-white rounded-md transition-colors"
           >
             <ExternalLink size={18} />
