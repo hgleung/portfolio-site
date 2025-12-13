@@ -95,7 +95,7 @@ export default function HomePage() {
         <div className="md:w-1/3 hidden md:flex flex-col items-center md:pl-1">
           <div className="w-32 h-32 md:w-40 md:h-40 rounded-lg overflow-hidden mb-4">
             <Image
-              src="/IMG_2162.PNG"
+              src="/IMG_2162.png"
               alt="Harry Leung"
               width={160}
               height={160}
