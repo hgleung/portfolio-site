@@ -1,7 +1,6 @@
 import type { Config } from "tailwindcss"
 import { fontFamily } from "tailwindcss/defaultTheme";
 
-
 const config = {
   darkMode: ["class"],
   content: [
@@ -9,7 +8,7 @@ const config = {
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
-	],
+  ],
   prefix: "",
   theme: {
     container: {
@@ -21,9 +20,6 @@ const config = {
     },
     extend: {
       colors: {
-        'light-gray': '#f5f5f5',
-        'charcoal': '#2c3e50',
-        'my-green': '#2ecc71',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -64,32 +60,17 @@ const config = {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        sans: ["Montserrat", ...fontFamily.sans],
+        sans: ["var(--font-geist-sans)", ...fontFamily.sans],
+        mono: ["var(--font-geist-mono)", ...fontFamily.mono],
       },
       keyframes: {
-        "accordion-down": {
-          from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" },
-        },
-        "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
-        },
-        "text-gradient": {
-          "0%, 100%": {
-            "background-size": "400% 400%",
-            "background-position": "0% center",
-          },
-          "50%": {
-            "background-size": "400% 400%",
-            "background-position": "100% center",
-          },
+        "fade-in": {
+          from: { opacity: "0", transform: "translateY(8px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
         },
       },
       animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
-        "text": "text-gradient 8s ease infinite",
+        "fade-in": "fade-in 0.5s ease-out forwards",
       },
     },
   },

@@ -17,13 +17,13 @@ interface NoteItem {
 const notes: NoteItem[] = [
   {
     title: 'Building a Toy Language: Design, Parsing, and LLVM',
-    description: 'A blog post about designing and implementing a toy programming language from scratch, featuring parsing, interpretation, and LLVM IR generation.',
+    description: 'Designing and implementing a toy programming language from scratch, featuring parsing, interpretation, and LLVM IR generation.',
     path: '/notes/toy-lang-blog',
     date: '2025-05-29'
   },
   {
     title: 'AI Art Detector Report',
-    description: 'Technical report detailing the implementation and findings of the AI Art Detector project, including model architecture, training process, and results.',
+    description: 'Technical report on the AI Art Detector project — model architecture, training process, and results.',
     path: '/notes/ai-art-detector-report',
     date: '2025-03-20'
   },
@@ -31,36 +31,32 @@ const notes: NoteItem[] = [
 
 export default function Page() {
   return (
-    <main className="max-w-[98%] md:max-w-[95%] mx-auto px-1.5 md:px-2.5 pt-28 md:pt-12 pb-16 bg-white dark:bg-[#0F0F0F]">
+    <main className="max-w-3xl mx-auto px-6 md:px-12 pt-24 md:pt-16 pb-24">
       <Link
         href="/"
-        className="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-500 mb-6 transition-colors"
+        className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground mb-8 transition-colors"
       >
-        <ArrowLeft size={20} />
-        <span>Back to Home</span>
+        <ArrowLeft size={16} />
+        <span>Home</span>
       </Link>
 
-      <h1 className="text-2xl font-normal mb-2 text-black dark:text-white">My Notes</h1>
+      <h1 className="text-2xl font-semibold tracking-tight text-foreground mb-3">Notes</h1>
+      <p className="text-[15px] text-foreground/70 mb-10 leading-relaxed">
+        Technical notes, project reports, and thoughts on things I've built.
+      </p>
 
-      <div className="mb-6">
-        <p className="text-gray-700 dark:text-gray-300">
-          This is where I keep my technical notes, project reports, and thoughts on things I've built.
-          I like to write about what I learn while working on different projects, both to organize my own thinking and to share what I've figured out along the way.
-        </p>
-      </div>
-
-      <div className="grid gap-6">
+      <div className="space-y-4">
         {notes.map((note) => (
           <Link
             key={note.path}
             href={note.path}
-            className="block p-6 bg-white dark:bg-[#0F0F0F] rounded-lg shadow-sm border border-gray-200 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors duration-200"
+            className="block rounded-lg border border-border/60 p-5 transition-all duration-200 hover:border-border hover:shadow-sm hover:shadow-black/[0.03] dark:hover:shadow-white/[0.02]"
           >
-            <div className="mb-1">
-              <h2 className="text-lg font-medium text-black dark:text-white">{note.title}</h2>
-              <span className="text-sm text-gray-500 dark:text-gray-400">{note.date}</span>
+            <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between mb-1.5">
+              <h2 className="text-base font-medium text-foreground">{note.title}</h2>
+              <span className="text-sm text-muted-foreground">{note.date}</span>
             </div>
-            <p className="text-gray-700 dark:text-gray-300 mt-2">{note.description}</p>
+            <p className="text-sm text-foreground/70 leading-relaxed">{note.description}</p>
           </Link>
         ))}
       </div>

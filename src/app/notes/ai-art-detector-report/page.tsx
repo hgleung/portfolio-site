@@ -8,41 +8,41 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <main className="max-w-[98%] md:max-w-[95%] mx-auto px-1.5 md:px-2.5 pt-28 md:pt-12 pb-16 bg-white dark:bg-[#0F0F0F]">
+    <main className="max-w-3xl mx-auto px-6 md:px-12 pt-24 md:pt-16 pb-24">
       <Link
         href="/notes"
-        className="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-500 mb-6 transition-colors"
+        className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground mb-8 transition-colors"
       >
-        <ArrowLeft size={20} />
-        <span>Back to Notes</span>
+        <ArrowLeft size={16} />
+        <span>Notes</span>
       </Link>
 
-      <h1 className="text-2xl font-normal mb-2 text-black dark:text-white">AI Art Detector Project Report</h1>
-      <p className="text-gray-500 dark:text-gray-400 mb-6">March 20, 2025</p>
+      <h1 className="text-2xl font-semibold tracking-tight text-foreground mb-2">AI Art Detector Project Report</h1>
+      <p className="text-sm text-muted-foreground mb-10">March 20, 2025</p>
 
-      <div className="relative w-full aspect-[1/1.4] bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700">
-        <div className="absolute top-2 right-2 flex gap-2 p-2 bg-white/80 dark:bg-gray-800/80 rounded-md backdrop-blur-sm">
+      <div className="relative w-full aspect-[1/1.4] rounded-lg border border-border/60 overflow-hidden">
+        <div className="absolute top-3 right-3 flex gap-2 p-1.5 bg-background/80 backdrop-blur-sm rounded-md border border-border/50 z-10">
           <a
             href="/neural_final_report.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-1.5 text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors"
+            className="p-1.5 text-muted-foreground hover:text-foreground transition-colors"
             title="Open PDF in new tab"
           >
-            <ExternalLink size={20} />
+            <ExternalLink size={16} />
           </a>
           <a
             href="/neural_final_report.pdf"
             download="ai_art_detector_report.pdf"
-            className="p-1.5 text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors"
+            className="p-1.5 text-muted-foreground hover:text-foreground transition-colors"
             title="Download PDF"
           >
-            <Download size={20} />
+            <Download size={16} />
           </a>
         </div>
         <iframe
           src="/neural_final_report.pdf"
-          className="w-full h-full rounded-lg"
+          className="w-full h-full"
         />
       </div>
     </main>

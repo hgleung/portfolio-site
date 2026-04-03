@@ -6,44 +6,31 @@ type Theme = 'light' | 'dark';
 
 type ThemeContextType = {
   theme: Theme;
+  mounted: boolean;
   toggleTheme: () => void;
 };
 
 const ThemeContext = createContext<ThemeContextType | null>(null);
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setTheme] = useState<Theme>(() => {
-    // Check for saved theme preference in localStorage (client-side only)
-    if (typeof window !== 'undefined') {
-      const savedTheme = localStorage.getItem('theme') as Theme;
-      if (savedTheme === 'light' || savedTheme === 'dark') {
-        return savedTheme;
-      }
-    }
-    return 'light'; // Default fallback
-  });
+  const [theme, setTheme] = useState<Theme>('light');
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    // Only check system preference if no saved preference exists
-    if (!localStorage.getItem('theme')) {
-      // Default to light theme regardless of system preference
-      setTheme('light');
-
-      // Save the default theme to localStorage
-      localStorage.setItem('theme', 'light');
+    const savedTheme = localStorage.getItem('theme') as Theme;
+    if (savedTheme === 'light' || savedTheme === 'dark') {
+      setTheme(savedTheme);
     }
+    setMounted(true);
   }, []);
 
   useEffect(() => {
-    // Save theme to localStorage whenever it changes
     localStorage.setItem('theme', theme);
-
     document.documentElement.classList.remove('light', 'dark');
     document.documentElement.classList.add(theme);
-    // Update meta theme-color for mobile browsers
     document.querySelector('meta[name="theme-color"]')?.setAttribute(
       'content',
-      theme === 'dark' ? '#111827' : '#f8fafc'
+      theme === 'dark' ? '#0a0a0a' : '#ffffff'
     );
   }, [theme]);
 
@@ -52,7 +39,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   };
 
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+    <ThemeContext.Provider value={{ theme, mounted, toggleTheme }}>
       {children}
     </ThemeContext.Provider>
   );
