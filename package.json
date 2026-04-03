@@ -24,10 +24,10 @@
     "geist": "^1.4.2",
     "lucide-react": "^0.414.0",
     "nanoid": "3.3.8",
-    "next": "^14.2.32",
+    "next": "^15.5.14",
     "postgres": "^3.4.7",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
     "react-icons": "^5.5.0",
     "tailwind-merge": "^2.6.0",
     "tailwindcss-animate": "^1.0.7",
@@ -36,8 +36,8 @@
   "devDependencies": {
     "@types/eslint": "^8.56.12",
     "@types/node": "^20.19.0",
-    "@types/react": "^18.3.23",
-    "@types/react-dom": "^18.3.7",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
     "@typescript-eslint/eslint-plugin": "^8.44.0",
     "@typescript-eslint/parser": "^8.44.0",
     "drizzle-kit": "^0.31.4",
@@ -59,7 +59,14 @@
     "overrides": {
       "esbuild@<=0.24.2": ">=0.25.0",
       "glob": ">=10.5.0",
-      "js-yaml": ">=4.1.1"
+      "js-yaml": ">=4.1.1",
+      "minimatch": ">=10.2.3",
+      "picomatch": ">=4.0.4",
+      "flatted": ">=3.3.4",
+      "@isaacs/brace-expansion": ">=5.0.1",
+      "brace-expansion": ">=2.0.3",
+      "yaml": ">=2.8.3",
+      "ajv": ">=6.14.0"
     }
   }
 }
