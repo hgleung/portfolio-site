@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { FaGithub, FaLinkedin, FaEnvelope, FaExternalLinkAlt } from 'react-icons/fa';
+import { Github, Linkedin, Mail, ExternalLink } from 'lucide-react';
 import Skills from '../components/Skills';
 
 export const metadata: Metadata = {
@@ -32,7 +32,7 @@ export default function HomePage() {
             className="text-muted-foreground hover:text-foreground text-lg"
             aria-label="GitHub"
           >
-            <FaGithub />
+            <Github size={18} />
           </a>
           <a
             href="https://www.linkedin.com/in/harrygleung/"
@@ -41,14 +41,14 @@ export default function HomePage() {
             className="text-muted-foreground hover:text-foreground text-lg"
             aria-label="LinkedIn"
           >
-            <FaLinkedin />
+            <Linkedin size={18} />
           </a>
           <a
             href="mailto:hleung.cs@gmail.com"
             className="text-muted-foreground hover:text-foreground text-lg"
             aria-label="Email"
           >
-            <FaEnvelope />
+            <Mail size={18} />
           </a>
         </div>
       </section>
@@ -172,13 +172,13 @@ export default function HomePage() {
           <div className="flex items-center gap-3">
             <span className="text-muted-foreground w-16 text-sm">X</span>
             <a href="https://x.com/hleung_dev" target="_blank" rel="noopener noreferrer" className="text-foreground/80 hover:text-foreground inline-flex items-center gap-1.5">
-              @hleung_dev <FaExternalLinkAlt className="text-[10px] text-muted-foreground" />
+              @hleung_dev <ExternalLink size={10} className="text-muted-foreground" />
             </a>
           </div>
           <div className="flex items-center gap-3">
             <span className="text-muted-foreground w-16 text-sm">LinkedIn</span>
             <a href="https://www.linkedin.com/in/harrygleung/" target="_blank" rel="noopener noreferrer" className="text-foreground/80 hover:text-foreground inline-flex items-center gap-1.5">
-              harrygleung <FaExternalLinkAlt className="text-[10px] text-muted-foreground" />
+              harrygleung <ExternalLink size={10} className="text-muted-foreground" />
             </a>
           </div>
         </div>
@@ -223,7 +223,7 @@ function ProjectCard({
               rel="noopener noreferrer"
               className="text-sm text-muted-foreground hover:text-foreground inline-flex items-center gap-1"
             >
-              {link.label} <FaExternalLinkAlt className="text-[9px]" />
+              {link.label} <ExternalLink size={10} />
             </a>
           ) : (
             <Link
