@@ -125,6 +125,15 @@ export default function HomePage() {
         <div className="space-y-6">
 
           <ProjectCard
+            title="Music Taste Visualizer"
+            description="Listening identity engine powered by Last.fm. Computes genre vectors, Shannon entropy diversity scores, Gini coefficient loyalty metrics, taste drift analysis via Jensen-Shannon divergence, and archetype classification. Compare two users with cosine similarity and per-genre breakdowns."
+            tags={["TypeScript", "Last.fm API", "Information Theory", "Data Analysis"]}
+            links={[
+              { label: "GitHub", href: "https://github.com/hgleung/music-taste", external: true },
+            ]}
+          />
+
+          <ProjectCard
             title="Toy Programming Language"
             description="Custom lexer, parser, and interpreter in Python. Supports variables, control flow, functions with recursion, error handling, and LLVM IR output."
             tags={["Python", "Parsing", "Interpreter", "LLVM"]}
