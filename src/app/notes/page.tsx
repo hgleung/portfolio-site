@@ -22,7 +22,7 @@ const notes: NoteItem[] = [
   },
   {
     title: 'AI Art Detector Report',
-    description: 'Technical report on the AI Art Detector project — model architecture, training process, and results.',
+    description: 'A breakdown of how we built a classifier to tell AI-generated art from human-made — architecture decisions, training, and what actually worked.',
     path: '/notes/ai-art-detector-report',
     date: '2025-03-20'
   },

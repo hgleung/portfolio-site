@@ -135,30 +135,11 @@ export default function HomePage() {
           />
 
           <ProjectCard
-            title="UCI ICS Search Engine"
-            description="High-performance search engine processing 56,000+ documents with TF-IDF scoring, HTML tag weighting, and sub-100ms query response time."
-            tags={["Python", "Multi-threading", "TF-IDF", "Information Retrieval"]}
-            links={[
-              { label: "GitHub", href: "https://github.com/hgleung/ics-search-engine", external: true },
-            ]}
-          />
-
-          <ProjectCard
             title="OS Projects — VM Manager & File System"
             description="Virtual Memory Manager with two-level paging and LFU replacement. File System Emulator with disk block management and bitmap allocation."
             tags={["Python", "Memory Management", "File Systems", "Algorithms"]}
             links={[
               { label: "GitHub", href: "https://github.com/hgleung/os-projects", external: true },
-            ]}
-          />
-
-          <ProjectCard
-            title="AI Art Detector"
-            description="Deep learning classifier using custom CNN and Vision Transformer to distinguish AI-generated from human-made artwork."
-            tags={["PyTorch", "CNN", "Vision Transformer", "Deep Learning"]}
-            links={[
-              { label: "Read more", href: "/notes/ai-art-detector-report" },
-              { label: "GitHub", href: "https://github.com/hgleung/ai-art-detector", external: true },
             ]}
           />
 
