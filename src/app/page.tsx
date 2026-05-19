@@ -58,7 +58,7 @@ export default function HomePage() {
         <h2 className="text-xs font-medium uppercase tracking-widest text-muted-foreground mb-6">About</h2>
         <div className="space-y-4 text-[15px] leading-relaxed text-foreground/80">
           <p>
-            Hey, I'm Harry! I build software and go to too many shows. Both feel necessary.
+            I'm a software engineer based in the Bay Area, drawn to problems that sit between systems and the people who use them.
           </p>
           <p>
             At my core I'm curious, not just about technology, but about how it shapes the way people think and experience things. That's what keeps me going deeper than the code. I like making things: systems, side projects, whatever pulls me in.
@@ -85,37 +85,46 @@ export default function HomePage() {
           {/* Amazon */}
           <div className="group">
             <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between mb-2">
-              <h3 className="text-base font-medium text-foreground">SDE 1 — Amazon Music</h3>
+              <h3 className="text-base font-medium text-foreground">Software Development Engineer — Amazon Music</h3>
               <span className="text-sm text-muted-foreground">Nov 2025 – Present</span>
             </div>
             <p className="text-sm text-muted-foreground mb-2">San Francisco, CA</p>
-            <ul className="space-y-1.5 text-[15px] text-foreground/80">
-              <li>Developing and maintaining ML-backed pipelines for catalog metadata optimization.</li>
+            <ul className="space-y-1.5 text-[15px] text-foreground/80 list-disc pl-5 marker:text-muted-foreground">
+              <li>Shipped a candidate-model rollout framework: a parallel pipeline with Step Functions orchestration, scoped IAM, and isolated storage for production-readiness validation of a new entity scoring and clustering model; consolidated ~600 lines of duplicated infrastructure into shared parameterized constructs.</li>
+              <li>Built backfill tooling (Lambda, SQS, Glue) that regenerates ML features at catalog scale to complete the feature store for the candidate model, migrating inference from sync to async to handle volume.</li>
+              <li>Built the offline model evaluation layer (Glue/Athena dashboards, batch accuracy reports, cross-account analytics) and a data-quality AI agent comparing candidate-vs-production outputs with cross-script (CJK/Latin) false-positive detection.</li>
+              <li>Stood up ~30 CloudWatch alarms across SageMaker endpoints and queue infrastructure; right-sized inference instances and concurrency to deliver ~24× per-instance throughput and eliminate cold-start timeouts.</li>
             </ul>
           </div>
 
           {/* Litepoint */}
           <div className="group">
             <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between mb-2">
-              <h3 className="text-base font-medium text-foreground">Software Engineer Intern — Litepoint</h3>
+              <h3 className="text-base font-medium text-foreground">Software Engineering Intern — Teradyne (Litepoint)</h3>
               <span className="text-sm text-muted-foreground">Jun – Sep 2023</span>
             </div>
             <p className="text-sm text-muted-foreground mb-2">San Jose, CA</p>
-            <ul className="space-y-1.5 text-[15px] text-foreground/80">
-              <li>Built a Tkinter GUI tool for regression data visualization, cutting onboarding time by 30%.</li>
-              <li>Integrated Apache Cassandra, reducing query response time by 96% on 100+ GB datasets.</li>
-              <li>Streamlined deployment workflows for internal tools, increasing team efficiency by 25%.</li>
+            <ul className="space-y-1.5 text-[15px] text-foreground/80 list-disc pl-5 marker:text-muted-foreground">
+              <li>Built a Tkinter-based GUI for data visualization and regression analysis, reducing new-user training time from 2 hours to under 45 minutes (~60% reduction).</li>
+              <li>Migrated regression test data storage to Apache Cassandra, reducing average query response time by ~95% across 100+ GB datasets.</li>
+              <li>Integrated Matplotlib reporting into the analysis workflow, surfacing failure patterns that previously required manual log inspection and accelerating root-cause investigation for the QA team.</li>
             </ul>
           </div>
+        </div>
+      </section>
 
-          {/* Education */}
-          <div className="group">
-            <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between mb-2">
-              <h3 className="text-base font-medium text-foreground">University of California, Irvine</h3>
-              <span className="text-sm text-muted-foreground">Sep 2021 – Jun 2025</span>
-            </div>
-            <p className="text-sm text-foreground/80">B.S. Computer Science — Intelligent Systems</p>
+      {/* Education */}
+      <section id="education" className="animate-section mb-20">
+        <h2 className="text-xs font-medium uppercase tracking-widest text-muted-foreground mb-6">Education</h2>
+        <div className="group">
+          <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between mb-2">
+            <h3 className="text-base font-medium text-foreground">University of California, Irvine</h3>
+            <span className="text-sm text-muted-foreground">Sep 2021 – Jun 2025</span>
           </div>
+          <p className="text-[15px] text-foreground/80 mb-2">B.S. in Computer Science</p>
+          <p className="text-sm text-muted-foreground leading-relaxed">
+            Relevant coursework: Machine Learning, Neural Networks &amp; Deep Learning, Artificial Intelligence, Graphical Models, Information Retrieval, Database Systems, Operating Systems, Data Structures &amp; Algorithms, Networks.
+          </p>
         </div>
       </section>
 
@@ -134,21 +143,21 @@ export default function HomePage() {
           />
 
           <ProjectCard
-            title="Toy Programming Language"
-            description="Custom lexer, parser, and interpreter in Python. Supports variables, control flow, functions with recursion, error handling, and LLVM IR output."
-            tags={["Python", "Parsing", "Interpreter", "LLVM"]}
+            title="Image Safety RAG"
+            description="Explainable image content-moderation system: OpenCLIP ViT-B/32 embeddings indexed in HNSW (Faiss/Weaviate), retrieved via FastAPI and packaged into MCP context manifests, then reasoned over by a multimodal LLM (GPT-4o or local Phi-3-vision). Grounds decisions in nearest-neighbor exemplars from the LAION-Safety subset so the model can cite concrete prior cases."
+            tags={["Python", "RAG", "OpenCLIP", "FastAPI", "Faiss", "MCP"]}
             links={[
-              { label: "Read more", href: "/notes/toy-lang-blog" },
-              { label: "GitHub", href: "https://github.com/hgleung/toy-lang", external: true },
+              { label: "GitHub", href: "https://github.com/hgleung/image-safety-rag", external: true },
             ]}
           />
 
           <ProjectCard
-            title="OS Projects — VM Manager & File System"
-            description="Virtual Memory Manager with two-level paging and LFU replacement. File System Emulator with disk block management and bitmap allocation."
-            tags={["Python", "Memory Management", "File Systems", "Algorithms"]}
+            title="Toy Language Interpreter & Compiler"
+            description="A programming language designed from scratch: custom lexer, recursive-descent parser, AST, and tree-walking interpreter supporting variables, arithmetic, control flow, and recursive functions with error reporting. Extended with an LLVM IR code-generation backend that lowers the language to a compilable target with explicit type handling."
+            tags={["Python", "Compilers", "LLVM IR", "AST"]}
             links={[
-              { label: "GitHub", href: "https://github.com/hgleung/os-projects", external: true },
+              { label: "Read more", href: "/notes/toy-lang-blog" },
+              { label: "GitHub", href: "https://github.com/hgleung/toy-lang", external: true },
             ]}
           />
 

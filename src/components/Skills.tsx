@@ -6,9 +6,12 @@ interface SkillCategory {
 }
 
 const categories: SkillCategory[] = [
-  { name: 'Languages', items: ['Python', 'C++', 'JavaScript', 'SQL'] },
-  { name: 'Frameworks', items: ['React.js', 'Next.js', 'Tailwind CSS'] },
-  { name: 'Systems & Tools', items: ['LLVM', 'Redis', 'Git', 'Docker', 'Valgrind'] },
+  { name: 'Languages', items: ['Python', 'TypeScript', 'Go', 'C++', 'Java', 'SQL', 'Rust'] },
+  { name: 'AWS / Cloud', items: ['CDK', 'Lambda', 'Step Functions', 'SageMaker', 'Glue', 'Athena', 'SQS', 'S3', 'CloudWatch', 'IAM'] },
+  { name: 'ML / Data', items: ['PyTorch', 'Hugging Face Transformers', 'NumPy', 'pandas', 'scikit-learn', 'Keras'] },
+  { name: 'Web & Frameworks', items: ['React', 'Next.js', 'Node.js', 'GraphQL', 'REST'] },
+  { name: 'Systems & Tools', items: ['Docker', 'Kubernetes', 'Linux', 'Git', 'Redis', 'MySQL', 'Bazel', 'CMake', 'GDB', 'Valgrind'] },
+  { name: 'Spoken', items: ['English', 'Cantonese', 'Mandarin'] },
 ];
 
 const Skills: React.FC = () => {
