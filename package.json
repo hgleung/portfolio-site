@@ -20,11 +20,11 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "cross-spawn": "7.0.5",
-    "drizzle-orm": "^0.30.10",
+    "drizzle-orm": "^0.45.2",
     "geist": "^1.4.2",
     "lucide-react": "^0.414.0",
     "nanoid": "3.3.8",
-    "next": "^15.5.14",
+    "next": "^15.5.18",
     "postgres": "^3.4.7",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
@@ -44,7 +44,7 @@
     "eslint": "^9.36.0",
     "eslint-config-next": "^15.5.3",
     "eslint-plugin-drizzle": "^0.2.3",
-    "postcss": "^8.5.5",
+    "postcss": "^8.5.10",
     "prettier": "^3.5.3",
     "prettier-plugin-tailwindcss": "^0.6.12",
     "tailwindcss": "^3.4.17",
@@ -63,9 +63,13 @@
       "picomatch": ">=4.0.4",
       "flatted": ">=3.3.4",
       "@isaacs/brace-expansion": ">=5.0.1",
-      "brace-expansion": ">=2.0.3",
+      "brace-expansion@<2.0.3": ">=2.0.3",
+      "brace-expansion@>=5.0.0 <5.0.6": ">=5.0.6",
       "yaml": ">=2.8.3",
-      "ajv": ">=6.14.0"
+      "ajv": ">=6.14.0",
+      "fast-uri": ">=3.1.2",
+      "ws@>=8.0.0 <8.20.1": ">=8.20.1",
+      "postcss@<8.5.10": ">=8.5.10"
     }
   }
 }
