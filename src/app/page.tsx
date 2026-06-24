@@ -90,10 +90,10 @@ export default function HomePage() {
             </div>
             <p className="text-sm text-muted-foreground mb-2">San Francisco, CA</p>
             <ul className="space-y-1.5 text-[15px] text-foreground/80 list-disc pl-5 marker:text-muted-foreground">
-              <li>Shipped a candidate-model rollout framework: a parallel pipeline with Step Functions orchestration, scoped IAM, and isolated storage for production-readiness validation of a new entity scoring and clustering model; consolidated ~600 lines of duplicated infrastructure into shared parameterized constructs.</li>
-              <li>Built backfill tooling (Lambda, SQS, Glue) that regenerates ML features at catalog scale to complete the feature store for the candidate model, migrating inference from sync to async to handle volume.</li>
-              <li>Built the offline model evaluation layer (Glue/Athena dashboards, batch accuracy reports, cross-account analytics) and a data-quality AI agent comparing candidate-vs-production outputs with cross-script (CJK/Latin) false-positive detection.</li>
-              <li>Stood up ~30 CloudWatch alarms across SageMaker endpoints and queue infrastructure; right-sized inference instances and concurrency to deliver ~24× per-instance throughput and eliminate cold-start timeouts.</li>
+              <li>Shipped a candidate-model rollout framework: a parallel pipeline with workflow orchestration, scoped IAM, and isolated storage for production-readiness validation of a new entity scoring and clustering model; consolidated ~600 lines of duplicated infrastructure into shared parameterized constructs.</li>
+              <li>Built backfill tooling (Lambda, SQS, ETL pipelines) that regenerates ML features at catalog scale to complete the feature store for the candidate model, migrating inference from sync to async to handle volume.</li>
+              <li>Built the offline model evaluation layer (ETL/SQL-query dashboards, batch accuracy reports, cross-account analytics) and a data-quality AI agent comparing candidate-vs-production outputs with cross-script (CJK/Latin) false-positive detection.</li>
+              <li>Stood up ~30 monitoring alarms across ML inference endpoints and queue infrastructure; right-sized inference instances and concurrency to deliver ~24× per-instance throughput and eliminate cold-start timeouts.</li>
             </ul>
           </div>
 
