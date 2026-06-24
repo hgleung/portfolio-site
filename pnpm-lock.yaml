@@ -7,7 +7,7 @@ settings:
 overrides:
   esbuild@<=0.24.2: '>=0.25.0'
   glob: '>=10.5.0'
-  js-yaml: '>=4.1.1'
+  js-yaml: '>=4.2.0'
   minimatch: '>=10.2.3'
   picomatch: '>=4.0.4'
   flatted: '>=3.3.4'
@@ -17,7 +17,7 @@ overrides:
   yaml: '>=2.8.3'
   ajv: '>=6.14.0'
   fast-uri: '>=3.1.2'
-  ws@>=8.0.0 <8.20.1: '>=8.20.1'
+  ws@>=8.0.0 <8.21.0: '>=8.21.0'
   postcss@<8.5.10: '>=8.5.10'
 
 importers:
@@ -839,6 +839,7 @@ packages:
   '@vercel/postgres@0.9.0':
     resolution: {integrity: sha512-WiI2g3+ce2g1u1gP41MoDj2DsMuQQ+us7vHobysRixKECGaLHpfTI7DuVZmHU087ozRAGr3GocSyqmWLLo+fig==}
     engines: {node: '>=14.6'}
+    deprecated: '@vercel/postgres is deprecated. If you are setting up a new database, you can choose an alternate storage solution from the Vercel Marketplace. If you had an existing Vercel Postgres database, it should have been migrated to Neon as a native Vercel integration. You can find more details and the guide to migrate to Neon''s SDKs here: https://neon.com/docs/guides/vercel-postgres-transition-guide'
 
   acorn-jsx@5.3.2:
     resolution: {integrity: sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==}
@@ -1632,8 +1633,8 @@ packages:
   js-tokens@4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
 
-  js-yaml@4.1.1:
-    resolution: {integrity: sha512-qQKT4zQxXl8lLwBtHMWwaTcGfFOZviOJet3Oy/xmGk2gZH677CJM9EvtfdSkgWcATZhj/55JZ0rmy3myCT5lsA==}
+  js-yaml@5.1.0:
+    resolution: {integrity: sha512-s8VA5jkR8f22S3NAXmhKPFqGUduqZGlsufabVOgN14iTdw/RXcym7bKkbwjxLK9Yw2lEvvmJjFp119+KPeo8Kg==}
     hasBin: true
 
   json-buffer@3.0.1:
@@ -2343,8 +2344,8 @@ packages:
     resolution: {integrity: sha512-BN22B5eaMMI9UMtjrGd5g5eCYPpCPDUy0FJXbYsaT5zYxjFOckS53SQDE3pWkVoWpHXVb3BrYcEN4Twa55B5cA==}
     engines: {node: '>=0.10.0'}
 
-  ws@8.20.1:
-    resolution: {integrity: sha512-It4dO0K5v//JtTXuPkfEOaI3uUN87iYPnqo/ZzqCoG3g8uhA66QUMs/SrM0YK7/NAu+r4LMh/9dq2A7k+rHs+w==}
+  ws@8.21.0:
+    resolution: {integrity: sha512-Vsp28b7DRcimFQvrqu2Wek3z1iYxDCWqHYB8Qsnk/S4RfaCQzPGPyBNuVjJV3cd6UiKtUtp6sNM77gWvzcCH+g==}
     engines: {node: '>=10.0.0'}
     peerDependencies:
       bufferutil: ^4.0.1
@@ -2515,7 +2516,7 @@ snapshots:
       globals: 14.0.0
       ignore: 5.3.2
       import-fresh: 3.3.1
-      js-yaml: 4.1.1
+      js-yaml: 5.1.0
       minimatch: 10.2.5
       strip-json-comments: 3.1.1
     transitivePeerDependencies:
@@ -2958,7 +2959,7 @@ snapshots:
       '@neondatabase/serverless': 0.9.5
       bufferutil: 4.0.9
       utf-8-validate: 6.0.5
-      ws: 8.20.1(bufferutil@4.0.9)(utf-8-validate@6.0.5)
+      ws: 8.21.0(bufferutil@4.0.9)(utf-8-validate@6.0.5)
 
   acorn-jsx@5.3.2(acorn@8.15.0):
     dependencies:
@@ -3877,7 +3878,7 @@ snapshots:
 
   js-tokens@4.0.0: {}
 
-  js-yaml@4.1.1:
+  js-yaml@5.1.0:
     dependencies:
       argparse: 2.0.1
 
@@ -4654,7 +4655,7 @@ snapshots:
 
   word-wrap@1.2.5: {}
 
-  ws@8.20.1(bufferutil@4.0.9)(utf-8-validate@6.0.5):
+  ws@8.21.0(bufferutil@4.0.9)(utf-8-validate@6.0.5):
     optionalDependencies:
       bufferutil: 4.0.9
       utf-8-validate: 6.0.5
