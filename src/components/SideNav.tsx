@@ -14,7 +14,7 @@ export default function SideNav() {
   const router = useRouter();
   const activeSection = useActiveSection(sections.map(s => s.id));
 
-  const scrollToSection = async (sectionId: string) => {
+  const scrollToSection = (sectionId: string) => {
     const scrollToElement = (element: HTMLElement) => {
       const offsetPosition = element.getBoundingClientRect().top + window.pageYOffset;
       window.scrollTo({
@@ -24,7 +24,7 @@ export default function SideNav() {
     };
 
     if (pathname !== '/') {
-      await router.push('/');
+      router.push('/');
       setTimeout(() => {
         const element = document.getElementById(sectionId);
         if (element) scrollToElement(element);
