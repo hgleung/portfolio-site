@@ -14,8 +14,8 @@ export const useActiveSection = (sectionIds: string[]) => {
       return
     }
 
-    const observers = new Map()
-    let visibleSections = new Set<string>()
+    const observers = new Map<string, Element>()
+    const visibleSections = new Set<string>()
 
     const observerCallback = (entries: IntersectionObserverEntry[]) => {
       entries.forEach((entry) => {
