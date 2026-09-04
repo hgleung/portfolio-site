@@ -8,11 +8,10 @@ export const useActiveSection = (sectionIds: string[]) => {
   const pathname = usePathname()
 
   useEffect(() => {
-    // Reset active section when not on home page
-    if (pathname !== '/') {
-      setActiveSection('')
-      return
-    }
+    // Nothing to observe outside the home page. The value is derived from
+    // `pathname` on the way out rather than reset here, since calling setState
+    // synchronously in an effect body cascades an extra render.
+    if (pathname !== '/') return
 
     const observers = new Map<string, Element>()
     const visibleSections = new Set<string>()
@@ -64,5 +63,5 @@ export const useActiveSection = (sectionIds: string[]) => {
     }
   }, [sectionIds, pathname]) // Add pathname to dependencies
 
-  return activeSection
+  return pathname === '/' ? activeSection : ''
 }

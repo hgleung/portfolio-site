@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+import { type Metadata } from 'next';
 import { ExternalLink, ArrowLeft, Code } from 'lucide-react';
 import Link from 'next/link';
 
@@ -22,12 +22,12 @@ export default function Page() {
 
       <article className="text-[15px] leading-relaxed text-foreground/80">
         <p className="text-base mb-8">
-          Building a programming language from the ground up taught me so much about how compilers and interpreters actually work. In this post, I'll share what I learned while creating a toy language that takes code all the way from text to execution.
+          Building a programming language from the ground up taught me so much about how compilers and interpreters actually work. In this post, I&apos;ll share what I learned while creating a toy language that takes code all the way from text to execution.
         </p>
 
         <blockquote className="border-l-2 border-border pl-5 my-8 text-foreground/60 italic">
           <p className="m-0">
-            "If you don't understand compilers, you don't understand computing."
+            &quot;If you don&apos;t understand compilers, you don&apos;t understand computing.&quot;
             <span className="block text-right mt-1 text-sm not-italic">— Tim Berners-Lee</span>
           </p>
         </blockquote>
@@ -135,10 +135,10 @@ if.else:
 
         <h2 className="text-lg font-semibold mt-12 mb-4 text-foreground">Why It Was Worth It</h2>
         <p className="mb-4">
-          Building a programming language from scratch was one of the most rewarding things I've done as a developer. It pushed me to turn abstract ideas into working code and gave me a much deeper appreciation for how languages work under the hood.
+          Building a programming language from scratch was one of the most rewarding things I&apos;ve done as a developer. It pushed me to turn abstract ideas into working code and gave me a much deeper appreciation for how languages work under the hood.
         </p>
         <p>
-          If you're curious about language design, I highly recommend it. Diving into lexers, parsers, and code generation changes the way you think about writing software.
+          If you&apos;re curious about language design, I highly recommend it. Diving into lexers, parsers, and code generation changes the way you think about writing software.
         </p>
 
         <div className="flex justify-center mt-12">

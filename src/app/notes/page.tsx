@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+import { type Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 
@@ -41,7 +41,7 @@ export default function Page() {
 
       <h1 className="text-2xl font-semibold tracking-tight text-foreground mb-3">Notes</h1>
       <p className="text-[15px] text-foreground/70 mb-10 leading-relaxed">
-        Technical notes, project reports, and thoughts on things I've built.
+        Technical notes, project reports, and thoughts on things I&apos;ve built.
       </p>
 
       <div className="space-y-4">

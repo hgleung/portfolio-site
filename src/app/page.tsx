@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+import { type Metadata } from 'next';
 import Link from 'next/link';
 import { Github, Linkedin, Mail, ExternalLink } from 'lucide-react';
 import Skills from '../components/Skills';
@@ -58,13 +58,13 @@ export default function HomePage() {
         <h2 className="text-xs font-medium uppercase tracking-widest text-muted-foreground mb-6">About</h2>
         <div className="space-y-4 text-[15px] leading-relaxed text-foreground/80">
           <p>
-            I'm a software engineer based in the Bay Area, drawn to problems that sit between systems and the people who use them.
+            I&apos;m a software engineer based in the Bay Area, drawn to problems that sit between systems and the people who use them.
           </p>
           <p>
-            At my core I'm curious, not just about technology, but about how it shapes the way people think and experience things. That's what keeps me going deeper than the code. I like making things: systems, side projects, whatever pulls me in.
+            At my core I&apos;m curious, not just about technology, but about how it shapes the way people think and experience things. That&apos;s what keeps me going deeper than the code. I like making things: systems, side projects, whatever pulls me in.
           </p>
           <p>
-            I see growth less as skills and achievements, more as getting better at knowing what I'm doing and why. Still figuring that one out.
+            I see growth less as skills and achievements, more as getting better at knowing what I&apos;m doing and why. Still figuring that one out.
           </p>
           <p>
             Based in the Bay Area. Say hi!

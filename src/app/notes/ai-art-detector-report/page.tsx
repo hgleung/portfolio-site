@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+import { type Metadata } from 'next';
 import { ExternalLink, Download, ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
 
